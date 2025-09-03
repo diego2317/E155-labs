@@ -34,7 +34,7 @@ module lab2_dw_tb();
 		
 	always @(posedge clk)
 		begin
-			#1; {s, res_expected} = testvectors[vectornum];
+			#1; {s_1, s_2, res_expected} = testvectors[vectornum];
 		end
 	
 	always @(negedge clk)
