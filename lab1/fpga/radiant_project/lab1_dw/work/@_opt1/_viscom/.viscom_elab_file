@@ -1,0 +1,1 @@
+C:/lscc/radiant/2024.2/questasim/win64/VisualizerRls/bin/viscom.exe -nolock -quiet -jmem_size 393216 work.display_controller_tb -quiet -auto_acc_if_foreign -work work +acc -allow_unnamed -o _opt1 -id 1-00be43eaec35-68b78c75-1fb-4744 +__design_bin_path+C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/radiant_project/lab1_dw +__betafsm

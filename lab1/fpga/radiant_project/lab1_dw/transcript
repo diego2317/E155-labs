@@ -13,4 +13,194 @@
 # // of the Customer's facilities without the express written permission of SISW,
 # // and may not be used in any way not expressly authorized by SISW.
 # //
-# Load canceled
+vlog -reportprogress 300 -work work C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/sim/display_controller_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 17:29:25 on Sep 02,2025
+# vlog -reportprogress 300 -work work C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/sim/display_controller_tb.sv 
+# -- Compiling module display_controller_tb
+# 
+# Top level modules:
+# 	display_controller_tb
+# End time: 17:29:25 on Sep 02,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/sim/lab1_dw_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 17:29:25 on Sep 02,2025
+# vlog -reportprogress 300 -work work C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/sim/lab1_dw_tb.sv 
+# -- Compiling module lab1_dw_tb
+# 
+# Top level modules:
+# 	lab1_dw_tb
+# End time: 17:29:25 on Sep 02,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/sim/led_controller_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 17:29:25 on Sep 02,2025
+# vlog -reportprogress 300 -work work C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/sim/led_controller_tb.sv 
+# -- Compiling module led_controller_tb
+# 
+# Top level modules:
+# 	led_controller_tb
+# End time: 17:29:25 on Sep 02,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/src/display_controller.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 17:29:33 on Sep 02,2025
+# vlog -reportprogress 300 -work work C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/src/display_controller.sv 
+# -- Compiling module display_controller
+# 
+# Top level modules:
+# 	display_controller
+# End time: 17:29:34 on Sep 02,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/src/lab1_dw.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 17:29:34 on Sep 02,2025
+# vlog -reportprogress 300 -work work C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/src/lab1_dw.sv 
+# -- Compiling module lab1_dw
+# 
+# Top level modules:
+# 	lab1_dw
+# End time: 17:29:34 on Sep 02,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/src/led_controller.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 17:29:34 on Sep 02,2025
+# vlog -reportprogress 300 -work work C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/src/led_controller.sv 
+# -- Compiling module led_controller
+# 
+# Top level modules:
+# 	led_controller
+# End time: 17:29:34 on Sep 02,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -gui work.display_controller_tb
+# vsim -gui work.display_controller_tb 
+# Start time: 17:29:55 on Sep 02,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading work.display_controller_tb(fast)
+quit -sim
+# End time: 17:30:32 on Sep 02,2025, Elapsed time: 0:00:37
+# Errors: 0, Warnings: 0
+vsim -gui work.display_controller work.display_controller_tb
+# vsim -gui work.display_controller work.display_controller_tb 
+# Start time: 17:30:40 on Sep 02,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading work.display_controller(fast)
+# Loading work.display_controller_tb(fast)
+quit -sim
+# End time: 17:31:24 on Sep 02,2025, Elapsed time: 0:00:44
+# Errors: 0, Warnings: 0
+vsim -gui work.display_controller_tb -voptargs=+acc
+# vsim -gui work.display_controller_tb -voptargs="+acc" 
+# Start time: 17:31:49 on Sep 02,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.display_controller_tb(fast)
+# Loading work.display_controller(fast)
+run -all
+# ** Warning: (vsim-7) Failed to open readmem file "display_controller_tv.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/sim/display_controller_tb.sv(25)
+#    Time: 0 ns  Iteration: 0  Instance: /display_controller_tb
+#          1 tests completed with          0 errors
+# ** Note: $stop    : C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/sim/display_controller_tb.sv(45)
+#    Time: 25 ns  Iteration: 1  Instance: /display_controller_tb
+# Break in Module display_controller_tb at C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/sim/display_controller_tb.sv line 45
+run -all
+#          2 tests completed with          0 errors
+# ** Note: $stop    : C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/sim/display_controller_tb.sv(45)
+#    Time: 35 ns  Iteration: 1  Instance: /display_controller_tb
+# Break in Module display_controller_tb at C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/sim/display_controller_tb.sv line 45
+pwd
+# C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/radiant_project/lab1_dw
+run -all
+#          3 tests completed with          0 errors
+# ** Note: $stop    : C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/sim/display_controller_tb.sv(45)
+#    Time: 45 ns  Iteration: 1  Instance: /display_controller_tb
+# Break in Module display_controller_tb at C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/sim/display_controller_tb.sv line 45
+quit -sim
+# End time: 17:34:03 on Sep 02,2025, Elapsed time: 0:02:14
+# Errors: 0, Warnings: 2
+pwd
+# C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/radiant_project/lab1_dw
+vsim -gui work.display_controller_tb -voptargs=+acc
+# vsim -gui work.display_controller_tb -voptargs="+acc" 
+# Start time: 17:34:14 on Sep 02,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading sv_std.std
+# Loading work.display_controller_tb(fast)
+# Loading work.display_controller(fast)
+run -all
+#         16 tests completed with          0 errors
+# ** Note: $stop    : C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/sim/display_controller_tb.sv(45)
+#    Time: 175 ns  Iteration: 1  Instance: /display_controller_tb
+# Break in Module display_controller_tb at C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/sim/display_controller_tb.sv line 45
+quit -sim
+# End time: 17:34:54 on Sep 02,2025, Elapsed time: 0:00:40
+# Errors: 0, Warnings: 0
+vsim -gui -voptargs=+acc work.led_controller_tb
+# vsim -gui -voptargs="+acc" work.led_controller_tb 
+# Start time: 17:35:04 on Sep 02,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.led_controller_tb(fast)
+# Loading work.led_controller(fast)
+add wave -position insertpoint  \
+{sim:/led_controller_tb/s[3]} \
+{sim:/led_controller_tb/s[2]} \
+{sim:/led_controller_tb/s[1]} \
+{sim:/led_controller_tb/s[0]}
+add wave -position insertpoint  \
+{sim:/led_controller_tb/led[2]} \
+{sim:/led_controller_tb/led[1]} \
+{sim:/led_controller_tb/led[0]}
+run -all
+# Break key hit
+# Simulation stop requested.
+# Break key hit
+quit -sim
+# End time: 17:36:58 on Sep 02,2025, Elapsed time: 0:01:54
+# Errors: 0, Warnings: 1
+vlog -reportprogress 300 -work work C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/sim/led_controller_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 17:37:11 on Sep 02,2025
+# vlog -reportprogress 300 -work work C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/sim/led_controller_tb.sv 
+# -- Compiling module led_controller_tb
+# 
+# Top level modules:
+# 	led_controller_tb
+# End time: 17:37:11 on Sep 02,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -gui -voptargs=+acc work.led_controller_tb
+# vsim -gui -voptargs="+acc" work.led_controller_tb 
+# Start time: 17:37:22 on Sep 02,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.led_controller_tb(fast)
+# Loading work.led_controller(fast)
+add wave -position insertpoint  \
+{sim:/led_controller_tb/s[3]} \
+{sim:/led_controller_tb/s[2]} \
+{sim:/led_controller_tb/s[1]} \
+{sim:/led_controller_tb/s[0]}
+add wave -position insertpoint  \
+{sim:/led_controller_tb/s[3]} \
+{sim:/led_controller_tb/s[2]} \
+{sim:/led_controller_tb/s[1]} \
+{sim:/led_controller_tb/s[0]} \
+{sim:/led_controller_tb/led[2]} \
+{sim:/led_controller_tb/led[1]} \
+{sim:/led_controller_tb/led[0]}
+run -all
+#         16 tests completed with          0 errors
+# ** Note: $stop    : C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/sim/led_controller_tb.sv(46)
+#    Time: 175 ns  Iteration: 1  Instance: /led_controller_tb
+# Break in Module led_controller_tb at C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/sim/led_controller_tb.sv line 46
+# Causality operation skipped due to absence of debug database file

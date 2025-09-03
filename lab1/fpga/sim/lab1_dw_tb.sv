@@ -3,14 +3,16 @@
 // Date: 9/1/25
 // Module to test top-level lab 1 module
 module lab1_dw_tb();
+// Modelsim-ASE requires a timescale directive
+`timescale 1 ns / 1 ns
 	logic clk, reset;
 	logic [3:0] s;
-	logic [8:0] res, res_expected;
+	logic [9:0] res, res_expected;
 	logic [13:0] testvectors[10000:0];
 	logic [31:0] vectornum, errors;
 	
 	// Instantiate DUT
-	dut lab1_dw(.clk(clk), .reset(reset), .s(s),  .led(res[8:7]), .seg(res[6:0]));
+	lab1_dw dut(.clk(clk), .reset(reset), .s(s),  .led(res[9:7]), .seg(res[6:0]));
 
 	// generate clock
 	always

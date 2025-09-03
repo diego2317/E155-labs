@@ -2,7 +2,9 @@
 // Email: dweiss@g.hmc.edu
 // Date: 9/1/25
 // Module to test top-level lab 1 module
-module led_controller_tb();
+module display_controller_tb();
+// Modelsim-ASE requires a timescale directive
+`timescale 1 ns / 1 ns
 	logic clk, reset;
 	logic [3:0] s;
 	logic [6:0] seg, seg_expected;
@@ -10,7 +12,7 @@ module led_controller_tb();
 	logic [31:0] vectornum, errors;
 	
 	// Instantiate DUT
-	dut display_controller(.s(s), .seg(seg)); 
+	display_controller dut(.s(s), .seg(seg)); 
 
 	// generate clock
 	always

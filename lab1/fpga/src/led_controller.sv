@@ -20,6 +20,6 @@ module led_controller(
 	// Assign LEDs
 	assign led[0] = s[0] ^ s[1];
     assign led[1] = s[2] & s[3];
-	assign led[2] = counter[24];
+	assign led[2] = counter[31];
 
 endmodule
