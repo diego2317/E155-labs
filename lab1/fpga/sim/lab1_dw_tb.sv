@@ -7,12 +7,14 @@ module lab1_dw_tb();
 `timescale 1 ns / 1 ns
 	logic clk, reset;
 	logic [3:0] s;
+	logic [2:0] led;
+	logic [6:0] seg;
 	logic [9:0] res, res_expected;
 	logic [13:0] testvectors[10000:0];
 	logic [31:0] vectornum, errors;
 	
 	// Instantiate DUT
-	lab1_dw dut(.clk(clk), .reset(reset), .s(s),  .led(res[9:7]), .seg(res[6:0]));
+	lab1_dw dut(clk, reset, s,  led, res);
 
 	// generate clock
 	always
@@ -34,9 +36,9 @@ module lab1_dw_tb();
 	
 	always @(negedge clk)
 		if (~reset) begin // skip during reset
-			if (res != res_expected) begin // check result
+			if (led[1:0] != res_expected[8:7] && seg != res_expected[6:0]) begin // check result
 				$display("Error: input = %b", {s});
-				$display(" outputs = %b (%b expected)", res, res_expected);
+				$display(" outputs = %b, %b, (%b expected)", led[1:0], seg, res_expected);
 				errors = errors + 1;
 			end
 			vectornum = vectornum + 1;
