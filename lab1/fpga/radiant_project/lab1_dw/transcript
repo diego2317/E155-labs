@@ -1,0 +1,431 @@
+# Reading pref.tcl
+# //  Questa Lattice OEM Edition-64
+# //  Version 2024.2 win64 May 20 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+vsim -gui work.lab1_dw_tb iCE40UP.HSOSC -voptargs=+acc
+# vsim -gui work.lab1_dw_tb iCE40UP.HSOSC -voptargs="+acc" 
+# Start time: 11:23:30 on Sep 03,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.lab1_dw_tb(fast)
+# Loading work.lab1_dw(fast)
+# Loading iCE40UP.HSOSC(fast__1)
+# Loading work.led_controller(fast)
+# Loading work.display_controller(fast)
+# Loading iCE40UP.HSOSC(fast)
+add wave -position insertpoint  \
+{sim:/lab1_dw_tb/s[3]} \
+{sim:/lab1_dw_tb/s[2]} \
+{sim:/lab1_dw_tb/s[1]} \
+{sim:/lab1_dw_tb/s[0]}
+add wave -position insertpoint  \
+{sim:/lab1_dw_tb/dut/led[2]} \
+{sim:/lab1_dw_tb/dut/led[1]} \
+{sim:/lab1_dw_tb/dut/led[0]}
+add wave -position insertpoint  \
+{sim:/lab1_dw_tb/dut/seg[6]} \
+{sim:/lab1_dw_tb/dut/seg[5]} \
+{sim:/lab1_dw_tb/dut/seg[4]} \
+{sim:/lab1_dw_tb/dut/seg[3]} \
+{sim:/lab1_dw_tb/dut/seg[2]} \
+{sim:/lab1_dw_tb/dut/seg[1]} \
+{sim:/lab1_dw_tb/dut/seg[0]}
+run -all
+# Error: input = 0000
+#  outputs = 0001000000 (1011111001 expected)
+# Error: input = 0001
+#  outputs = 0011111001 (0010100100 expected)
+# Error: input = 0001
+#  outputs = 0011111001 (1000110000 expected)
+# Error: input = 0010
+#  outputs = 0010100100 (0000011001 expected)
+# Error: input = 0010
+#  outputs = 0010100100 (1010010010 expected)
+# Error: input = 0011
+#  outputs = 0000110000 (0010100010 expected)
+# Error: input = 0011
+#  outputs = 0000110000 (1001111000 expected)
+# Error: input = 0100
+#  outputs = 0000011001 (0000000000 expected)
+# Error: input = 0100
+#  outputs = 0000011001 (1010011000 expected)
+# Error: input = 0101
+#  outputs = 0010010010 (0010001000 expected)
+# Error: input = 0101
+#  outputs = 0010010010 (1000000011 expected)
+# Error: input = 0110
+#  outputs = 0010100010 (0101000110 expected)
+# Error: input = 0110
+#  outputs = 0010100010 (1110100001 expected)
+# Error: input = 0111
+#  outputs = 0001111000 (0110000110 expected)
+# Error: input = 0111
+#  outputs = 0001111000 (1100001110 expected)
+#         16 tests completed with         15 errors
+# ** Note: $stop    : C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/sim/lab1_dw_tb.sv(45)
+#    Time: 175 ns  Iteration: 1  Instance: /lab1_dw_tb
+# Break in Module lab1_dw_tb at C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/sim/lab1_dw_tb.sv line 45
+quit -sim
+# End time: 11:24:52 on Sep 03,2025, Elapsed time: 0:01:22
+# Errors: 0, Warnings: 1
+vlog -reportprogress 300 -work work C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/sim/lab1_dw_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 11:25:02 on Sep 03,2025
+# vlog -reportprogress 300 -work work C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/sim/lab1_dw_tb.sv 
+# -- Compiling module lab1_dw_tb
+# 
+# Top level modules:
+# 	lab1_dw_tb
+# End time: 11:25:02 on Sep 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -gui work.lab1_dw_tb iCE40UP.HSOSC -voptargs=+acc
+# vsim -gui work.lab1_dw_tb iCE40UP.HSOSC -voptargs="+acc" 
+# Start time: 11:25:23 on Sep 03,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.lab1_dw_tb(fast)
+# Loading work.lab1_dw(fast)
+# Loading iCE40UP.HSOSC(fast__1)
+# Loading work.led_controller(fast)
+# Loading work.display_controller(fast)
+# Loading iCE40UP.HSOSC(fast)
+add wave -position insertpoint  \
+{sim:/lab1_dw_tb/dut/s[3]} \
+{sim:/lab1_dw_tb/dut/s[2]} \
+{sim:/lab1_dw_tb/dut/s[1]} \
+{sim:/lab1_dw_tb/dut/s[0]} \
+{sim:/lab1_dw_tb/dut/led[2]} \
+{sim:/lab1_dw_tb/dut/led[1]} \
+{sim:/lab1_dw_tb/dut/led[0]} \
+{sim:/lab1_dw_tb/dut/seg[6]} \
+{sim:/lab1_dw_tb/dut/seg[5]} \
+{sim:/lab1_dw_tb/dut/seg[4]} \
+{sim:/lab1_dw_tb/dut/seg[3]} \
+{sim:/lab1_dw_tb/dut/seg[2]} \
+{sim:/lab1_dw_tb/dut/seg[1]} \
+{sim:/lab1_dw_tb/dut/seg[0]}
+run -all
+# Error: input = 0000
+#  outputs = 0001000000 (1011111001 expected)
+# Error: input = 0001
+#  outputs = 0011111001 (0010100100 expected)
+# Error: input = 0001
+#  outputs = 0011111001 (1000110000 expected)
+# Error: input = 0010
+#  outputs = 0010100100 (0000011001 expected)
+# Error: input = 0010
+#  outputs = 0010100100 (1010010010 expected)
+# Error: input = 0011
+#  outputs = 0000110000 (0010100010 expected)
+# Error: input = 0011
+#  outputs = 0000110000 (1001111000 expected)
+# Error: input = 0100
+#  outputs = 0000011001 (0000000000 expected)
+# Error: input = 0100
+#  outputs = 0000011001 (1010011000 expected)
+# Error: input = 0101
+#  outputs = 0010010010 (0010001000 expected)
+# Error: input = 0101
+#  outputs = 0010010010 (1000000011 expected)
+# Error: input = 0110
+#  outputs = 0010100010 (0101000110 expected)
+# Error: input = 0110
+#  outputs = 0010100010 (1110100001 expected)
+# Error: input = 0111
+#  outputs = 0001111000 (0110000110 expected)
+# Error: input = 0111
+#  outputs = 0001111000 (1100001110 expected)
+#         16 tests completed with         15 errors
+# ** Note: $stop    : C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/sim/lab1_dw_tb.sv(45)
+#    Time: 175 ns  Iteration: 1  Instance: /lab1_dw_tb
+# Break in Module lab1_dw_tb at C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/sim/lab1_dw_tb.sv line 45
+# Causality operation skipped due to absence of debug database file
+quit -sim
+# End time: 11:30:20 on Sep 03,2025, Elapsed time: 0:04:57
+# Errors: 0, Warnings: 1
+vlog -reportprogress 300 -work work C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/sim/lab1_dw_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 11:30:25 on Sep 03,2025
+# vlog -reportprogress 300 -work work C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/sim/lab1_dw_tb.sv 
+# -- Compiling module lab1_dw_tb
+# 
+# Top level modules:
+# 	lab1_dw_tb
+# End time: 11:30:25 on Sep 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -gui work.lab1_dw_tb iCE40UP.HSOSC -voptargs=+acc
+# vsim -gui work.lab1_dw_tb iCE40UP.HSOSC -voptargs="+acc" 
+# Start time: 11:30:35 on Sep 03,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.lab1_dw_tb(fast)
+# Loading work.lab1_dw(fast)
+# Loading iCE40UP.HSOSC(fast__1)
+# Loading work.led_controller(fast)
+# Loading work.display_controller(fast)
+# Loading iCE40UP.HSOSC(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (1) for port 'led'. The port definition is at: C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/src/lab1_dw.sv(10).
+#    Time: 0 ps  Iteration: 0  Instance: /lab1_dw_tb/dut File: C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/sim/lab1_dw_tb.sv Line: 15
+# ** Warning: (vsim-3015) [PCDPC] - Port size (7) does not match connection size (1) for port 'seg'. The port definition is at: C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/src/lab1_dw.sv(11).
+#    Time: 0 ps  Iteration: 0  Instance: /lab1_dw_tb/dut File: C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/sim/lab1_dw_tb.sv Line: 15
+quit -sim
+# End time: 11:31:39 on Sep 03,2025, Elapsed time: 0:01:04
+# Errors: 0, Warnings: 3
+vlog -reportprogress 300 -work work C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/sim/lab1_dw_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 11:31:44 on Sep 03,2025
+# vlog -reportprogress 300 -work work C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/sim/lab1_dw_tb.sv 
+# -- Compiling module lab1_dw_tb
+# 
+# Top level modules:
+# 	lab1_dw_tb
+# End time: 11:31:44 on Sep 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -gui work.lab1_dw_tb iCE40UP.HSOSC -voptargs=+acc
+# vsim -gui work.lab1_dw_tb iCE40UP.HSOSC -voptargs="+acc" 
+# Start time: 11:31:51 on Sep 03,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.lab1_dw_tb(fast)
+# Loading work.lab1_dw(fast)
+# Loading iCE40UP.HSOSC(fast__1)
+# Loading work.led_controller(fast)
+# Loading work.display_controller(fast)
+# Loading iCE40UP.HSOSC(fast)
+add wave -position insertpoint  \
+{sim:/lab1_dw_tb/dut/s[3]} \
+{sim:/lab1_dw_tb/dut/s[2]} \
+{sim:/lab1_dw_tb/dut/s[1]} \
+{sim:/lab1_dw_tb/dut/s[0]} \
+{sim:/lab1_dw_tb/dut/led[2]} \
+{sim:/lab1_dw_tb/dut/led[1]} \
+{sim:/lab1_dw_tb/dut/led[0]} \
+{sim:/lab1_dw_tb/dut/seg[6]} \
+{sim:/lab1_dw_tb/dut/seg[5]} \
+{sim:/lab1_dw_tb/dut/seg[4]} \
+{sim:/lab1_dw_tb/dut/seg[3]} \
+{sim:/lab1_dw_tb/dut/seg[2]} \
+{sim:/lab1_dw_tb/dut/seg[1]} \
+{sim:/lab1_dw_tb/dut/seg[0]}
+run -all
+# Error: input = 0000
+#  outputs = 001000000 (1011111001 expected)
+# Error: input = 0001
+#  outputs = 011111001 (0010100100 expected)
+# Error: input = 0001
+#  outputs = 011111001 (1000110000 expected)
+# Error: input = 0010
+#  outputs = 010100100 (0000011001 expected)
+# Error: input = 0010
+#  outputs = 010100100 (1010010010 expected)
+# Error: input = 0011
+#  outputs = 000110000 (0010100010 expected)
+# Error: input = 0011
+#  outputs = 000110000 (1001111000 expected)
+# Error: input = 0100
+#  outputs = 000011001 (0000000000 expected)
+# Error: input = 0100
+#  outputs = 000011001 (1010011000 expected)
+# Error: input = 0101
+#  outputs = 010010010 (0010001000 expected)
+# Error: input = 0101
+#  outputs = 010010010 (1000000011 expected)
+# Error: input = 0110
+#  outputs = 010100010 (0101000110 expected)
+# Error: input = 0110
+#  outputs = 010100010 (1110100001 expected)
+# Error: input = 0111
+#  outputs = 001111000 (0110000110 expected)
+# Error: input = 0111
+#  outputs = 001111000 (1100001110 expected)
+#         16 tests completed with         15 errors
+# ** Note: $stop    : C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/sim/lab1_dw_tb.sv(45)
+#    Time: 175 ns  Iteration: 1  Instance: /lab1_dw_tb
+# Break in Module lab1_dw_tb at C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/sim/lab1_dw_tb.sv line 45
+add wave -position insertpoint  \
+sim:/lab1_dw_tb/dut/clk
+run -all
+#         17 tests completed with         15 errors
+# ** Note: $stop    : C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/sim/lab1_dw_tb.sv(45)
+#    Time: 185 ns  Iteration: 1  Instance: /lab1_dw_tb
+# Break in Module lab1_dw_tb at C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/sim/lab1_dw_tb.sv line 45
+quit -sim
+# End time: 11:34:36 on Sep 03,2025, Elapsed time: 0:02:45
+# Errors: 0, Warnings: 1
+vsim -gui work.lab1_dw_tb iCE40UP.HSOSC -voptargs=+acc
+# vsim -gui work.lab1_dw_tb iCE40UP.HSOSC -voptargs="+acc" 
+# Start time: 11:34:52 on Sep 03,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading sv_std.std
+# Loading work.lab1_dw_tb(fast)
+# Loading work.lab1_dw(fast)
+# Loading iCE40UP.HSOSC(fast__1)
+# Loading work.led_controller(fast)
+# Loading work.display_controller(fast)
+# Loading iCE40UP.HSOSC(fast)
+add wave -position insertpoint  \
+{sim:/lab1_dw_tb/dut/s[3]} \
+{sim:/lab1_dw_tb/dut/s[2]} \
+{sim:/lab1_dw_tb/dut/s[1]} \
+{sim:/lab1_dw_tb/dut/s[0]} \
+{sim:/lab1_dw_tb/dut/led[2]} \
+{sim:/lab1_dw_tb/dut/led[1]} \
+{sim:/lab1_dw_tb/dut/led[0]} \
+{sim:/lab1_dw_tb/dut/seg[6]} \
+{sim:/lab1_dw_tb/dut/seg[5]} \
+{sim:/lab1_dw_tb/dut/seg[4]} \
+{sim:/lab1_dw_tb/dut/seg[3]} \
+{sim:/lab1_dw_tb/dut/seg[2]} \
+{sim:/lab1_dw_tb/dut/seg[1]} \
+{sim:/lab1_dw_tb/dut/seg[0]}
+add wave -position insertpoint  \
+sim:/lab1_dw_tb/dut/clk
+run -all
+# Error: input = 0000
+#  outputs = 001000000 (1011111001 expected)
+# Error: input = 0001
+#  outputs = 011111001 (0010100100 expected)
+# Error: input = 0001
+#  outputs = 011111001 (1000110000 expected)
+# Error: input = 0010
+#  outputs = 010100100 (0000011001 expected)
+# Error: input = 0010
+#  outputs = 010100100 (1010010010 expected)
+# Error: input = 0011
+#  outputs = 000110000 (0010100010 expected)
+# Error: input = 0011
+#  outputs = 000110000 (1001111000 expected)
+# Error: input = 0100
+#  outputs = 000011001 (0000000000 expected)
+# Error: input = 0100
+#  outputs = 000011001 (1010011000 expected)
+# Error: input = 0101
+#  outputs = 010010010 (0010001000 expected)
+# Error: input = 0101
+#  outputs = 010010010 (1000000011 expected)
+# Error: input = 0110
+#  outputs = 010100010 (0101000110 expected)
+# Error: input = 0110
+#  outputs = 010100010 (1110100001 expected)
+# Error: input = 0111
+#  outputs = 001111000 (0110000110 expected)
+# Error: input = 0111
+#  outputs = 001111000 (1100001110 expected)
+#         16 tests completed with         15 errors
+# ** Note: $stop    : C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/sim/lab1_dw_tb.sv(45)
+#    Time: 175 ns  Iteration: 1  Instance: /lab1_dw_tb
+# Break in Module lab1_dw_tb at C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/sim/lab1_dw_tb.sv line 45
+run -all
+#         17 tests completed with         15 errors
+# ** Note: $stop    : C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/sim/lab1_dw_tb.sv(45)
+#    Time: 185 ns  Iteration: 1  Instance: /lab1_dw_tb
+# Break in Module lab1_dw_tb at C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/sim/lab1_dw_tb.sv line 45
+restart -f
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.lab1_dw_tb(fast)
+# Loading work.lab1_dw(fast)
+# Loading iCE40UP.HSOSC(fast__1)
+# Loading work.led_controller(fast)
+# Loading work.display_controller(fast)
+# Loading iCE40UP.HSOSC(fast)
+add wave -position insertpoint  \
+{sim:/lab1_dw_tb/dut/s[3]} \
+{sim:/lab1_dw_tb/dut/s[2]} \
+{sim:/lab1_dw_tb/dut/s[1]} \
+{sim:/lab1_dw_tb/dut/s[0]} \
+{sim:/lab1_dw_tb/dut/led[2]} \
+{sim:/lab1_dw_tb/dut/led[1]} \
+{sim:/lab1_dw_tb/dut/led[0]} \
+{sim:/lab1_dw_tb/dut/seg[6]} \
+{sim:/lab1_dw_tb/dut/seg[5]} \
+{sim:/lab1_dw_tb/dut/seg[4]} \
+{sim:/lab1_dw_tb/dut/seg[3]} \
+{sim:/lab1_dw_tb/dut/seg[2]} \
+{sim:/lab1_dw_tb/dut/seg[1]} \
+{sim:/lab1_dw_tb/dut/seg[0]}
+add wave -position insertpoint  \
+sim:/lab1_dw_tb/dut/clk
+run -all
+# Error: input = 0000
+#  outputs = 001000000 (1011111001 expected)
+# Error: input = 0001
+#  outputs = 011111001 (0010100100 expected)
+# Error: input = 0001
+#  outputs = 011111001 (1000110000 expected)
+# Error: input = 0010
+#  outputs = 010100100 (0000011001 expected)
+# Error: input = 0010
+#  outputs = 010100100 (1010010010 expected)
+# Error: input = 0011
+#  outputs = 000110000 (0010100010 expected)
+# Error: input = 0011
+#  outputs = 000110000 (1001111000 expected)
+# Error: input = 0100
+#  outputs = 000011001 (0000000000 expected)
+# Error: input = 0100
+#  outputs = 000011001 (1010011000 expected)
+# Error: input = 0101
+#  outputs = 010010010 (0010001000 expected)
+# Error: input = 0101
+#  outputs = 010010010 (1000000011 expected)
+# Error: input = 0110
+#  outputs = 010100010 (0101000110 expected)
+# Error: input = 0110
+#  outputs = 010100010 (1110100001 expected)
+# Error: input = 0111
+#  outputs = 001111000 (0110000110 expected)
+# Error: input = 0111
+#  outputs = 001111000 (1100001110 expected)
+#         16 tests completed with         15 errors
+# ** Note: $stop    : C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/sim/lab1_dw_tb.sv(45)
+#    Time: 175 ns  Iteration: 1  Instance: /lab1_dw_tb
+# Break in Module lab1_dw_tb at C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/sim/lab1_dw_tb.sv line 45
+vlog -reportprogress 300 -work work C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/sim/lab1_dw_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 11:41:57 on Sep 03,2025
+# vlog -reportprogress 300 -work work C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/sim/lab1_dw_tb.sv 
+# -- Compiling module lab1_dw_tb
+# 
+# Top level modules:
+# 	lab1_dw_tb
+# End time: 11:41:57 on Sep 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.lab1_dw_tb(fast)
+# Loading work.lab1_dw(fast)
+# Loading iCE40UP.HSOSC(fast__1)
+# Loading work.led_controller(fast)
+# Loading work.display_controller(fast)
+# Loading iCE40UP.HSOSC(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (7) does not match connection size (10) for port 'seg'. The port definition is at: C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/src/lab1_dw.sv(11).
+#    Time: 0 ps  Iteration: 0  Instance: /lab1_dw_tb/dut File: C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/sim/lab1_dw_tb.sv Line: 17
+run -all
+#         16 tests completed with          0 errors
+# ** Note: $stop    : C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/sim/lab1_dw_tb.sv(47)
+#    Time: 175 ns  Iteration: 1  Instance: /lab1_dw_tb
+# Break in Module lab1_dw_tb at C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/sim/lab1_dw_tb.sv line 47
+# End time: 11:47:21 on Sep 03,2025, Elapsed time: 0:12:29
+# Errors: 0, Warnings: 2

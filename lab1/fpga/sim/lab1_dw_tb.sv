@@ -1,0 +1,50 @@
+// Author: Diego Weiss
+// Email: dweiss@g.hmc.edu
+// Date: 9/1/25
+// Module to test top-level lab 1 module
+module lab1_dw_tb();
+// Modelsim-ASE requires a timescale directive
+`timescale 1 ns / 1 ns
+	logic clk, reset;
+	logic [3:0] s;
+	logic [2:0] led;
+	logic [6:0] seg;
+	logic [9:0] res, res_expected;
+	logic [13:0] testvectors[10000:0];
+	logic [31:0] vectornum, errors;
+	
+	// Instantiate DUT
+	lab1_dw dut(clk, reset, s,  led, res);
+
+	// generate clock
+	always
+	begin
+		clk=1; #5; clk=0; #5;
+	end
+	
+	initial 
+		begin
+			$readmemb("lab1_dw_tv.txt", testvectors);
+			vectornum = 0; errors = 0;
+			reset = 1; #22; reset = 0;
+		end
+		
+	always @(posedge clk)
+		begin
+			#1; {s, res_expected} = testvectors[vectornum];
+		end
+	
+	always @(negedge clk)
+		if (~reset) begin // skip during reset
+			if (led[1:0] != res_expected[8:7] && seg != res_expected[6:0]) begin // check result
+				$display("Error: input = %b", {s});
+				$display(" outputs = %b, %b, (%b expected)", led[1:0], seg, res_expected);
+				errors = errors + 1;
+			end
+			vectornum = vectornum + 1;
+			if (testvectors[vectornum] === 14'bx) begin
+				$display("%d tests completed with %d errors", vectornum, errors);
+				$stop;
+			end
+		end
+endmodule

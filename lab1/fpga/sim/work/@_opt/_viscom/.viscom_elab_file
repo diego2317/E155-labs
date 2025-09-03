@@ -1,0 +1,1 @@
+C:/lscc/radiant/2024.2/questasim/win64/VisualizerRls/bin/viscom.exe -nolock -quiet -jmem_size 393216 work.led_controller_tb iCE40UP.HSOSC -quiet -auto_acc_if_foreign -work work +acc -allow_unnamed -o _opt -id 1-00be43eaec35-68b785ba-85-454c +__design_bin_path+C:/Users/dweiss/Documents/GitHub/E155/lab1/fpga/sim +__betafsm
