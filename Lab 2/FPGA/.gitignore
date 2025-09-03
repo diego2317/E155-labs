@@ -14,3 +14,4 @@ impl_1/
 *.srp
 *.dmp
 ._Real_._Math_.vhd
+*.bak
