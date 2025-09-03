@@ -18,12 +18,13 @@
 				<BScanVal>0</BScanVal>
 			</Bypass>
 			<File>../../impl_1/lab1_dw_impl_1.bin</File>
-			<FileTime>09/02/25 16:11:51</FileTime>
-			<JedecChecksum>0x069D</JedecChecksum>
+			<FileTime>09/03/25 12:14:34</FileTime>
+			<JedecChecksum>0x03A9</JedecChecksum>
 			<MemoryType>External SPI Flash Memory (SPI FLASH)</MemoryType>
 			<Operation>Erase,Program,Verify</Operation>
 			<Option>
 				<SVFVendor>JTAG STANDARD</SVFVendor>
+				<SVFProcessor>SVF Processor</SVFProcessor>
 				<AccessMode>Direct Programming</AccessMode>
 			</Option>
 			<FPGALoader>
@@ -48,6 +49,7 @@
 						<SVFVendor>JTAG STANDARD</SVFVendor>
 						<IOState>HighZ</IOState>
 						<IOVectorData>P</IOVectorData>
+						<SVFProcessor>SVF Processor</SVFProcessor>
 						<AccessMode>Direct Programming</AccessMode>
 					</Option>
 				</Device>
@@ -82,6 +84,7 @@
 					</LocalChainList>
 					<Option>
 						<SVFVendor>JTAG STANDARD</SVFVendor>
+						<SVFProcessor>SVF Processor</SVFProcessor>
 					</Option>
 				</Device>
 			</FPGADevice>
@@ -101,5 +104,6 @@
 	<CableOptions>
 		<CableName>USB2</CableName>
 		<PortAdd>FTUSB-0</PortAdd>
+		<USBID>UPduino v3.0 Location 0014 Serial </USBID>
 	</CableOptions>
 </ispXCF>
