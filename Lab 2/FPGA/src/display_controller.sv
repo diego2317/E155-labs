@@ -3,10 +3,12 @@
 // Date: 8.29.2025
 // This module controls a 7 segment display based on input switches
 module display_controller(
+	input  logic       clk,
 	input  logic [3:0] s,
 	output logic [6:0] seg
 	);
 	
+	// Case statement for determining output segments
 	always_comb begin
 		case (s)
 			4'h0: seg = 7'b1000000;
