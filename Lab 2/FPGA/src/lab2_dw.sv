@@ -16,7 +16,7 @@ module lab2_dw(
 	logic       int_osc;
 
 	
-	// Initialize display logic modules
+	// Initialize display logic module
 	display_controller left(s_1, seg_left);
 	display_controller right(s_2, seg_right);
 	
