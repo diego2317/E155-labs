@@ -1,36 +1,44 @@
 // Author: Diego Weiss
 // Email: dweiss@g.hmc.edu
-// Date: 8.29.2025
+// Date: 9.4.2025
 // This module controls a 7 segment display based on input switches
 module display_controller(
-	input  logic       clk,
-	input  logic [3:0] s,
-	output logic [6:0] seg
+	input  logic 	   clk,
+	input  logic 	   reset,
+	input  logic [7:0] s,
+	output logic       toggle,
+	output logic [3:0] s_out
 	);
 	
-	// Case statement for determining output segments
+	//logic [6:0] seg_left, seg_right; // internal signals for left and right displays
+	logic curr, next; // Used for tracking current and next states
+	logic [31:0] counter;
+	
+	// Register for state
+	always_ff @(posedge clk) begin
+		if (reset == 0) begin
+			curr <= 0;
+			counter <= 0;
+		end else begin
+			curr <= next;
+			counter <= counter + 178957;
+		end
+	end
+	
+	// Next state logic
 	always_comb begin
-		case (s)
-			4'h0: seg = 7'b1000000;
-			4'h1: seg = 7'b1111001;
-			4'h2: seg = 7'b0100100;
-			4'h3: seg = 7'b0110000;
-			4'h4: seg = 7'b0011001;
-			4'h5: seg = 7'b0010010;
-			4'h6: seg = 7'b0000010;
-			4'h7: seg = 7'b1111000;
-			4'h8: seg = 7'b0000000;
-			4'h9: seg = 7'b0011000;
-			4'hA: seg = 7'b0001000;
-			4'hB: seg = 7'b0000011;
-			4'hC: seg = 7'b1000110;
-			4'hD: seg = 7'b0100001;
-			4'hE: seg = 7'b0000110;
-			4'hF: seg = 7'b0001110;
-			
-			default: seg = 7'b1111111;
+		case (curr)
+			1'b0: next = (counter[31] == 1'b1) ? 1'b1 : 1'b0;
+			1'b1: next = (counter[31] == 1'b1) ? 1'b0 : 1'b1;
+			default: next = 1'b0;
 		endcase
 	end
+	
+	// Output logic
+	// State 0 -> first digit
+	// State 1 -> second digit
+	assign toggle = curr;
+	assign s_out = (curr ? s[3:0] : s[7:4]);
 
 	
 endmodule
