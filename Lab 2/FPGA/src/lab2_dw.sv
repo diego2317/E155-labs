@@ -5,7 +5,7 @@
 module lab2_dw(
 	input  logic reset,
 	input  logic [7:0] s,
-	output logic [1:0] transistor_mode,
+	output logic [1:0] t,
 	output logic [4:0] led,
 	output logic [6:0] seg_out);
 				
@@ -31,8 +31,8 @@ module lab2_dw(
 	//led_controller LED_CONTROL(.reset(reset), .s(s), .led(led));
 	
 	// Assign final signals
-	assign transistor_mode[0] = toggle;
-	assign transistor_mode[1] = ~toggle;
+	assign t[0] = toggle;
+	assign t[1] = ~toggle;
 	
 	
 endmodule
