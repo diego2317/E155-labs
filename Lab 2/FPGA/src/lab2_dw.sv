@@ -27,8 +27,8 @@ module lab2_dw(
 		.s_out(current_s)
 	);
 	
-	//display_logic DISPLAY(.s(current_s), .seg(seg_out));
-	//led_controller LED_CONTROL(.reset(reset), .s(s), .led(led));
+	display_logic DISPLAY(.reset(reset), .s(current_s), .seg(seg_out));
+	led_controller LED_CONTROL(.s(s), .led(led));
 	
 	// Assign final signals
 	assign t[0] = toggle;
