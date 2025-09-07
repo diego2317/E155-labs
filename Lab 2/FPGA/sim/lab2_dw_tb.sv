@@ -4,20 +4,18 @@
 // Module to test top level module for E155 Lab 2 at Harvey Mudd
 module lab2_dw_tb();
 // Modelsim-ASE requires a timescale directive
-`timescale 1 ms / 1 ns
+`timescale 1ps / 1ps
 	logic clk, reset;
-	logic [3:0] s_1, s_2;
-    logic       toggle_left;
-    logic       toggle_right;
-	logic [6:0] seg;
-    logic [8:0] res_expected;
+	logic [7:0] s;
+    logic [1:0] t;
+	logic [4:0] led;
+    logic [6:0] seg;
 	logic [13:0] testvectors[10000:0];
 	logic [31:0] vectornum, errors;
 	
 
-    parameter CLOCK_PERIOD = 1; // 1 ms clock
 	// Instantiate DUT
-	lab2_dw dut(clk, reset, s_1, s_2, toggle_left, toggle_right, seg); 
+	lab2_dw dut(reset, s, t, led, seg); 
 
 	// generate clock with a period of 5 timesteps
 	always begin
@@ -27,14 +25,13 @@ module lab2_dw_tb();
 	
 	// apply test vectors
 	initial begin
-		reset = 1; #27; reset = 0; #500;
-		 s0=4'b0000; s1=4'b0000; #1000000;
-    	s0=4'b0001; s1=4'b0000; #1000000;
-    	s0=4'b0000; s1=4'b0001; #1000000;
-    	s0=4'b0001; s1=4'b0001; #1000000;
-    	s0=4'b1111; s1=4'b0000; #1000000;
-    	s0=4'b0000; s1=4'b1111; #1000000;
-    	s0=4'b1111; s1=4'b1111; #1000000;
-		s0=4'b0100; s1=4'b0010; #1000000;
+		s[3:0]=4'b0000; s[7:4]=4'b0000; #20;
+    	s[3:0]=4'b0001; s[7:4]=4'b0000; #20;
+    	s[3:0]=4'b0000; s[7:4]=4'b0001; #20;
+    	s[3:0]=4'b0001; s[7:4]=4'b0001; #20;
+    	s[3:0]=4'b1111; s[7:4]=4'b0000; #20;
+    	s[3:0]=4'b0000; s[7:4]=4'b1111; #20;
+    	s[3:0]=4'b1111; s[7:4]=4'b1111; #20;
+		s[3:0]=4'b0100; s[7:4]=4'b0010; #20;
 	end
 endmodule
