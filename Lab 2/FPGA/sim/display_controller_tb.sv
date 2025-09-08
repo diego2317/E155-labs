@@ -6,9 +6,10 @@ module display_controller_tb();
 // Modelsim-ASE requires a timescale directive
 `timescale 1 ns / 1 ns
 	logic clk, reset;
-	logic [3:0] s;
+	logic [7:0] s;
 	logic [6:0] seg, seg_expected;
-	logic [13:0] testvectors[10000:0];
+	logic toggle, toggle_expected;
+	logic [15:0] testvectors[10000:0];
 	logic [31:0] vectornum, errors;
 	
 	// Instantiate DUT
@@ -29,14 +30,15 @@ module display_controller_tb();
 		
 	always @(posedge clk)
 		begin
-			#1; {s, seg_expected} = testvectors[vectornum];
+			#1; {s, toggle_expected, seg_expected} = testvectors[vectornum];
 		end
 	
 	always @(negedge clk)
 		if (~reset) begin // skip during reset
-			if (seg != seg_expected) begin // check result
+			if (seg != seg_expected || toggle != toggle_expected) begin // check result
 				$display("Error: input = %b", {s});
 				$display(" outputs = %b (%b expected)", seg, seg_expected);
+				$display(" outputs = %b (%b expected)", toggle, toggle_expected);
 				errors = errors + 1;
 			end
 			vectornum = vectornum + 1;
