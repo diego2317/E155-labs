@@ -5,40 +5,31 @@
 module display_controller(
 	input  logic 	   clk,
 	input  logic 	   reset,
-	input  logic [7:0] s,
-	output logic       toggle,
-	output logic [3:0] s_out
+	input  logic [3:0] s1, s2,
+	output logic       t1, t2,
+	output logic [4:0] led,
+	output logic [6:0] seg
 	);
 	
-	//logic [6:0] seg_left, seg_right; // internal signals for left and right displays
-	logic curr, next; // Used for tracking current and next states
-	logic [31:0] counter;
+	logic toggle = 0;
+	logic [24:0] counter = 0;
+	logic [3:0] sw = s1;
 	
 	// Register for state
 	always_ff @(posedge clk) begin
-		if (reset == 0) begin
-			curr <= 0;
+		counter <= counter + 1;
+		if (counter == 102416) begin
 			counter <= 0;
-		end else begin
-			curr <= next;
-			counter <= counter + 178957;
+			toggle <= ~toggle;
+			if (toggle == 0) sw = s1;
+			else sw = s2;
 		end
 	end
 	
-	// Next state logic
-	always_comb begin
-		case (curr)
-			1'b0: next = (counter[31] == 1'b1) ? 1'b1 : 1'b0;
-			1'b1: next = (counter[31] == 1'b1) ? 1'b0 : 1'b1;
-			default: next = 1'b0;
-		endcase
-	end
-	
-	// Output logic
-	// State 0 -> first digit
-	// State 1 -> second digit
-	assign toggle = curr;
-	assign s_out = (curr ? s[3:0] : s[7:4]);
+	assign t1 = toggle;
+	assign t2 = ~toggle;
+	display_logic DISPLAY(.reset(reset), .s(sw), .seg(seg));
+	led_controller LED_CONTROL(.s1(s1), .s2(s2), .led(led));
 
 	
 endmodule

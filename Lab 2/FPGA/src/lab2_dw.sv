@@ -4,35 +4,24 @@
 // This module implements the logic for lab 2 of E155 at Harvey Mudd College
 module lab2_dw(
 	input  logic reset,
-	input  logic [7:0] s,
-	output logic [1:0] t,
+	input  logic [3:0] s1, s2,
+	output logic       t1, t2,
 	output logic [4:0] led,
-	output logic [6:0] seg_out);
+	output logic [6:0] seg);
 				
-				
-	logic toggle;
-	logic [3:0] current_s; // Keeps track of the current switch
-	
 	logic int_osc;
-	// Initialize high-speed oscillator to 24 MHz
 	HSOSC #(.CLKHF_DIV(2'b01)) 
 					hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(int_osc));
-					
-	// Output logic, initialize modules
 	display_controller DISPLAY_CONTROL(
-		.clk(int_osc), 
-		.reset(reset),
-		.s(s),
-		.toggle(toggle),
-		.s_out(current_s)
-	);
-	
-	//display_logic DISPLAY(.s(current_s), .seg(seg_out));
-	//led_controller LED_CONTROL(.reset(reset), .s(s), .led(led));
-	
-	// Assign final signals
-	assign t[0] = toggle;
-	assign t[1] = ~toggle;
+		int_osc,
+		reset,
+		s1,
+		s2,
+		t1,
+		t2,
+		led,
+		seg
+	);			
 	
 	
 endmodule

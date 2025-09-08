@@ -6,13 +6,13 @@ module led_controller_tb();
 // Modelsim-ASE requires a timescale directive
 `timescale 1 ns / 1 ns
 	logic clk, reset;
-	logic [7:0] s;
+	logic [3:0] s1, s2;
 	logic [4:0] led, led_expected;
 	logic [13:0] testvectors[10000:0];
 	logic [31:0] vectornum, errors;
 	
 	// Instantiate DUT
-	display_controller dut(.s(s), .led(led)); 
+	display_controller dut(.s1(s1), .s2(s2), .led(led)); 
 
 	// generate clock
 	always
@@ -29,7 +29,7 @@ module led_controller_tb();
 		
 	always @(posedge clk)
 		begin
-			#1; {s, led_expected} = testvectors[vectornum];
+			#1; {s1, s2, led_expected} = testvectors[vectornum];
 		end
 	
 	always @(negedge clk)
