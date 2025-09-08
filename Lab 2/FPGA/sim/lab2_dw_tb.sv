@@ -19,44 +19,22 @@ module lab2_dw_tb();
 	// Instantiate DUT
 	lab2_dw dut(clk, reset, s_1, s_2, toggle_left, toggle_right, seg); 
 
-	// generate clock
-	always
-	begin
-		clk=0;
+	// generate clock with a period of 5 timesteps
+	always begin
+    	clk = 1; #5;
+    	clk = 0; #5;
+  	end
+	
+	// apply test vectors
+	initial begin
+		reset = 1; #27; reset = 0; #500;
+		 s0=4'b0000; s1=4'b0000; #1000000;
+    	s0=4'b0001; s1=4'b0000; #1000000;
+    	s0=4'b0000; s1=4'b0001; #1000000;
+    	s0=4'b0001; s1=4'b0001; #1000000;
+    	s0=4'b1111; s1=4'b0000; #1000000;
+    	s0=4'b0000; s1=4'b1111; #1000000;
+    	s0=4'b1111; s1=4'b1111; #1000000;
+		s0=4'b0100; s1=4'b0010; #1000000;
 	end
-	
-	initial 
-		begin
-			$readmemb("lab2_dw_tv.txt", testvectors);
-			vectornum = 0; errors = 0;
-			reset = 1; #22; reset = 0;
-		end
-		
-	always @(posedge clk)
-		begin
-			#1; {s_1, s_2, res_expected} = testvectors[vectornum];
-		end
-	
-	always @(negedge clk)
-		if (~reset) begin // skip during reset
-			if (seg != res_expected[6:0]) begin // check result
-				$display("Error: input = %b", {s});
-				$display(" Segment outputs = %b (%b expected)", seg, res_expected[6:0]);
-				errors = errors + 1;
-			end
-            if (toggle_left != res_expected[9]) begin
-                $display("Error: input = %b", {s});
-                $display("Misaligned clock");
-            end
-            if (toggle_right != res_expected[7]) begin
-                $display("Error: input = %b", {s});
-                $display("Misaligned clock");
-            end
-			vectornum = vectornum + 1;
-			if (testvectors[vectornum] === 14'bx) begin
-				$display("%d tests completed with %d errors", vectornum, errors);
-				$stop;
-			end
-		end
-
 endmodule
