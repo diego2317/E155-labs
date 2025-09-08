@@ -12,7 +12,7 @@ module display_controller_tb();
 	logic [31:0] vectornum, errors;
 	
 	// Instantiate DUT
-	display_controller dut(.s(s), .seg(seg)); 
+	display_controller dut(reset, s, seg); 
 
 	// generate clock
 	always
