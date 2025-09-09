@@ -15,6 +15,7 @@ module display_controller(
 	logic [24:0] counter = 0;
 	logic [3:0] sw = s1;
 	
+	// Register for state
 	always_ff @(posedge clk) begin
 		counter <= counter + 1;
 		if (counter == 102416) begin
