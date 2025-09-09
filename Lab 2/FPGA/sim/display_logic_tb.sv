@@ -2,7 +2,7 @@
 // Email: dweiss@g.hmc.edu
 // Date: 9/1/25
 // Module to test 7 segment display controller
-module display_controller_tb();
+module display_logic_tb();
 // Modelsim-ASE requires a timescale directive
 `timescale 1 ns / 1 ns
 	logic clk, reset;

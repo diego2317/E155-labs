@@ -5,34 +5,6 @@ Z0 !s12c _opt
 Z1 !s99 nomlopt
 R0
 R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-Z2 !s12c _opt2
-R1
-R2
-R1
-R2
-R1
-R2
-R1
-R2
-R1
-Z3 !s12c _opt1
-R1
-R3
-R1
-R3
-R1
-R3
-R1
-R0
-R1
 !s11f vlog 2024.2 2024.05, May 20 2024
 13
 !s112 1.1
@@ -40,209 +12,218 @@ R1
 !i10e 25
 !i10f 100
 cModel Technology
-Z4 dC:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/radiant_project/lab2_dw
+Z2 dC:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/radiant_project/lab2_dw
 T_opt
-!s110 1757293447
-Vi1GR9haj4R5=V_e`56oD[0
+!s110 1757369437
+V[2fmg@eSNaf;A^QGA7hd23
 04 21 4 work display_controller_tb fast 0
-=1-00be43eaec35-68be2b87-21-a6c
+=1-00be43eaec35-68bf545d-1be-3194
 R1
 !s12f OEM25U4 
-Z5 !s12b OEM100
-Z6 !s124 OEM100
-Z7 !s135 nogc
-Z8 o-quiet -auto_acc_if_foreign -work work +acc
-Z9 tCvgOpt 0
+!s12b OEM100
+!s124 OEM100
+!s135 nogc
+o-quiet -auto_acc_if_foreign -work work +acc
+Z3 tCvgOpt 0
 n@_opt
-Z10 OL;O;2024.2;79
-T_opt1
-!s110 1757282069
-V8=44aPL:Qe9g7fB^BehOM3
-04 10 4 work lab2_dw_tb fast 0
-07 5 4 iCE40UP HSOSC fast 0
-=4-00be43e570c5-68bdff15-e7-4bfc
-R1
-!s12f OEM25U3 
-R5
-R6
-R7
-R8
-R9
-n@_opt1
-R10
-R4
+OL;O;2024.2;79
 vdisplay_controller
 2C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/src/display_controller.sv
-Z11 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-!s110 1757293430
+Z4 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+!s110 1757369241
 !i10b 1
 !s100 c?I`4adog4:D_e=KBWhW13
 I?RHcd9Y2RVN1H9O9[BiJW3
 S1
-R4
-w1757293406
+R2
+w1757369224
 8C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/src/display_controller.sv
 FC:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/src/display_controller.sv
-!i122 91
+!i122 0
 L0 5 31
-Z12 VDg1SIo80bB@j0V0VzS_@n1
-Z13 OL;L;2024.2;79
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 OL;L;2024.2;79
 r1
 !s85 0
 31
-!s108 1757293430.000000
+Z7 !s108 1757369241.000000
 !s107 C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/src/display_controller.sv|
 !s90 -reportprogress|300|-work|work|C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/src/display_controller.sv|
 !i113 0
-Z14 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R9
+Z8 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
 vdisplay_controller_tb
 2C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/sim/display_controller_tb.sv
-R11
-!s110 1757293253
+R4
+!s110 1757369425
 !i10b 1
 !s100 IA7SkO7k@iRTf>S82aoSF1
 IGBoS>BIhfK=HGja_61_l23
 S1
-R4
+R2
 w1757293241
 8C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/sim/display_controller_tb.sv
 FC:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/sim/display_controller_tb.sv
-!i122 90
+!i122 9
 L0 5 36
-R12
-R13
+R5
+R6
 r1
 !s85 0
 31
-!s108 1757293253.000000
+!s108 1757369424.000000
 !s107 C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/sim/display_controller_tb.sv|
 !s90 -reportprogress|300|-work|work|C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/sim/display_controller_tb.sv|
 !i113 0
-R14
-R9
+R8
+R3
 vdisplay_logic
 2C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/src/display_logic.sv
-R11
-Z15 !s110 1757292522
+R4
+Z9 !s110 1757369242
 !i10b 1
 !s100 3zzaMmP]:NIGRj>Z1[18[1
 IG2zTCKXoI^QleW:@OTaMN0
 S1
-R4
+R2
 w1757288707
 8C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/src/display_logic.sv
 FC:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/src/display_logic.sv
-!i122 77
+!i122 1
 L0 5 32
-R12
-R13
+R5
+R6
 r1
 !s85 0
 31
-Z16 !s108 1757292522.000000
+R7
 !s107 C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/src/display_logic.sv|
 !s90 -reportprogress|300|-work|work|C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/src/display_logic.sv|
 !i113 0
-R14
-R9
+R8
+R3
+vdisplay_logic_tb
+2C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/sim/display_logic_tb.sv
+R4
+!s110 1757369420
+!i10b 1
+!s100 hHlAIIK5]KYniFFOZBCgi0
+IXX?N8dKBUYoLX3S;PLQBP2
+S1
+R2
+w1757369405
+8C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/sim/display_logic_tb.sv
+FC:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/sim/display_logic_tb.sv
+!i122 8
+Z10 L0 5 45
+R5
+R6
+r1
+!s85 0
+31
+!s108 1757369420.000000
+!s107 C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/sim/display_logic_tb.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/sim/display_logic_tb.sv|
+!i113 0
+R8
+R3
 vlab2_dw
 2C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/src/lab2_dw.sv
-R11
-R15
+R4
+R9
 !i10b 1
 !s100 g230eEDmRok;nAjI8RkK20
 I:4gGQCc:15G_@AJ^?HkdG1
 S1
-R4
+R2
 w1757292410
 8C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/src/lab2_dw.sv
 FC:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/src/lab2_dw.sv
-!i122 78
+!i122 2
 L0 5 23
-R12
-R13
+R5
+R6
 r1
 !s85 0
 31
-R16
+Z11 !s108 1757369242.000000
 !s107 C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/src/lab2_dw.sv|
 !s90 -reportprogress|300|-work|work|C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/src/lab2_dw.sv|
 !i113 0
-R14
-R9
+R8
+R3
 vlab2_dw_tb
 2C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/sim/lab2_dw_tb.sv
-R11
-!s110 1757293038
+R4
+Z12 !s110 1757369248
 !i10b 1
 !s100 j4SmBV>agT]Cj010:3M2>0
 IB>JiWjkQGA8N5>ZFMDY``1
 S1
-R4
+R2
 w1757293006
 8C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/sim/lab2_dw_tb.sv
 FC:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/sim/lab2_dw_tb.sv
-!i122 89
+!i122 6
 L0 5 34
-R12
-R13
+R5
+R6
 r1
 !s85 0
 31
-!s108 1757293038.000000
+Z13 !s108 1757369248.000000
 !s107 C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/sim/lab2_dw_tb.sv|
 !s90 -reportprogress|300|-work|work|C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/sim/lab2_dw_tb.sv|
 !i113 0
-R14
-R9
+R8
+R3
 vled_controller
 2C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/src/led_controller.sv
-R11
-R15
+R4
+R9
 !i10b 1
 !s100 mg69[hPB?[`NC74FB43251
 I0<kB5D[6FfXCha0;YjH@h3
 S1
-R4
+R2
 w1757292031
 8C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/src/led_controller.sv
 FC:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/src/led_controller.sv
-!i122 79
+!i122 3
 L0 5 7
-R12
-R13
+R5
+R6
 r1
 !s85 0
 31
-R16
+R11
 !s107 C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/src/led_controller.sv|
 !s90 -reportprogress|300|-work|work|C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/src/led_controller.sv|
 !i113 0
-R14
-R9
+R8
+R3
 vled_controller_tb
 2C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/sim/led_controller_tb.sv
-R11
-!s110 1757292619
+R4
+R12
 !i10b 1
 !s100 jR53IWzTLToz0?H7bLCW<3
 IgNB;cP=m[5zE:08fY2L401
 S1
-R4
+R2
 w1757292568
 8C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/sim/led_controller_tb.sv
 FC:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/sim/led_controller_tb.sv
-!i122 88
-L0 5 45
-R12
-R13
+!i122 7
+R10
+R5
+R6
 r1
 !s85 0
 31
-!s108 1757292619.000000
+R13
 !s107 C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/sim/led_controller_tb.sv|
 !s90 -reportprogress|300|-work|work|C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/sim/led_controller_tb.sv|
 !i113 0
-R14
-R9
+R8
+R3

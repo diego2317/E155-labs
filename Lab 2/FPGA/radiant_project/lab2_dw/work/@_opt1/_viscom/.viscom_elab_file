@@ -1,1 +1,0 @@
-C:/lscc/radiant/2024.2/questasim/win64/VisualizerRls/bin/viscom.exe -nolock -quiet -jmem_size 393216 work.lab2_dw_tb(fast) iCE40UP.HSOSC(fast) -quiet -auto_acc_if_foreign -work work +acc -allow_unnamed -o _opt1 -id 4-00be43e570c5-68bdff15-e7-4bfc {+__design_bin_path+C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/radiant_project/lab2_dw} +__betafsm
