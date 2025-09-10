@@ -14,8 +14,7 @@ module display_controller_tb();
   logic        t2_expected;
   logic [6:0]  seg_expected;
   logic [16:0] test_vectors[10000:0];
-  int   test_counter;
-  int   errors;
+  logic [31:0] vectornum, errors;
 
   // instantiate dut
   display_controller dut (
@@ -41,7 +40,7 @@ module display_controller_tb();
   initial begin
     $display("Reading test vectors");
     $readmemb("display_controller_tv.txt", test_vectors);
-    test_counter = 0;
+    vectornum = 0;
     errors      = 0;
 
     reset  = 1;
@@ -57,7 +56,7 @@ module display_controller_tb();
   always @(posedge clk) begin
     #1;
     if (t1_prev !== t1) begin
-      {s1, s2, t1_expected, t2_expected, seg_expected} = test_vectors[test_counter];
+      {s1, s2, t1_expected, t2_expected, seg_expected} = test_vectors[vectornum];
     end
   end
 
@@ -66,18 +65,18 @@ module display_controller_tb();
     #1;
     if (t1_prev !== t1) begin
       if ({t1, t2, seg} !== {t1_expected, t2_expected, seg_expected}) begin
-        $display("Error (test %0d): s1=%b s2=%b", test_counter, s1, s2);
+        $display("Error (test %0d): s1=%b s2=%b", vectornum, s1, s2);
         $display("  got     t1=%b t2=%b seg=%07b",
                  t1, t2, seg);
         $display("  expect  t1=%b t2=%b seg=%07b",
                  t1_expected, t2_expected, seg_expected);
-        errors++;
+        errors = errors + 1;
       end
       t1_prev = t1;
-      test_counter++;
+      vectornum = vectornum + 1;
 
-      if (test_vectors[test_counter] === 17'bx) begin
-        $display("%0d tests completed with %0d errors", test_counter, errors);
+      if (test_vectors[vectornum] === 17'bx) begin
+        $display("%0d tests completed with %0d errors", vectornum, errors);
         $finish;
       end
     end
