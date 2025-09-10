@@ -10,6 +10,7 @@ module lab2_dw(
 	output logic [6:0] seg);
 				
 	logic int_osc;
+	// Initialize internal clock to 24MHz
 	HSOSC #(.CLKHF_DIV(2'b01)) 
 					hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(int_osc));
 					
@@ -23,7 +24,7 @@ module lab2_dw(
 		.seg(seg)
 	);
 	
-	led_controller LED_CONTROL(.s1(s1), .s2(s2), .led(led));	
+	led_controller LED_CONTROL(.s1(s1), .s2(s2), .led(led)); // LEDs don't require synchronization
 	
 	
 endmodule

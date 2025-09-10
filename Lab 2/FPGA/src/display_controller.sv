@@ -10,7 +10,7 @@ module display_controller(
 	output logic [6:0] seg
 	);
 	
-	logic toggle;
+	logic toggle; // select signal
 	logic [15:0] counter;
 	logic [3:0] sw;
 	
@@ -24,7 +24,7 @@ module display_controller(
 	
 	assign t1 = toggle;
 	assign t2 = ~toggle;
-	assign sw = toggle ? s2 : s1;
+	assign sw = toggle ? s2 : s1; // mux
 	display_logic DISPLAY(.s(sw), .seg(seg));
 
 	
