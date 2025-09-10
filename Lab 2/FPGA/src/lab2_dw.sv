@@ -3,7 +3,6 @@
 // Date: 9.4.2025
 // This module implements the logic for lab 2 of E155 at Harvey Mudd College
 module lab2_dw(
-	
 	input  logic reset,
 	input  logic [3:0] s1, s2,
 	output logic       t1, t2,
@@ -20,9 +19,10 @@ module lab2_dw(
 		.s2(s2),
 		.t1(t1),
 		.t2(t2),
-		.led(led),
 		.seg(seg)
-	);			
+	);
+	
+	led_controller LED_CONTROL(.s1(s1), .s2(s2), .led(led));	
 	
 	
 endmodule

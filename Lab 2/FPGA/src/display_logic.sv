@@ -3,7 +3,6 @@
 // Date: 8.29.2025
 // This module controls a 7 segment display based on input switches
 module display_logic(
-	input  logic       reset,
 	input  logic [3:0] s,
 	output logic [6:0] seg
 	);

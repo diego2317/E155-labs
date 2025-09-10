@@ -12,7 +12,7 @@ module led_controller_tb();
 	logic [31:0] vectornum, errors;
 	
 	// Instantiate DUT
-	display_controller dut(.s1(s1), .s2(s2), .led(led)); 
+	led_controller dut(.s1(s1), .s2(s2), .led(led)); 
 
 	// generate clock
 	always
@@ -35,7 +35,7 @@ module led_controller_tb();
 	always @(negedge clk)
 		if (~reset) begin // skip during reset
 			if (led != led_expected) begin // check result
-				$display("Error: input = %b", {s});
+				$display("Error: inputs = %b, %b", s1, s2);
 				$display(" outputs = %b (%b expected)", led, led_expected);
 				errors = errors + 1;
 			end

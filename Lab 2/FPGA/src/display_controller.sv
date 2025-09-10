@@ -7,7 +7,6 @@ module display_controller(
 	input  logic 	   reset,
 	input  logic [3:0] s1, s2,
 	output logic       t1, t2,
-	output logic [4:0] led,
 	output logic [6:0] seg
 	);
 	
@@ -26,8 +25,7 @@ module display_controller(
 	assign t1 = toggle;
 	assign t2 = ~toggle;
 	assign sw = toggle ? s2 : s1;
-	display_logic DISPLAY(.reset(reset), .s(sw), .seg(seg));
-	led_controller LED_CONTROL(.s1(s1), .s2(s2), .led(led));
+	display_logic DISPLAY(.s(sw), .seg(seg));
 
 	
 endmodule
