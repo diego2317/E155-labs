@@ -16,7 +16,7 @@ module display_controller(
 	
 	// Clock divider
 	always_ff @(posedge clk) begin
-		if (reset) counter <= 0;
+		if (reset == 0) counter <= 0;
 		else counter <= counter + 1;
 	end
 	

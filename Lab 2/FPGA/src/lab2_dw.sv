@@ -12,6 +12,7 @@ module lab2_dw(
 	logic int_osc;
 	HSOSC #(.CLKHF_DIV(2'b01)) 
 					hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(int_osc));
+					
 	display_controller DISPLAY_CONTROL(
 		.clk(int_osc),
 		.reset(reset),
