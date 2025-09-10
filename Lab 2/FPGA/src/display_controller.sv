@@ -11,23 +11,21 @@ module display_controller(
 	output logic [6:0] seg
 	);
 	
-	logic toggle = 0;
-	logic [24:0] counter = 0;
-	logic [3:0] sw = s1;
+	logic toggle;
+	logic [15:0] counter;
+	logic [3:0] sw;
 	
-	// Register for state
+	// Clock divider
 	always_ff @(posedge clk) begin
-		counter <= counter + 1;
-		if (counter == 102416) begin
-			counter <= 0;
-			toggle <= ~toggle;
-			if (toggle == 0) sw = s1;
-			else sw = s2;
-		end
+		if (reset) counter <= 0;
+		else counter <= counter + 1;
 	end
+	
+	assign toggle = counter[15];
 	
 	assign t1 = toggle;
 	assign t2 = ~toggle;
+	assign sw = toggle ? s2 : s1;
 	display_logic DISPLAY(.reset(reset), .s(sw), .seg(seg));
 	led_controller LED_CONTROL(.s1(s1), .s2(s2), .led(led));
 
