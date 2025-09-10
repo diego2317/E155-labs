@@ -1,0 +1,410 @@
+# Reading pref.tcl
+# //  Questa Lattice OEM Edition-64
+# //  Version 2024.2 win64 May 20 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+vlog -reportprogress 300 -work work {C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/sim/display_controller_tb.sv}
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 11:44:25 on Sep 10,2025
+# vlog -reportprogress 300 -work work C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/sim/display_controller_tb.sv 
+# -- Compiling module display_controller_tb
+# 
+# Top level modules:
+# 	display_controller_tb
+# End time: 11:44:25 on Sep 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work {C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/sim/display_logic_tb.sv}
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 11:44:25 on Sep 10,2025
+# vlog -reportprogress 300 -work work C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/sim/display_logic_tb.sv 
+# -- Compiling module display_logic_tb
+# 
+# Top level modules:
+# 	display_logic_tb
+# End time: 11:44:25 on Sep 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work {C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/sim/lab2_dw_tb.sv}
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 11:44:25 on Sep 10,2025
+# vlog -reportprogress 300 -work work C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/sim/lab2_dw_tb.sv 
+# -- Compiling module lab2_dw_tb
+# 
+# Top level modules:
+# 	lab2_dw_tb
+# End time: 11:44:25 on Sep 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work {C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/sim/led_controller_tb.sv}
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 11:44:25 on Sep 10,2025
+# vlog -reportprogress 300 -work work C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/sim/led_controller_tb.sv 
+# -- Compiling module led_controller_tb
+# 
+# Top level modules:
+# 	led_controller_tb
+# End time: 11:44:25 on Sep 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work {C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/src/display_controller.sv}
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 11:44:30 on Sep 10,2025
+# vlog -reportprogress 300 -work work C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/src/display_controller.sv 
+# -- Compiling module display_controller
+# 
+# Top level modules:
+# 	display_controller
+# End time: 11:44:30 on Sep 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work {C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/src/display_logic.sv}
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 11:44:30 on Sep 10,2025
+# vlog -reportprogress 300 -work work C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/src/display_logic.sv 
+# -- Compiling module display_logic
+# 
+# Top level modules:
+# 	display_logic
+# End time: 11:44:30 on Sep 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work {C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/src/lab2_dw.sv}
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 11:44:30 on Sep 10,2025
+# vlog -reportprogress 300 -work work C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/src/lab2_dw.sv 
+# -- Compiling module lab2_dw
+# 
+# Top level modules:
+# 	lab2_dw
+# End time: 11:44:30 on Sep 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work {C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/src/led_controller.sv}
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 11:44:30 on Sep 10,2025
+# vlog -reportprogress 300 -work work C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/src/led_controller.sv 
+# -- Compiling module led_controller
+# 
+# Top level modules:
+# 	led_controller
+# End time: 11:44:30 on Sep 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -gui work.lab2_dw_tb iCE40UP.HSOSC -voptargs=+acc
+# vsim -gui work.lab2_dw_tb iCE40UP.HSOSC -voptargs="+acc" 
+# Start time: 11:44:59 on Sep 10,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.lab2_dw_tb(fast)
+# Loading work.lab2_dw(fast)
+# Loading iCE40UP.HSOSC(fast__1)
+# Loading work.display_controller(fast)
+# Loading work.display_logic(fast)
+# Loading work.led_controller(fast)
+# Loading iCE40UP.HSOSC(fast)
+# Break key hit
+quit -sim
+# End time: 11:45:48 on Sep 10,2025, Elapsed time: 0:00:49
+# Errors: 0, Warnings: 1
+vlog -reportprogress 300 -work work {C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/sim/lab2_dw_tb.sv}
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 11:47:51 on Sep 10,2025
+# vlog -reportprogress 300 -work work C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/sim/lab2_dw_tb.sv 
+# -- Compiling module lab2_dw_tb
+# 
+# Top level modules:
+# 	lab2_dw_tb
+# End time: 11:47:51 on Sep 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -gui work.lab2_dw_tb iCE40UP.HSOSC -voptargs=+acc
+# vsim -gui work.lab2_dw_tb iCE40UP.HSOSC -voptargs="+acc" 
+# Start time: 11:48:11 on Sep 10,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.lab2_dw_tb(fast)
+# Loading work.lab2_dw(fast)
+# Loading iCE40UP.HSOSC(fast__1)
+# Loading work.display_controller(fast)
+# Loading work.display_logic(fast)
+# Loading work.led_controller(fast)
+# Loading iCE40UP.HSOSC(fast)
+add wave -position insertpoint  \
+sim:/lab2_dw_tb/clk \
+sim:/lab2_dw_tb/reset \
+sim:/lab2_dw_tb/t1 \
+sim:/lab2_dw_tb/t2
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: dweiss  Hostname: GGMZ0R3  ProcessID: 12692
+#           Attempting to use alternate WLF file "./wlftgmw48a".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftgmw48a
+run 100
+# Reading test vectors
+run 100
+run 1000
+run 10000
+run 10000
+run 10000
+run 1000000
+run 10000000
+run 10000000
+run 10000000
+quit -sim
+# End time: 11:50:47 on Sep 10,2025, Elapsed time: 0:02:36
+# Errors: 0, Warnings: 3
+vlog -reportprogress 300 -work work {C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/sim/lab2_dw_tb.sv}
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 11:50:59 on Sep 10,2025
+# vlog -reportprogress 300 -work work C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/sim/lab2_dw_tb.sv 
+# -- Compiling module lab2_dw_tb
+# 
+# Top level modules:
+# 	lab2_dw_tb
+# End time: 11:50:59 on Sep 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -gui work.lab2_dw_tb iCE40UP.HSOSC -voptargs=+acc
+# vsim -gui work.lab2_dw_tb iCE40UP.HSOSC -voptargs="+acc" 
+# Start time: 11:51:24 on Sep 10,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.lab2_dw_tb(fast)
+# Loading work.lab2_dw(fast)
+# Loading iCE40UP.HSOSC(fast__1)
+# Loading work.display_controller(fast)
+# Loading work.display_logic(fast)
+# Loading work.led_controller(fast)
+# Loading iCE40UP.HSOSC(fast)
+add wave -position insertpoint  \
+sim:/lab2_dw_tb/clk \
+sim:/lab2_dw_tb/t1 \
+sim:/lab2_dw_tb/t2
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: dweiss  Hostname: GGMZ0R3  ProcessID: 12692
+#           Attempting to use alternate WLF file "./wlfta415i0".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfta415i0
+run 10000
+# Reading test vectors
+run 10000
+run 10000
+run 10000
+run 1000000
+run 100000000
+run 100000000
+run 100000000
+run 100000000
+run 100000000
+run 100000000
+run 100000000
+run 100000000
+run 100000000
+run 100000000
+quit -sim
+# End time: 12:03:33 on Sep 10,2025, Elapsed time: 0:12:09
+# Errors: 0, Warnings: 3
+vlog -reportprogress 300 -work work {C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/src/lab2_dw.sv}
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 12:03:40 on Sep 10,2025
+# vlog -reportprogress 300 -work work C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/src/lab2_dw.sv 
+# -- Compiling module lab2_dw
+# 
+# Top level modules:
+# 	lab2_dw
+# End time: 12:03:40 on Sep 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -gui work.lab2_dw_tb iCE40UP.HSOSC -voptargs=+acc
+# vsim -gui work.lab2_dw_tb iCE40UP.HSOSC -voptargs="+acc" 
+# Start time: 12:03:58 on Sep 10,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading sv_std.std
+# Loading work.lab2_dw_tb(fast)
+# Loading work.lab2_dw(fast)
+# Loading iCE40UP.HSOSC(fast__1)
+# Loading work.display_controller(fast)
+# Loading work.display_logic(fast)
+# Loading work.led_controller(fast)
+# Loading iCE40UP.HSOSC(fast)
+add wave -position insertpoint  \
+sim:/lab2_dw_tb/dut/reset \
+sim:/lab2_dw_tb/dut/t1 \
+sim:/lab2_dw_tb/dut/t2 \
+sim:/lab2_dw_tb/dut/int_osc
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: dweiss  Hostname: GGMZ0R3  ProcessID: 12692
+#           Attempting to use alternate WLF file "./wlftt3a8ea".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftt3a8ea
+run 100000
+# Reading test vectors
+run 100000
+run 100000
+run 100000
+run 100000
+run 100000
+run 1000000
+run 1000000
+run 1000000
+run 1000000
+run 1000000
+run 10000000
+add wave -position insertpoint  \
+sim:/lab2_dw_tb/dut/DISPLAY_CONTROL/counter
+add wave -position insertpoint  \
+{sim:/lab2_dw_tb/dut/DISPLAY_CONTROL/counter[15]}
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.lab2_dw_tb(fast)
+# Loading work.lab2_dw(fast)
+# Loading iCE40UP.HSOSC(fast__1)
+# Loading work.display_controller(fast)
+# Loading work.display_logic(fast)
+# Loading work.led_controller(fast)
+# Loading iCE40UP.HSOSC(fast)
+run 1000000
+# Reading test vectors
+add wave -position insertpoint  \
+sim:/lab2_dw_tb/dut/DISPLAY_CONTROL/counter
+run 1000000
+run 1000000
+run 1000000
+run 1000000
+run 1000000
+run 1000000
+run 1000000
+run 1000000
+run 1000000
+run 1000000
+run 10000000
+run 10000000
+run 10000000
+run 10000000
+run 10000000
+run 10000000
+run 10000000
+quit -sim
+# End time: 12:11:36 on Sep 10,2025, Elapsed time: 0:07:38
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work {C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/src/display_controller.sv}
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 12:11:41 on Sep 10,2025
+# vlog -reportprogress 300 -work work C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/src/display_controller.sv 
+# -- Compiling module display_controller
+# 
+# Top level modules:
+# 	display_controller
+# End time: 12:11:42 on Sep 10,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work {C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/src/lab2_dw.sv}
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 12:11:45 on Sep 10,2025
+# vlog -reportprogress 300 -work work C:/Users/dweiss/Documents/GitHub/E155/Lab 2/FPGA/src/lab2_dw.sv 
+# -- Compiling module lab2_dw
+# 
+# Top level modules:
+# 	lab2_dw
+# End time: 12:11:45 on Sep 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -gui work.lab2_dw_tb iCE40UP.HSOSC -voptargs=+acc
+# vsim -gui work.lab2_dw_tb iCE40UP.HSOSC -voptargs="+acc" 
+# Start time: 12:11:56 on Sep 10,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.lab2_dw_tb(fast)
+# Loading work.lab2_dw(fast)
+# Loading iCE40UP.HSOSC(fast__1)
+# Loading work.display_controller(fast)
+# Loading work.display_logic(fast)
+# Loading work.led_controller(fast)
+# Loading iCE40UP.HSOSC(fast)
+add wave -position insertpoint  \
+sim:/lab2_dw_tb/dut/DISPLAY_CONTROL/clk \
+sim:/lab2_dw_tb/dut/DISPLAY_CONTROL/t1 \
+sim:/lab2_dw_tb/dut/DISPLAY_CONTROL/t2 \
+sim:/lab2_dw_tb/dut/DISPLAY_CONTROL/counter
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: dweiss  Hostname: GGMZ0R3  ProcessID: 12692
+#           Attempting to use alternate WLF file "./wlftv71hrn".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftv71hrn
+add wave -position insertpoint  \
+sim:/lab2_dw_tb/dut/DISPLAY_CONTROL/reset
+run 10000000
+# Reading test vectors
+run 10000000
+quit -sim
+# End time: 12:15:42 on Sep 10,2025, Elapsed time: 0:03:46
+# Errors: 0, Warnings: 3
+vsim -gui work.lab2_dw_tb iCE40UP.HSOSC -voptargs=+acc
+# vsim -gui work.lab2_dw_tb iCE40UP.HSOSC -voptargs="+acc" 
+# Start time: 12:16:26 on Sep 10,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading sv_std.std
+# Loading work.lab2_dw_tb(fast)
+# Loading work.lab2_dw(fast)
+# Loading iCE40UP.HSOSC(fast__1)
+# Loading work.display_controller(fast)
+# Loading work.display_logic(fast)
+# Loading work.led_controller(fast)
+# Loading iCE40UP.HSOSC(fast)
+add wave -position insertpoint  \
+sim:/lab2_dw_tb/t1 \
+sim:/lab2_dw_tb/t2
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: dweiss  Hostname: GGMZ0R3  ProcessID: 12692
+#           Attempting to use alternate WLF file "./wlfth083hv".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfth083hv
+run 1000
+# Reading test vectors
+run 1000000
+run 1000000
+add wave -position insertpoint  \
+sim:/lab2_dw_tb/clk
+# Causality operation skipped due to absence of debug database file
+quit -sim
+# End time: 12:20:39 on Sep 10,2025, Elapsed time: 0:04:13
+# Errors: 0, Warnings: 2
+# Load canceled
+vsim -gui work.lab2_dw_tb iCE40UP.HSOSC -voptargs=+acc
+# vsim -gui work.lab2_dw_tb iCE40UP.HSOSC -voptargs="+acc" 
+# Start time: 12:22:59 on Sep 10,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading sv_std.std
+# Loading work.lab2_dw_tb(fast)
+# Loading work.lab2_dw(fast)
+# Loading iCE40UP.HSOSC(fast__1)
+# Loading work.display_controller(fast)
+# Loading work.display_logic(fast)
+# Loading work.led_controller(fast)
+# Loading iCE40UP.HSOSC(fast)
+add wave -position insertpoint  \
+sim:/lab2_dw_tb/dut/DISPLAY_CONTROL/counter
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: dweiss  Hostname: GGMZ0R3  ProcessID: 12692
+#           Attempting to use alternate WLF file "./wlftaziyqz".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftaziyqz
+add wave -position insertpoint  \
+sim:/lab2_dw_tb/dut/DISPLAY_CONTROL/clk
+add wave -position insertpoint  \
+sim:/lab2_dw_tb/dut/DISPLAY_CONTROL/t1
+add wave -position insertpoint  \
+sim:/lab2_dw_tb/dut/DISPLAY_CONTROL/t2
+run 100000
+# Reading test vectors
+add wave -position insertpoint  \
+sim:/lab2_dw_tb/dut/DISPLAY_CONTROL/reset
+add wave -position insertpoint  \
+sim:/lab2_dw_tb/dut/DISPLAY_CONTROL/reset
