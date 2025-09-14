@@ -21,17 +21,24 @@ logic int_osc;
 
 // Setup "slow" clock
 
-logic clock_speed_1200Hz;
-
-clock_divider #(d'10000) slow_clock (
-    .clk(int_osc),
+//* Slowing down the clk
+logic clkDiv240;  // 240Hz clock for seven segment display
+clock_divider #('d10000) clkDivMod240 (
+    .clk(clk),
     .reset(reset),
-    .divided_clock(clock_speed_1200Hz)
+    .divided_clock(clkDiv240)
+);
+
+logic clkDiv48;  // 48Hz clock for keypad
+clock_divider #('d500000) clkDivMod48 (
+    .clk(clk),
+    .reset(reset),
+    .divided_clock(clkDiv48)
 );
 
 // Synchronize for debouncing
 synchronizer sync(
-    .clk(clock_speed_1200Hz),
+    .clk(clock_speed_slow),
     .cols(cols),
     .synchronized_cols(synchronized_cols)
 );

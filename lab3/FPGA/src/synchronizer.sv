@@ -13,7 +13,7 @@ logic [3:0] n;
 
 always_ff @(posedge clk)
     begin
-        n <= rows;
+        n <= cols;
         synchronized_cols <= n;
     end
 
