@@ -28,7 +28,7 @@ keypad_input get_input (
 
 // Define FSM States
 typedef enum logic [1:0] {
-    WAIT,
+    AWAIT_PRESS,
     INPUT,
     HOLD,
     DEBOUNCE
@@ -38,7 +38,7 @@ fsm_states current_state, next_state;
 
 // Determine the row output
 always_comb begin
-    if (current_state == WAIT) begin
+    if (current_state == AWAIT_PRESS) begin
         unique case (row_counter)
             'b0001: rows = 4'b0001;
             'b0010: rows = 4'b0010;
@@ -51,7 +51,7 @@ end
 // State Register
 always_ff @(posedge clk) begin
     if (reset == 0) begin
-        current_state <= WAIT;
+        current_state <= AWAIT_PRESS;
     end else begin
         current_state <= next_state;
     end
@@ -62,11 +62,11 @@ assign valid_input = current_state == INPUT && valid_input_key;
 // Next state logic
 always_comb begin
     case (current_state)
-        WAIT:     next_state = cols === 4'b0000 ? WAIT     : INPUT;
-        INPUT:    next_state = cols === 4'b0000 ? DEBOUNCE : HOLD;
-        HOLD:     next_state = cols === 4'b0000 ? DEBOUNCE : HOLD;
-        DEBOUNCE: next_state = cols === 4'b0000 ? WAIT     : HOLD;
-        default:  next_state = WAIT;
+        AWAIT_PRESS:     next_state = cols === 4'b0000 ? AWAIT_PRESS : INPUT;
+        INPUT:           next_state = cols === 4'b0000 ? DEBOUNCE    : HOLD;
+        HOLD:            next_state = cols === 4'b0000 ? DEBOUNCE    : HOLD;
+        DEBOUNCE:        next_state = cols === 4'b0000 ? AWAIT_PRESS : HOLD;
+        default:  next_state = AWAIT_PRESS;
     endcase
 end
 
@@ -74,7 +74,7 @@ end
 always_ff @(posedge clk) begin
     if (reset == 0) begin
         row_counter = 4'b0000;
-    end else if (next_state == WAIT) begin
+    end else if (next_state == AWAIT_PRESS) begin
         row_counter <= row_counter == 4'b1000 ? 4'b0001 : row_counter << 1;
     end
 end

@@ -9,6 +9,8 @@ module lab3_dw (
     output logic [3:0] rows,
     output logic [6:0] seg
 );
+
+
 // Setup internal signals
 logic [3:0] synchronized_cols;
 
@@ -19,42 +21,69 @@ logic int_osc;
 				HSOSC #(.CLKHF_DIV(2'b01)) 
 					hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(int_osc));
 
-// Setup "slow" clock
 
 //* Slowing down the clk
-logic clkDiv240;  // 240Hz clock for seven segment display
-clock_divider #('d10000) clkDivMod240 (
-    .clk(clk),
+logic _240_Hz_clk;  // 240Hz clock for seven segment display
+clock_divider #('d50000) clkDivMod240 (
+    .clk(int_osc),
     .reset(reset),
-    .divided_clock(clkDiv240)
+    .divided_clock(_240_Hz_clk)
 );
 
-logic clkDiv48;  // 48Hz clock for keypad
-clock_divider #('d500000) clkDivMod48 (
-    .clk(clk),
+logic _60_Hz_clk;  // 60Hz clock for keypad
+clock_divider #('d200000) clkDivMod60 (
+    .clk(int_osc),
     .reset(reset),
-    .divided_clock(clkDiv48)
+    .divided_clock(_60_Hz_clk)
+);
+
+assign enable_left = _240_Hz_clk;
+assign enable_right = ~_240_Hz_clk;
+
+// Create internal signals for input, current value, old value
+logic [3:0] input_key, current_value, old_value;
+logic       valid_input;
+
+// Setup flops to hold values
+flopenr current_value_flop (
+	.clk(_60_Hz_clk),
+	.reset(reset),
+	.en(valid_input),
+	.d(input_key),
+	.q(current_value)
+);
+
+flopenr old_value_flop (
+	.clk(_60_Hz_clk),
+	.reset(reset),
+	.en(valid_input),
+	.d(current_value),
+	.q(old_value)
 );
 
 // Synchronize for debouncing
 synchronizer sync(
-    .clk(clock_speed_slow),
+    .clk(_240_Hz_clk),
     .cols(cols),
     .synchronized_cols(synchronized_cols)
 );
 
 // Gets keypad input
+keypad_input keypad(
+	.clk(_60_Hz_clk),
+	.reset(reset),
+	.rows(rows),
+	.cols(synchronized_cols),
+	.valid_input(valid_input),
+	.input_key(input_key)
+);
 
-
+logic [3:0] display_input; // Internal signal that goes to 7 seg display decoder
+assign display_input = _240_Hz_clk ? current_value : old_value; // Mux to select what's being displayed
 // Control 7 segment display
-seven_seg_controller SEVEN_SEG(
-		.clk(int_osc),
-		.reset(reset),
-		.s1(s1),
-		.s2(s2),
-		.t1(enable_left),
-		.t2(enable_right),
-		.seg(seg)
+seven_seg_decoder _7_seg_display(
+	.s(display_input),
+	.seg(seg)
 );
 
 
