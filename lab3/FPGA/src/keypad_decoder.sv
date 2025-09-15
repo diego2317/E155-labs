@@ -73,7 +73,7 @@ end
 // Next row logic
 always_ff @(posedge clk) begin
     if (reset == 1) begin
-        row_counter = 4'b0000;
+        row_counter <= 4'b0000;
     end else if (next_state == AWAIT_PRESS) begin
         row_counter <= row_counter == 4'b1000 ? 4'b0001 : row_counter << 1;
     end

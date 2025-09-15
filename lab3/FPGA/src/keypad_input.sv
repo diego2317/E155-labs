@@ -18,67 +18,67 @@ module keypad_input(
             case ({
                 cols, rows
             })
-            8'b0001_0001: begin
+            8'b1110_1110: begin
                 input_key = 4'h0;
                 valid_input = 1;
             end
-            8'b0010_0001: begin
+            8'b1101_1110: begin
                 input_key = 4'h1;
                 valid_input = 1;
             end
-            8'b0100_0001: begin
+            8'b1011_1110: begin
                 input_key = 4'h2;
                 valid_input = 1;
             end
-            8'b1000_0001: begin
+            8'b0111_1110: begin
                 input_key = 4'h3;
                 valid_input = 1;
             end
-            8'b0001_0010: begin
+            8'b1110_1101: begin
                 input_key = 4'h4;
                 valid_input = 1;
             end
-            8'b0010_0010: begin
+            8'b1101_1101: begin
                 input_key = 4'h5;
                 valid_input = 1;
             end
-            8'b0100_0010: begin
+            8'b1011_1101: begin
                 input_key = 4'h6;
                 valid_input = 1;
             end
-            8'b1000_0010: begin
+            8'b0111_1101: begin
                 input_key = 4'h7;
                 valid_input = 1;
             end
-            8'b0001_0100: begin
+            8'b1110_1011: begin
                 input_key = 4'h8;
                 valid_input = 1;
             end
-            8'b0010_0100: begin
+            8'b1101_1011: begin
                 input_key = 4'h9;
                 valid_input = 1;
             end
-            8'b0100_0100: begin
+            8'b1011_1011: begin
                 input_key = 4'hA;
                 valid_input = 1;
             end
-            8'b1000_0100: begin
+            8'b0111_1011: begin
                 input_key = 4'hB;
                 valid_input = 1;
             end
-            8'b0001_1000: begin
+            8'b1110_0111: begin
                 input_key = 4'hC;
                 valid_input = 1;
             end
-            8'b0010_1000: begin
+            8'b1101_0111: begin
                 input_key = 4'hD;
                 valid_input = 1;
             end
-            8'b0100_1000: begin
+            8'b1011_0111: begin
                 input_key = 4'hE;
                 valid_input = 1;
             end
-            8'b1000_1000: begin
+            8'b0111_0111: begin
                 input_key = 4'hF;
                 valid_input = 1;
             end

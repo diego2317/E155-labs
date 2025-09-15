@@ -51,16 +51,16 @@ assign enable_right = ~_240_Hz_clk;
 // Create internal signals for input, current value, old value
 logic [3:0] input_key, current_value, old_value;
 logic       valid_input;
-assign valid_input = 0;
 
 // Gets keypad input
-keypad_input keypad(
+keypad_decoder keypad(
 	.clk(_60_Hz_clk),
 	.reset(reset),
+	.cols(cols),
+	.current_value(current_value),
 	.rows(rows),
-	.cols(synchronized_cols),
-	.valid_input(valid_input),
-	.input_key(input_key)
+	.input_key(input_key),
+	.valid_input(valid_input)
 );
 
 // Setup flops to hold values
