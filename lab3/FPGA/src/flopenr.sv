@@ -7,8 +7,8 @@ module flopenr(
 
     // asynchronous reset
     always_ff @(posedge clk, posedge reset) begin
-        if (reset) q <= 4'b0;
-        else if (en) q <= d;
+        if (reset == 1) q <= 4'b0;
+        else if (en == 1) q <= d;
     end
 
 endmodule

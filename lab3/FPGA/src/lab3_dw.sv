@@ -24,17 +24,25 @@ logic int_osc;
 
 //* Slowing down the clk
 logic _240_Hz_clk;  // 240Hz clock for seven segment display
-clock_divider #('d50000) clkDivMod240 (
+clock_divider #('d50000) _240_Hz_divider (
     .clk(int_osc),
     .reset(reset),
     .divided_clock(_240_Hz_clk)
 );
 
 logic _60_Hz_clk;  // 60Hz clock for keypad
-clock_divider #('d200000) clkDivMod60 (
+clock_divider #('d200000) _60_Hz_divider (
     .clk(int_osc),
     .reset(reset),
     .divided_clock(_60_Hz_clk)
+);
+
+
+// Synchronize for debouncing
+synchronizer sync(
+    .clk(_60_Hz_clk),
+    .cols(cols),
+    .synchronized_cols(synchronized_cols)
 );
 
 assign enable_left = _240_Hz_clk;
@@ -43,6 +51,17 @@ assign enable_right = ~_240_Hz_clk;
 // Create internal signals for input, current value, old value
 logic [3:0] input_key, current_value, old_value;
 logic       valid_input;
+assign valid_input = 0;
+
+// Gets keypad input
+keypad_input keypad(
+	.clk(_60_Hz_clk),
+	.reset(reset),
+	.rows(rows),
+	.cols(synchronized_cols),
+	.valid_input(valid_input),
+	.input_key(input_key)
+);
 
 // Setup flops to hold values
 flopenr current_value_flop (
@@ -61,22 +80,8 @@ flopenr old_value_flop (
 	.q(old_value)
 );
 
-// Synchronize for debouncing
-synchronizer sync(
-    .clk(_240_Hz_clk),
-    .cols(cols),
-    .synchronized_cols(synchronized_cols)
-);
 
-// Gets keypad input
-keypad_input keypad(
-	.clk(_60_Hz_clk),
-	.reset(reset),
-	.rows(rows),
-	.cols(synchronized_cols),
-	.valid_input(valid_input),
-	.input_key(input_key)
-);
+
 
 logic [3:0] display_input; // Internal signal that goes to 7 seg display decoder
 assign display_input = _240_Hz_clk ? current_value : old_value; // Mux to select what's being displayed

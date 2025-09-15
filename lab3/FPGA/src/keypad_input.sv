@@ -11,7 +11,7 @@ module keypad_input(
 );
 
     always_ff @(posedge clk) begin
-        if (reset == 0) begin
+        if (reset == 1) begin
             input_key = 4'hx;
             valid_input = 0;
         end else begin
