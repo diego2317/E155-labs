@@ -1,0 +1,110 @@
+// Author: Diego Weiss
+// Email: dweiss@hmc.edu
+// Date: 9/15/2025
+// This module determines next state logic for my keypad scanner
+
+// Import state
+import state::*;
+
+module next_state_logic(
+	input statetype state,
+	input logic [3:0] cols,
+	input logic [5:0] counter,
+	output statetype nextstate
+);
+	logic press;
+	
+	// if any of the columns are read to be high, then that indicates a press.
+	assign press = !(cols[0] && cols[1] && cols[2] && cols[3]);
+	
+	always_comb
+		case(state)
+			// row turns on, we wait two clock cycles for the column signal to change after the row changes
+			B0: begin
+					nextstate = (counter == 1) ? R0 : B0;
+				end
+			B1: begin
+					nextstate = (counter == 1) ? R1 : B1;
+				end
+			B2: begin
+					nextstate = (counter == 1) ? R2 : B2;  
+				end
+			B3: begin
+					nextstate = (counter == 1) ? R3 : B3;
+				end
+			// in the scanning row state
+			R0: begin
+					nextstate = (press) ? D0 : B1;  
+				end
+			R1: begin
+					nextstate = (press) ? D1 : B2;  
+				end
+			R2: begin
+					nextstate = (press) ? D2 : B3;  
+				end
+			R3: begin
+					nextstate = (press) ? D3 : B0;  
+				end
+			// debouncing state, we wait a certain amount of clock cycles for the signal to settle
+			D0: begin
+					if (counter == 15) begin //(counter == 25000) begin
+						nextstate = (press) ? P0 : R0;
+					end
+					else begin
+						nextstate = D0;
+					end
+				end
+			D1: begin
+					if (counter == 15) begin //if (counter == 25000) begin
+						nextstate = (press) ? P1 : R1;
+					end
+					else begin
+						nextstate = D1;
+					end
+				end
+			D2: begin
+					if (counter == 15) begin //if (counter == 25000) begin
+						nextstate = (press) ? P2 : R2;
+					end
+					else begin
+						nextstate = D2;
+					end
+				end
+			D3: begin
+					if (counter == 15) begin //if (counter == 25000) begin
+						nextstate = (press) ? P3 : R3;
+					end
+					else begin
+						nextstate = D3;
+					end
+				end
+			// in the sending pulse state (where pulse is the message that a row with a pressed button has been identified)
+			P0: begin
+					nextstate = (press) ? W0 : R0;  
+				end
+			P1: begin
+					nextstate = (press) ? W1 : R1;  
+				end
+			P2: begin
+					nextstate = (press) ? W2 : R2;  
+				end
+			P3: begin
+					nextstate = (press) ? W3 : R3;  
+				end
+			// in the waiting state (waiting for pressed button to be released)
+			W0: begin
+					nextstate = (press) ? W0 : R0;  
+				end
+			W1: begin
+					nextstate = (press) ? W1 : R1;  
+				end
+			W2: begin
+					nextstate = (press) ? W2 : R2;  
+				end
+			W3: begin
+					nextstate = (press) ? W3 : R3;  
+				end
+			default: nextstate = R0;
+		endcase
+
+endmodule

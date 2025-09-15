@@ -1,0 +1,538 @@
+# Reading pref.tcl
+# //  Questa Lattice OEM Edition-64
+# //  Version 2024.2 win64 May 20 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_decoder.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 15:09:34 on Sep 15,2025
+# vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_decoder.sv 
+# -- Compiling module keypad_decoder
+# 
+# Top level modules:
+# 	keypad_decoder
+# End time: 15:09:34 on Sep 15,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_input.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 15:09:34 on Sep 15,2025
+# vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_input.sv 
+# -- Compiling package keypad_input_sv_unit
+# -- Importing package state
+# -- Compiling module keypad_input
+# 
+# Top level modules:
+# 	keypad_input
+# End time: 15:09:34 on Sep 15,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_reader.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 15:09:35 on Sep 15,2025
+# vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_reader.sv 
+# -- Compiling module keypad_reader
+# 
+# Top level modules:
+# 	keypad_reader
+# End time: 15:09:35 on Sep 15,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/src/next_state_logic.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 15:09:35 on Sep 15,2025
+# vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/src/next_state_logic.sv 
+# -- Compiling package next_state_logic_sv_unit
+# -- Importing package state
+# -- Compiling module next_state_logic
+# 
+# Top level modules:
+# 	next_state_logic
+# End time: 15:09:35 on Sep 15,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/src/state.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 15:09:35 on Sep 15,2025
+# vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/src/state.sv 
+# -- Compiling package state
+# 
+# Top level modules:
+# 	--none--
+# End time: 15:09:35 on Sep 15,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_input_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 15:09:45 on Sep 15,2025
+# vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_input_tb.sv 
+# -- Compiling module keypad_input_tb
+# 
+# Top level modules:
+# 	keypad_input_tb
+# End time: 15:09:45 on Sep 15,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -gui work.keypad_input_tb -voptargs=+acc
+# vsim -gui work.keypad_input_tb -voptargs="+acc" 
+# Start time: 15:10:01 on Sep 15,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.keypad_input_tb(fast)
+# Loading work.state(fast)
+# Loading work.keypad_input_sv_unit(fast)
+# Loading work.keypad_input(fast)
+# Loading work.next_state_logic_sv_unit(fast)
+# Loading work.next_state_logic(fast)
+add wave -position insertpoint  \
+sim:/keypad_input_tb/dut/clk \
+sim:/keypad_input_tb/dut/cols \
+sim:/keypad_input_tb/dut/rows \
+sim:/keypad_input_tb/dut/press \
+sim:/keypad_input_tb/dut/change \
+sim:/keypad_input_tb/dut/state \
+sim:/keypad_input_tb/dut/nextstate
+run -all
+# Error: inputs = 1111
+#  Output = 000100 (111000 expected)
+# Error: inputs = 1111
+#  Output = 000100 (111000 expected)
+# Error: inputs = 1111
+#  Output = 000110 (111010 expected)
+# Error: inputs = 1111
+#  Output = 111100 (110100 expected)
+# Error: inputs = 1111
+#  Output = 111100 (110100 expected)
+# Error: inputs = 1111
+#  Output = 111100 (110110 expected)
+# Error: inputs = 1111
+#  Output = 111100 (101100 expected)
+# Error: inputs = 1111
+#  Output = 111100 (101100 expected)
+# Error: inputs = 1111
+#  Output = 111100 (101110 expected)
+# Error: inputs = 1111
+#  Output = 111100 (011100 expected)
+# Error: inputs = 1111
+#  Output = 111100 (011100 expected)
+# Error: inputs = 1111
+#  Output = 111100 (011110 expected)
+# Error: inputs = 1011
+#  Output = 111100 (111000 expected)
+# Error: inputs = 1011
+#  Output = 111100 (111000 expected)
+# Error: inputs = 1111
+#  Output = 111100 (111010 expected)
+# Error: inputs = 1111
+#  Output = 111100 (110100 expected)
+# Break key hit
+# Simulation stop requested.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.keypad_input_tb(fast)
+# Loading work.state(fast)
+# Loading work.keypad_input_sv_unit(fast)
+# Loading work.keypad_input(fast)
+# Loading work.next_state_logic_sv_unit(fast)
+# Loading work.next_state_logic(fast)
+run 300
+# Error: inputs = 1111
+#  Output = 000100 (111000 expected)
+# Error: inputs = 1111
+#  Output = 000100 (111000 expected)
+# Error: inputs = 1111
+#  Output = 000110 (111010 expected)
+# Error: inputs = 1111
+#  Output = 111100 (110100 expected)
+# Error: inputs = 1111
+#  Output = 111100 (110100 expected)
+# Error: inputs = 1111
+#  Output = 111100 (110110 expected)
+# Error: inputs = 1111
+#  Output = 111100 (101100 expected)
+# Error: inputs = 1111
+#  Output = 111100 (101100 expected)
+# Error: inputs = 1111
+#  Output = 111100 (101110 expected)
+# Error: inputs = 1111
+#  Output = 111100 (011100 expected)
+# Error: inputs = 1111
+#  Output = 111100 (011100 expected)
+# Error: inputs = 1111
+#  Output = 111100 (011110 expected)
+# Error: inputs = 1011
+#  Output = 111100 (111000 expected)
+# Error: inputs = 1011
+#  Output = 111100 (111000 expected)
+# Error: inputs = 1111
+#  Output = 111100 (111010 expected)
+# Error: inputs = 1111
+#  Output = 111100 (110100 expected)
+add wave -position insertpoint  \
+sim:/keypad_input_tb/vectornum
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.keypad_input_tb(fast)
+# Loading work.state(fast)
+# Loading work.keypad_input_sv_unit(fast)
+# Loading work.keypad_input(fast)
+# Loading work.next_state_logic_sv_unit(fast)
+# Loading work.next_state_logic(fast)
+run 300
+# Error: inputs = 1111
+#  Output = 000100 (111000 expected)
+# Error: inputs = 1111
+#  Output = 000100 (111000 expected)
+# Error: inputs = 1111
+#  Output = 000110 (111010 expected)
+# Error: inputs = 1111
+#  Output = 111100 (110100 expected)
+# Error: inputs = 1111
+#  Output = 111100 (110100 expected)
+# Error: inputs = 1111
+#  Output = 111100 (110110 expected)
+# Error: inputs = 1111
+#  Output = 111100 (101100 expected)
+# Error: inputs = 1111
+#  Output = 111100 (101100 expected)
+# Error: inputs = 1111
+#  Output = 111100 (101110 expected)
+# Error: inputs = 1111
+#  Output = 111100 (011100 expected)
+# Error: inputs = 1111
+#  Output = 111100 (011100 expected)
+# Error: inputs = 1111
+#  Output = 111100 (011110 expected)
+# Error: inputs = 1011
+#  Output = 111100 (111000 expected)
+# Error: inputs = 1011
+#  Output = 111100 (111000 expected)
+# Error: inputs = 1111
+#  Output = 111100 (111010 expected)
+# Error: inputs = 1111
+#  Output = 111100 (110100 expected)
+quit -sim
+# End time: 15:13:57 on Sep 15,2025, Elapsed time: 0:03:56
+# Errors: 0, Warnings: 1
+vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_input.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 15:14:05 on Sep 15,2025
+# vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_input.sv 
+# -- Compiling package keypad_input_sv_unit
+# -- Importing package state
+# -- Compiling module keypad_input
+# 
+# Top level modules:
+# 	keypad_input
+# End time: 15:14:05 on Sep 15,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/src/next_state_logic.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 15:14:10 on Sep 15,2025
+# vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/src/next_state_logic.sv 
+# -- Compiling package next_state_logic_sv_unit
+# -- Importing package state
+# -- Compiling module next_state_logic
+# 
+# Top level modules:
+# 	next_state_logic
+# End time: 15:14:10 on Sep 15,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_input.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 15:15:32 on Sep 15,2025
+# vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_input.sv 
+# -- Compiling package keypad_input_sv_unit
+# -- Importing package state
+# -- Compiling module keypad_input
+# 
+# Top level modules:
+# 	keypad_input
+# End time: 15:15:32 on Sep 15,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -gui -voptargs=+acc work.keypad_input
+# vsim -gui -voptargs="+acc" work.keypad_input 
+# Start time: 15:15:49 on Sep 15,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.state(fast)
+# Loading work.keypad_input_sv_unit(fast)
+# Loading work.keypad_input(fast)
+# Loading work.next_state_logic_sv_unit(fast)
+# Loading work.next_state_logic(fast)
+run 300
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.state(fast)
+# Loading work.keypad_input_sv_unit(fast)
+# Loading work.keypad_input(fast)
+# Loading work.next_state_logic_sv_unit(fast)
+# Loading work.next_state_logic(fast)
+quit -sim
+# End time: 15:16:19 on Sep 15,2025, Elapsed time: 0:00:30
+# Errors: 0, Warnings: 1
+vsim -gui -voptargs=+acc work.keypad_input_tb
+# vsim -gui -voptargs="+acc" work.keypad_input_tb 
+# Start time: 15:16:29 on Sep 15,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.keypad_input_tb(fast)
+# Loading work.state(fast)
+# Loading work.keypad_input_sv_unit(fast)
+# Loading work.keypad_input(fast)
+# Loading work.next_state_logic_sv_unit(fast)
+# Loading work.next_state_logic(fast)
+add wave -position insertpoint  \
+sim:/keypad_input_tb/dut/clk \
+sim:/keypad_input_tb/dut/cols \
+sim:/keypad_input_tb/dut/rows \
+sim:/keypad_input_tb/dut/press \
+sim:/keypad_input_tb/dut/change \
+sim:/keypad_input_tb/dut/state \
+sim:/keypad_input_tb/dut/nextstate
+run 200
+# Error: inputs = 1111
+#  Output = 111000 (111010 expected)
+# Error: inputs = 1111
+#  Output = 110100 (110110 expected)
+# Error: inputs = 1111
+#  Output = 101100 (101110 expected)
+# Error: inputs = 1111
+#  Output = 011100 (011110 expected)
+# Error: inputs = 1111
+#  Output = 111000 (111010 expected)
+add wave -position insertpoint  \
+sim:/keypad_input_tb/clk \
+sim:/keypad_input_tb/reset \
+sim:/keypad_input_tb/press \
+sim:/keypad_input_tb/press_exp \
+sim:/keypad_input_tb/change \
+sim:/keypad_input_tb/change_exp \
+sim:/keypad_input_tb/cols \
+sim:/keypad_input_tb/rows
+add wave -position insertpoint  \
+sim:/keypad_input_tb/vectornum
+add wave -position insertpoint  \
+sim:/keypad_input_tb/dut/state
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.keypad_input_tb(fast)
+# Loading work.state(fast)
+# Loading work.keypad_input_sv_unit(fast)
+# Loading work.keypad_input(fast)
+# Loading work.next_state_logic_sv_unit(fast)
+# Loading work.next_state_logic(fast)
+run 200
+# Error: inputs = 1111
+#  Output = 111000 (111010 expected)
+# Error: inputs = 1111
+#  Output = 110100 (110110 expected)
+# Error: inputs = 1111
+#  Output = 101100 (101110 expected)
+# Error: inputs = 1111
+#  Output = 011100 (011110 expected)
+# Error: inputs = 1111
+#  Output = 111000 (111010 expected)
+# Causality operation skipped due to absence of debug database file
+add wave -position insertpoint  \
+sim:/keypad_input_tb/rows_exp
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.keypad_input_tb(fast)
+# Loading work.state(fast)
+# Loading work.keypad_input_sv_unit(fast)
+# Loading work.keypad_input(fast)
+# Loading work.next_state_logic_sv_unit(fast)
+# Loading work.next_state_logic(fast)
+run 200
+# Error: inputs = 1111
+#  Output = 111000 (111010 expected)
+# Error: inputs = 1111
+#  Output = 110100 (110110 expected)
+# Error: inputs = 1111
+#  Output = 101100 (101110 expected)
+# Error: inputs = 1111
+#  Output = 011100 (011110 expected)
+# Error: inputs = 1111
+#  Output = 111000 (111010 expected)
+vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_input_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 15:25:36 on Sep 15,2025
+# vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_input_tb.sv 
+# -- Compiling module keypad_input_tb
+# 
+# Top level modules:
+# 	keypad_input_tb
+# End time: 15:25:36 on Sep 15,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.keypad_input_tb(fast)
+# Loading work.state(fast)
+# Loading work.keypad_input_sv_unit(fast)
+# Loading work.keypad_input(fast)
+# Loading work.next_state_logic_sv_unit(fast)
+# Loading work.next_state_logic(fast)
+run 200
+# Error: inputs = 1111
+# Rows:  1110 (1110 expected)
+# Press:  0 (1 expected)
+# Change:  0 (0 expected)
+# Error: inputs = 1111
+# Rows:  1101 (1101 expected)
+# Press:  0 (1 expected)
+# Change:  0 (0 expected)
+# Error: inputs = 1111
+# Rows:  1011 (1011 expected)
+# Press:  0 (1 expected)
+# Change:  0 (0 expected)
+# Error: inputs = 1111
+# Rows:  0111 (0111 expected)
+# Press:  0 (1 expected)
+# Change:  0 (0 expected)
+# Error: inputs = 1111
+# Rows:  1110 (1110 expected)
+# Press:  0 (1 expected)
+# Change:  0 (0 expected)
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.keypad_input_tb(fast)
+# Loading work.state(fast)
+# Loading work.keypad_input_sv_unit(fast)
+# Loading work.keypad_input(fast)
+# Loading work.next_state_logic_sv_unit(fast)
+# Loading work.next_state_logic(fast)
+run 200
+# Error: inputs = 1111
+# Rows:  1110 (1110 expected)
+# Press:  0 (1 expected)
+# Change:  0 (0 expected)
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.keypad_input_tb(fast)
+# Loading work.state(fast)
+# Loading work.keypad_input_sv_unit(fast)
+# Loading work.keypad_input(fast)
+# Loading work.next_state_logic_sv_unit(fast)
+# Loading work.next_state_logic(fast)
+run 200
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.keypad_input_tb(fast)
+# Loading work.state(fast)
+# Loading work.keypad_input_sv_unit(fast)
+# Loading work.keypad_input(fast)
+# Loading work.next_state_logic_sv_unit(fast)
+# Loading work.next_state_logic(fast)
+run 200
+run 200
+# Error: inputs = 1101
+# Rows:  0000 (1101 expected)
+# Press:  0 (0 expected)
+# Change:  0 (0 expected)
+# Error: inputs = 1101
+# Rows:  0000 (1101 expected)
+# Press:  0 (0 expected)
+# Change:  0 (0 expected)
+# Error: inputs = 1101
+# Rows:  0000 (1101 expected)
+# Press:  0 (0 expected)
+# Change:  0 (0 expected)
+# Error: inputs = 1101
+# Rows:  0000 (1101 expected)
+# Press:  0 (0 expected)
+# Change:  0 (0 expected)
+# Error: inputs = 1101
+# Rows:  0000 (1101 expected)
+# Press:  0 (0 expected)
+# Change:  0 (0 expected)
+# Error: inputs = 1101
+# Rows:  0000 (1101 expected)
+# Press:  0 (0 expected)
+# Change:  0 (0 expected)
+# Error: inputs = 1101
+# Rows:  0000 (1101 expected)
+# Press:  0 (0 expected)
+# Change:  0 (0 expected)
+# Error: inputs = 1101
+# Rows:  0000 (1101 expected)
+# Press:  0 (0 expected)
+# Change:  0 (0 expected)
+# Error: inputs = 1101
+# Rows:  0000 (1101 expected)
+# Press:  0 (0 expected)
+# Change:  0 (0 expected)
+# Error: inputs = 1101
+# Rows:  0000 (1101 expected)
+# Press:  0 (0 expected)
+# Change:  0 (0 expected)
+# Error: inputs = 1101
+# Rows:  0000 (1101 expected)
+# Press:  0 (0 expected)
+# Change:  0 (0 expected)
+# Error: inputs = 1101
+# Rows:  0000 (1101 expected)
+# Press:  0 (0 expected)
+# Change:  0 (1 expected)
+# Error: inputs = 1101
+# Rows:  0000 (1101 expected)
+# Press:  0 (0 expected)
+# Change:  0 (0 expected)
+# Error: inputs = 1101
+# Rows:  0000 (1101 expected)
+# Press:  0 (0 expected)
+# Change:  0 (0 expected)
+# Error: inputs = 1101
+# Rows:  0000 (1101 expected)
+# Press:  0 (0 expected)
+# Change:  0 (0 expected)
+# Error: inputs = 1101
+# Rows:  0000 (1101 expected)
+# Press:  0 (0 expected)
+# Change:  0 (0 expected)
+# Error: inputs = 1101
+# Rows:  0000 (1101 expected)
+# Press:  0 (0 expected)
+# Change:  1 (0 expected)
+# Error: inputs = 1101
+# Rows:  0000 (1101 expected)
+# Press:  0 (0 expected)
+# Change:  0 (0 expected)
+# Error: inputs = 1101
+# Rows:  0000 (1101 expected)
+# Press:  0 (0 expected)
+# Change:  0 (0 expected)
+# Error: inputs = 1101
+# Rows:  0000 (1101 expected)
+# Press:  0 (0 expected)
+# Change:  0 (0 expected)

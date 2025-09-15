@@ -1,0 +1,1 @@
+C:/lscc/radiant/2025.1/questasim/win64/VisualizerRls/bin/viscom.exe -nolock -quiet -jmem_size 737568 work.keypad_input -quiet -auto_acc_if_foreign -work work +acc -allow_unnamed -o _opt2 -id 1-a8934a98430d-68c89016-175-3f00 +__design_bin_path+C:/Users/diego/College/2025/E155/lab3/FPGA/radiant_project/lab3_dw +__betafsm
