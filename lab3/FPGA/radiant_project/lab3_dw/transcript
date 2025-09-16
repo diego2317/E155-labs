@@ -1,0 +1,1140 @@
+# Reading pref.tcl
+# //  Questa Lattice OEM Edition-64
+# //  Version 2024.2 win64 May 20 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+vlib work
+vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/src/clock_divider.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 18:16:16 on Sep 15,2025
+# vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/src/clock_divider.sv 
+# -- Compiling module clock_divider
+# 
+# Top level modules:
+# 	clock_divider
+# End time: 18:16:16 on Sep 15,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_decoder.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 18:16:16 on Sep 15,2025
+# vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_decoder.sv 
+# -- Compiling module keypad_decoder
+# 
+# Top level modules:
+# 	keypad_decoder
+# End time: 18:16:16 on Sep 15,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_input.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 18:16:16 on Sep 15,2025
+# vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_input.sv 
+# ** Error: C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_input.sv(8): (vlog-13006) Could not find the package (state).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# ** Error: C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_input.sv(43): (vlog-2730) Undefined variable: 'B0'.
+# ** Error: C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_input.sv(43): (vlog-2730) Undefined variable: 'R0'.
+# ** Error: C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_input.sv(43): (vlog-2730) Undefined variable: 'D0'.
+# ** Error: C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_input.sv(43): (vlog-2730) Undefined variable: 'P0'.
+# ** Error: C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_input.sv(43): (vlog-2730) Undefined variable: 'W0'.
+# ** Error: C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_input.sv(44): (vlog-2730) Undefined variable: 'B1'.
+# ** Error: C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_input.sv(44): (vlog-2730) Undefined variable: 'R1'.
+# ** Error: C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_input.sv(44): (vlog-2730) Undefined variable: 'D1'.
+# ** Error: C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_input.sv(44): (vlog-2730) Undefined variable: 'P1'.
+# ** Error: C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_input.sv(44): (vlog-2730) Undefined variable: 'W1'.
+# ** Error: C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_input.sv(45): (vlog-2730) Undefined variable: 'B2'.
+# ** Error: C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_input.sv(45): (vlog-2730) Undefined variable: 'R2'.
+# ** Error: C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_input.sv(45): (vlog-2730) Undefined variable: 'D2'.
+# ** Error: C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_input.sv(45): (vlog-2730) Undefined variable: 'P2'.
+# ** Error: C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_input.sv(45): (vlog-2730) Undefined variable: 'W2'.
+# ** Error: C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_input.sv(46): (vlog-2730) Undefined variable: 'B3'.
+# ** Error: C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_input.sv(46): (vlog-2730) Undefined variable: 'R3'.
+# ** Error: C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_input.sv(46): (vlog-2730) Undefined variable: 'D3'.
+# ** Error: C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_input.sv(46): (vlog-2730) Undefined variable: 'P3'.
+# ** Error: C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_input.sv(46): (vlog-2730) Undefined variable: 'W3'.
+# End time: 18:16:16 on Sep 15,2025, Elapsed time: 0:00:00
+# Errors: 21, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_reader.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 18:16:17 on Sep 15,2025
+# vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_reader.sv 
+# -- Compiling module keypad_reader
+# 
+# Top level modules:
+# 	keypad_reader
+# End time: 18:16:17 on Sep 15,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/src/lab3_dw.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 18:16:17 on Sep 15,2025
+# vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/src/lab3_dw.sv 
+# -- Compiling module lab3_dw
+# 
+# Top level modules:
+# 	lab3_dw
+# End time: 18:16:17 on Sep 15,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/src/next_state_logic.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 18:16:17 on Sep 15,2025
+# vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/src/next_state_logic.sv 
+# ** Error: C:/Users/diego/College/2025/E155/lab3/FPGA/src/next_state_logic.sv(7): (vlog-13006) Could not find the package (state).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# ** Error: (vlog-13069) C:/Users/diego/College/2025/E155/lab3/FPGA/src/next_state_logic.sv(10): near "state": syntax error, unexpected IDENTIFIER, expecting ')'.
+# End time: 18:16:17 on Sep 15,2025, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/src/seven_seg_controller.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 18:16:17 on Sep 15,2025
+# vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/src/seven_seg_controller.sv 
+# -- Compiling module seven_seg_controller
+# 
+# Top level modules:
+# 	seven_seg_controller
+# End time: 18:16:17 on Sep 15,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/src/seven_seg_decoder.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 18:16:17 on Sep 15,2025
+# vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/src/seven_seg_decoder.sv 
+# -- Compiling module seven_seg_decoder
+# 
+# Top level modules:
+# 	seven_seg_decoder
+# End time: 18:16:17 on Sep 15,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/src/state.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 18:16:17 on Sep 15,2025
+# vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/src/state.sv 
+# -- Compiling package state
+# 
+# Top level modules:
+# 	--none--
+# End time: 18:16:17 on Sep 15,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/src/synchronizer.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 18:16:18 on Sep 15,2025
+# vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/src/synchronizer.sv 
+# -- Compiling module synchronizer
+# 
+# Top level modules:
+# 	synchronizer
+# End time: 18:16:18 on Sep 15,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/src/next_state_logic.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 18:16:40 on Sep 15,2025
+# vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/src/next_state_logic.sv 
+# -- Compiling package next_state_logic_sv_unit
+# -- Importing package state
+# -- Compiling module next_state_logic
+# 
+# Top level modules:
+# 	next_state_logic
+# End time: 18:16:40 on Sep 15,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_decoder.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 18:16:49 on Sep 15,2025
+# vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_decoder.sv 
+# -- Compiling module keypad_decoder
+# 
+# Top level modules:
+# 	keypad_decoder
+# End time: 18:16:49 on Sep 15,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_input.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 18:16:49 on Sep 15,2025
+# vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_input.sv 
+# -- Compiling package keypad_input_sv_unit
+# -- Importing package state
+# -- Compiling module keypad_input
+# 
+# Top level modules:
+# 	keypad_input
+# End time: 18:16:49 on Sep 15,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_reader.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 18:16:49 on Sep 15,2025
+# vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_reader.sv 
+# -- Compiling module keypad_reader
+# 
+# Top level modules:
+# 	keypad_reader
+# End time: 18:16:49 on Sep 15,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_reader_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 18:17:13 on Sep 15,2025
+# vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_reader_tb.sv 
+# -- Compiling module keypad_input_tb
+# 
+# Top level modules:
+# 	keypad_input_tb
+# End time: 18:17:13 on Sep 15,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Load canceled
+vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_reader_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 18:18:10 on Sep 15,2025
+# vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_reader_tb.sv 
+# -- Compiling module keypad_reader_tb
+# 
+# Top level modules:
+# 	keypad_reader_tb
+# End time: 18:18:10 on Sep 15,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -gui work.keypad_reader_tb -voptargs=+acc
+# vsim -gui work.keypad_reader_tb -voptargs="+acc" 
+# Start time: 18:18:40 on Sep 15,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.keypad_reader_tb(fast)
+# Loading work.keypad_reader(fast)
+# Loading work.state(fast)
+# Loading work.keypad_input_sv_unit(fast)
+# Loading work.keypad_input(fast)
+# Loading work.next_state_logic_sv_unit(fast)
+# Loading work.next_state_logic(fast)
+# Loading work.keypad_decoder(fast)
+add wave -position insertpoint  \
+sim:/keypad_reader_tb/clk
+add wave -position insertpoint  \
+sim:/keypad_reader_tb/cols
+add wave -position insertpoint  \
+sim:/keypad_reader_tb/rows
+add wave -position insertpoint  \
+sim:/keypad_reader_tb/rows_exp
+add wave -position insertpoint  \
+sim:/keypad_reader_tb/new_value
+add wave -position insertpoint  \
+sim:/keypad_reader_tb/new_value_exp
+add wave -position insertpoint  \
+sim:/keypad_reader_tb/old_value
+add wave -position insertpoint  \
+sim:/keypad_reader_tb/old_value_exp
+run -all
+# ** Warning: (vsim-7) Failed to open readmem file "keypad_reader_tv.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_reader_tb.sv(33)
+#    Time: 0 ns  Iteration: 0  Instance: /keypad_reader_tb
+# Break key hit
+# Break in Module keypad_reader_tb at C:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_reader_tb.sv line 28
+vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_reader_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 18:19:38 on Sep 15,2025
+# vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_reader_tb.sv 
+# -- Compiling module keypad_reader_tb
+# 
+# Top level modules:
+# 	keypad_reader_tb
+# End time: 18:19:39 on Sep 15,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_reader_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 18:19:50 on Sep 15,2025
+# vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_reader_tb.sv 
+# -- Compiling module keypad_reader_tb
+# 
+# Top level modules:
+# 	keypad_reader_tb
+# End time: 18:19:50 on Sep 15,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.keypad_reader_tb(fast)
+# Loading work.keypad_reader(fast)
+# Loading work.state(fast)
+# Loading work.keypad_input_sv_unit(fast)
+# Loading work.keypad_input(fast)
+# Loading work.next_state_logic_sv_unit(fast)
+# Loading work.next_state_logic(fast)
+# Loading work.keypad_decoder(fast)
+run -all
+# Break key hit
+# Simulation stop requested.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.keypad_reader_tb(fast)
+# Loading work.keypad_reader(fast)
+# Loading work.state(fast)
+# Loading work.keypad_input_sv_unit(fast)
+# Loading work.keypad_input(fast)
+# Loading work.next_state_logic_sv_unit(fast)
+# Loading work.next_state_logic(fast)
+# Loading work.keypad_decoder(fast)
+run 10
+run 10
+run 10
+run 100
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.keypad_reader_tb(fast)
+# Loading work.keypad_reader(fast)
+# Loading work.state(fast)
+# Loading work.keypad_input_sv_unit(fast)
+# Loading work.keypad_input(fast)
+# Loading work.next_state_logic_sv_unit(fast)
+# Loading work.next_state_logic(fast)
+# Loading work.keypad_decoder(fast)
+run 100
+run 100
+run 100
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.keypad_reader_tb(fast)
+# Loading work.keypad_reader(fast)
+# Loading work.state(fast)
+# Loading work.keypad_input_sv_unit(fast)
+# Loading work.keypad_input(fast)
+# Loading work.next_state_logic_sv_unit(fast)
+# Loading work.next_state_logic(fast)
+# Loading work.keypad_decoder(fast)
+run -all
+# Break key hit
+# Break in Module keypad_reader_tb at C:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_reader_tb.sv line 27
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.keypad_reader_tb(fast)
+# Loading work.keypad_reader(fast)
+# Loading work.state(fast)
+# Loading work.keypad_input_sv_unit(fast)
+# Loading work.keypad_input(fast)
+# Loading work.next_state_logic_sv_unit(fast)
+# Loading work.next_state_logic(fast)
+# Loading work.keypad_decoder(fast)
+vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_reader_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 18:26:31 on Sep 15,2025
+# vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_reader_tb.sv 
+# -- Compiling module keypad_reader_tb
+# 
+# Top level modules:
+# 	keypad_reader_tb
+# End time: 18:26:31 on Sep 15,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+run -all
+# Break key hit
+# Simulation stop requested.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.keypad_reader_tb(fast)
+# Loading work.keypad_reader(fast)
+# Loading work.state(fast)
+# Loading work.keypad_input_sv_unit(fast)
+# Loading work.keypad_input(fast)
+# Loading work.next_state_logic_sv_unit(fast)
+# Loading work.next_state_logic(fast)
+# Loading work.keypad_decoder(fast)
+run 180
+run 1-
+# Time value must not be negative: 1-
+run 10
+run 10
+run 10
+run 10
+run 10
+run 20
+run 10
+run 10
+#         25 tests completed with          0 errors
+# ** Note: $stop    : C:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_reader_tb.sv(54)
+#    Time: 265 ns  Iteration: 1  Instance: /keypad_reader_tb
+# Break in Module keypad_reader_tb at C:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_reader_tb.sv line 54
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.keypad_reader_tb(fast)
+# Loading work.keypad_reader(fast)
+# Loading work.state(fast)
+# Loading work.keypad_input_sv_unit(fast)
+# Loading work.keypad_input(fast)
+# Loading work.next_state_logic_sv_unit(fast)
+# Loading work.next_state_logic(fast)
+# Loading work.keypad_decoder(fast)
+run 250
+run 250
+# Error: inputs = 0111
+# Rows:  1011 (1011 expected)
+# New Value:  0101 (1011 expected)
+# Old Value:  0000 (0101 expected)
+# Test number:         45
+#         47 tests completed with          0 errors
+# ** Note: $stop    : C:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_reader_tb.sv(54)
+#    Time: 485 ns  Iteration: 1  Instance: /keypad_reader_tb
+# Break in Module keypad_reader_tb at C:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_reader_tb.sv line 54
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.keypad_reader_tb(fast)
+# Loading work.keypad_reader(fast)
+# Loading work.state(fast)
+# Loading work.keypad_input_sv_unit(fast)
+# Loading work.keypad_input(fast)
+# Loading work.next_state_logic_sv_unit(fast)
+# Loading work.next_state_logic(fast)
+# Loading work.keypad_decoder(fast)
+run -all
+#         48 tests completed with          0 errors
+# ** Note: $stop    : C:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_reader_tb.sv(54)
+#    Time: 495 ns  Iteration: 1  Instance: /keypad_reader_tb
+# Break in Module keypad_reader_tb at C:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_reader_tb.sv line 54
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.keypad_reader_tb(fast)
+# Loading work.keypad_reader(fast)
+# Loading work.state(fast)
+# Loading work.keypad_input_sv_unit(fast)
+# Loading work.keypad_input(fast)
+# Loading work.next_state_logic_sv_unit(fast)
+# Loading work.next_state_logic(fast)
+# Loading work.keypad_decoder(fast)
+run -all
+# Error: inputs = 0011
+# Rows:  0111 (1110 expected)
+# New Value:  1011 (1011 expected)
+# Old Value:  0101 (0101 expected)
+# Test number:         52
+# Error: inputs = 0010
+# Rows:  0111 (1110 expected)
+# New Value:  1011 (1011 expected)
+# Old Value:  0101 (0101 expected)
+# Test number:         53
+# Error: inputs = 0010
+# Rows:  0111 (1110 expected)
+# New Value:  1011 (1011 expected)
+# Old Value:  0101 (0101 expected)
+# Test number:         54
+# Error: inputs = 0010
+# Rows:  0111 (1101 expected)
+# New Value:  1011 (1011 expected)
+# Old Value:  0101 (0101 expected)
+# Test number:         55
+# Error: inputs = 0010
+# Rows:  0111 (1101 expected)
+# New Value:  1011 (1011 expected)
+# Old Value:  0101 (0101 expected)
+# Test number:         56
+# Error: inputs = 0010
+# Rows:  0111 (1101 expected)
+# New Value:  1011 (1011 expected)
+# Old Value:  0101 (0101 expected)
+# Test number:         57
+# Error: inputs = 0010
+# Rows:  0111 (1011 expected)
+# New Value:  1011 (1011 expected)
+# Old Value:  0101 (0101 expected)
+# Test number:         58
+# Error: inputs = 0010
+# Rows:  0111 (1011 expected)
+# New Value:  1011 (1011 expected)
+# Old Value:  0101 (0101 expected)
+# Test number:         59
+# Error: inputs = 0010
+# Rows:  0111 (1011 expected)
+# New Value:  1011 (1011 expected)
+# Old Value:  0101 (0101 expected)
+# Test number:         60
+# Error: inputs = 0010
+# Rows:  0111 (1110 expected)
+# New Value:  1011 (1011 expected)
+# Old Value:  0101 (0101 expected)
+# Test number:         64
+# Error: inputs = 1110
+# Rows:  0111 (1110 expected)
+# New Value:  1011 (1011 expected)
+# Old Value:  0101 (0101 expected)
+# Test number:         65
+# Error: inputs = 1110
+# Rows:  0111 (1110 expected)
+# New Value:  1011 (1011 expected)
+# Old Value:  0101 (0101 expected)
+# Test number:         66
+# Error: inputs = 1110
+# Rows:  0111 (1110 expected)
+# New Value:  1011 (1011 expected)
+# Old Value:  0101 (0101 expected)
+# Test number:         67
+# Error: inputs = 1110
+# Rows:  0111 (1110 expected)
+# New Value:  1011 (1011 expected)
+# Old Value:  0101 (0101 expected)
+# Test number:         68
+# Error: inputs = 1110
+# Rows:  0111 (1110 expected)
+# New Value:  1100 (1011 expected)
+# Old Value:  1011 (0101 expected)
+# Test number:         69
+# Error: inputs = 1110
+# Rows:  0111 (1110 expected)
+# New Value:  1100 (1011 expected)
+# Old Value:  1011 (0101 expected)
+# Test number:         70
+# Error: inputs = 1110
+# Rows:  0111 (1110 expected)
+# New Value:  1100 (1011 expected)
+# Old Value:  1011 (0101 expected)
+# Test number:         71
+# Error: inputs = 1110
+# Rows:  0111 (1110 expected)
+# New Value:  1100 (1011 expected)
+# Old Value:  1011 (0101 expected)
+# Test number:         72
+# Error: inputs = 1110
+# Rows:  0111 (1110 expected)
+# New Value:  1100 (1011 expected)
+# Old Value:  1011 (0101 expected)
+# Test number:         73
+# Error: inputs = 1110
+# Rows:  0111 (1110 expected)
+# New Value:  1100 (1011 expected)
+# Old Value:  1011 (0101 expected)
+# Test number:         74
+# Error: inputs = 1110
+# Rows:  0111 (1110 expected)
+# New Value:  1100 (1011 expected)
+# Old Value:  1011 (0101 expected)
+# Test number:         75
+# Error: inputs = 1110
+# Rows:  0111 (1110 expected)
+# New Value:  1100 (1011 expected)
+# Old Value:  1011 (0101 expected)
+# Test number:         76
+# Error: inputs = 1110
+# Rows:  0111 (1110 expected)
+# New Value:  1100 (1011 expected)
+# Old Value:  1011 (0101 expected)
+# Test number:         77
+# Error: inputs = 1110
+# Rows:  0111 (1110 expected)
+# New Value:  1100 (1011 expected)
+# Old Value:  1011 (0101 expected)
+# Test number:         78
+# Error: inputs = 1110
+# Rows:  0111 (1110 expected)
+# New Value:  1100 (1011 expected)
+# Old Value:  1011 (0101 expected)
+# Test number:         79
+# Error: inputs = 1110
+# Rows:  0111 (1110 expected)
+# New Value:  1100 (1011 expected)
+# Old Value:  1011 (0101 expected)
+# Test number:         80
+# Error: inputs = 1110
+# Rows:  0111 (1110 expected)
+# New Value:  1100 (1011 expected)
+# Old Value:  1011 (0101 expected)
+# Test number:         81
+# Error: inputs = 1110
+# Rows:  0111 (1110 expected)
+# New Value:  1100 (1011 expected)
+# Old Value:  1011 (0101 expected)
+# Test number:         82
+# Error: inputs = 1110
+# Rows:  0111 (1110 expected)
+# New Value:  1100 (1011 expected)
+# Old Value:  1011 (0101 expected)
+# Test number:         83
+# Error: inputs = 1110
+# Rows:  0111 (1110 expected)
+# New Value:  1100 (1011 expected)
+# Old Value:  1011 (0101 expected)
+# Test number:         84
+# Error: inputs = 1110
+# Rows:  0111 (1110 expected)
+# New Value:  1100 (0000 expected)
+# Old Value:  1011 (1011 expected)
+# Test number:         85
+# Error: inputs = 1110
+# Rows:  0111 (1110 expected)
+# New Value:  1100 (0000 expected)
+# Old Value:  1011 (1011 expected)
+# Test number:         86
+# Error: inputs = 1110
+# Rows:  0111 (1110 expected)
+# New Value:  1100 (0000 expected)
+# Old Value:  1011 (1011 expected)
+# Test number:         87
+# Error: inputs = 1110
+# Rows:  0111 (1110 expected)
+# New Value:  1100 (0000 expected)
+# Old Value:  1011 (1011 expected)
+# Test number:         88
+#         89 tests completed with          0 errors
+# ** Note: $stop    : C:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_reader_tb.sv(54)
+#    Time: 905 ns  Iteration: 1  Instance: /keypad_reader_tb
+# Break in Module keypad_reader_tb at C:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_reader_tb.sv line 54
+add wave -position insertpoint  \
+sim:/keypad_reader_tb/dut/k/state
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.keypad_reader_tb(fast)
+# Loading work.keypad_reader(fast)
+# Loading work.state(fast)
+# Loading work.keypad_input_sv_unit(fast)
+# Loading work.keypad_input(fast)
+# Loading work.next_state_logic_sv_unit(fast)
+# Loading work.next_state_logic(fast)
+# Loading work.keypad_decoder(fast)
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.keypad_reader_tb(fast)
+# Loading work.keypad_reader(fast)
+# Loading work.state(fast)
+# Loading work.keypad_input_sv_unit(fast)
+# Loading work.keypad_input(fast)
+# Loading work.next_state_logic_sv_unit(fast)
+# Loading work.next_state_logic(fast)
+# Loading work.keypad_decoder(fast)
+run -all
+# Error: inputs = 0011
+# Rows:  0111 (1110 expected)
+# New Value:  1011 (1011 expected)
+# Old Value:  0101 (0101 expected)
+# Test number:         52
+# Error: inputs = 0010
+# Rows:  0111 (1110 expected)
+# New Value:  1011 (1011 expected)
+# Old Value:  0101 (0101 expected)
+# Test number:         53
+# Error: inputs = 0010
+# Rows:  0111 (1110 expected)
+# New Value:  1011 (1011 expected)
+# Old Value:  0101 (0101 expected)
+# Test number:         54
+# Error: inputs = 0010
+# Rows:  0111 (1101 expected)
+# New Value:  1011 (1011 expected)
+# Old Value:  0101 (0101 expected)
+# Test number:         55
+# Error: inputs = 0010
+# Rows:  0111 (1101 expected)
+# New Value:  1011 (1011 expected)
+# Old Value:  0101 (0101 expected)
+# Test number:         56
+# Error: inputs = 0010
+# Rows:  0111 (1101 expected)
+# New Value:  1011 (1011 expected)
+# Old Value:  0101 (0101 expected)
+# Test number:         57
+# Error: inputs = 0010
+# Rows:  0111 (1011 expected)
+# New Value:  1011 (1011 expected)
+# Old Value:  0101 (0101 expected)
+# Test number:         58
+# Error: inputs = 0010
+# Rows:  0111 (1011 expected)
+# New Value:  1011 (1011 expected)
+# Old Value:  0101 (0101 expected)
+# Test number:         59
+# Error: inputs = 0010
+# Rows:  0111 (1011 expected)
+# New Value:  1011 (1011 expected)
+# Old Value:  0101 (0101 expected)
+# Test number:         60
+# Error: inputs = 0010
+# Rows:  0111 (1110 expected)
+# New Value:  1011 (1011 expected)
+# Old Value:  0101 (0101 expected)
+# Test number:         64
+#         65 tests completed with          0 errors
+# ** Note: $stop    : C:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_reader_tb.sv(54)
+#    Time: 665 ns  Iteration: 1  Instance: /keypad_reader_tb
+# Break in Module keypad_reader_tb at C:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_reader_tb.sv line 54
+add wave -position insertpoint  \
+sim:/keypad_reader_tb/vectornum
+vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_reader_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 18:45:44 on Sep 15,2025
+# vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_reader_tb.sv 
+# -- Compiling module keypad_reader_tb
+# 
+# Top level modules:
+# 	keypad_reader_tb
+# End time: 18:45:44 on Sep 15,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.keypad_reader_tb(fast)
+# Loading work.keypad_reader(fast)
+# Loading work.state(fast)
+# Loading work.keypad_input_sv_unit(fast)
+# Loading work.keypad_input(fast)
+# Loading work.next_state_logic_sv_unit(fast)
+# Loading work.next_state_logic(fast)
+# Loading work.keypad_decoder(fast)
+run -all
+# Error: inputs = 0011
+# Rows:  0111 (1110 expected)
+# New Value:  1011 (1011 expected)
+# Old Value:  0101 (0101 expected)
+# Test number:         52
+# Error: inputs = 0010
+# Rows:  0111 (1110 expected)
+# New Value:  1011 (1011 expected)
+# Old Value:  0101 (0101 expected)
+# Test number:         53
+# Error: inputs = 0010
+# Rows:  0111 (1110 expected)
+# New Value:  1011 (1011 expected)
+# Old Value:  0101 (0101 expected)
+# Test number:         54
+# Error: inputs = 0010
+# Rows:  0111 (1101 expected)
+# New Value:  1011 (1011 expected)
+# Old Value:  0101 (0101 expected)
+# Test number:         55
+# Error: inputs = 0010
+# Rows:  0111 (1101 expected)
+# New Value:  1011 (1011 expected)
+# Old Value:  0101 (0101 expected)
+# Test number:         56
+# Error: inputs = 0010
+# Rows:  0111 (1101 expected)
+# New Value:  1011 (1011 expected)
+# Old Value:  0101 (0101 expected)
+# Test number:         57
+# Error: inputs = 0010
+# Rows:  0111 (1011 expected)
+# New Value:  1011 (1011 expected)
+# Old Value:  0101 (0101 expected)
+# Test number:         58
+# Error: inputs = 0010
+# Rows:  0111 (1011 expected)
+# New Value:  1011 (1011 expected)
+# Old Value:  0101 (0101 expected)
+# Test number:         59
+# Error: inputs = 0010
+# Rows:  0111 (1011 expected)
+# New Value:  1011 (1011 expected)
+# Old Value:  0101 (0101 expected)
+# Test number:         60
+# Error: inputs = 0010
+# Rows:  0111 (1110 expected)
+# New Value:  1011 (1011 expected)
+# Old Value:  0101 (0101 expected)
+# Test number:         64
+#         65 tests completed with         10 errors
+# ** Note: $stop    : C:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_reader_tb.sv(55)
+#    Time: 665 ns  Iteration: 1  Instance: /keypad_reader_tb
+# Break in Module keypad_reader_tb at C:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_reader_tb.sv line 55
+vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/src/next_state_logic.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 18:51:48 on Sep 15,2025
+# vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/src/next_state_logic.sv 
+# -- Compiling package next_state_logic_sv_unit
+# -- Importing package state
+# -- Compiling module next_state_logic
+# 
+# Top level modules:
+# 	next_state_logic
+# End time: 18:51:48 on Sep 15,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.keypad_reader_tb(fast)
+# Loading work.keypad_reader(fast)
+# Loading work.state(fast)
+# Loading work.keypad_input_sv_unit(fast)
+# Loading work.keypad_input(fast)
+# Loading work.next_state_logic_sv_unit(fast)
+# Loading work.next_state_logic(fast)
+# Loading work.keypad_decoder(fast)
+run -all
+# Error: inputs = 1101
+# Rows:  1011 (1101 expected)
+# New Value:  0000 (0000 expected)
+# Old Value:  0000 (0000 expected)
+# Test number:          6
+# Error: inputs = 1101
+# Rows:  1011 (1101 expected)
+# New Value:  0000 (0000 expected)
+# Old Value:  0000 (0000 expected)
+# Test number:          7
+# Error: inputs = 1101
+# Rows:  1011 (1101 expected)
+# New Value:  0000 (0000 expected)
+# Old Value:  0000 (0000 expected)
+# Test number:          8
+# Error: inputs = 1101
+# Rows:  0111 (1101 expected)
+# New Value:  0000 (0000 expected)
+# Old Value:  0000 (0000 expected)
+# Test number:          9
+# Error: inputs = 1101
+# Rows:  0111 (1101 expected)
+# New Value:  0000 (0000 expected)
+# Old Value:  0000 (0000 expected)
+# Test number:         10
+# Error: inputs = 1101
+# Rows:  0111 (1101 expected)
+# New Value:  0000 (0000 expected)
+# Old Value:  0000 (0000 expected)
+# Test number:         11
+# Error: inputs = 1101
+# Rows:  1110 (1101 expected)
+# New Value:  0000 (0000 expected)
+# Old Value:  0000 (0000 expected)
+# Test number:         12
+# Error: inputs = 1101
+# Rows:  1110 (1101 expected)
+# New Value:  0000 (0000 expected)
+# Old Value:  0000 (0000 expected)
+# Test number:         13
+# Error: inputs = 1101
+# Rows:  1110 (1101 expected)
+# New Value:  0000 (0000 expected)
+# Old Value:  0000 (0000 expected)
+# Test number:         14
+# Error: inputs = 1101
+# Rows:  1011 (1101 expected)
+# New Value:  0000 (0000 expected)
+# Old Value:  0000 (0000 expected)
+# Test number:         18
+# Error: inputs = 1101
+# Rows:  1011 (1101 expected)
+# New Value:  0000 (0000 expected)
+# Old Value:  0000 (0000 expected)
+# Test number:         19
+# Error: inputs = 1101
+# Rows:  1011 (1101 expected)
+# New Value:  0000 (0000 expected)
+# Old Value:  0000 (0000 expected)
+# Test number:         20
+# Error: inputs = 1101
+# Rows:  0111 (1101 expected)
+# New Value:  0000 (0000 expected)
+# Old Value:  0000 (0000 expected)
+# Test number:         21
+# Error: inputs = 1101
+# Rows:  0111 (1101 expected)
+# New Value:  0000 (0000 expected)
+# Old Value:  0000 (0000 expected)
+# Test number:         22
+# Error: inputs = 1101
+# Rows:  0111 (1101 expected)
+# New Value:  0000 (0101 expected)
+# Old Value:  0000 (0000 expected)
+# Test number:         23
+# Error: inputs = 1101
+# Rows:  1110 (1101 expected)
+# New Value:  0000 (0101 expected)
+# Old Value:  0000 (0000 expected)
+# Test number:         24
+# Error: inputs = 1111
+# Rows:  1110 (1101 expected)
+# New Value:  0000 (0101 expected)
+# Old Value:  0000 (0000 expected)
+# Test number:         25
+# Error: inputs = 1111
+# Rows:  1110 (1011 expected)
+# New Value:  0000 (0101 expected)
+# Old Value:  0000 (0000 expected)
+# Test number:         26
+# Error: inputs = 1111
+# Rows:  1101 (1011 expected)
+# New Value:  0000 (0101 expected)
+# Old Value:  0000 (0000 expected)
+# Test number:         27
+# Error: inputs = 0111
+# Rows:  1101 (1011 expected)
+# New Value:  0000 (0101 expected)
+# Old Value:  0000 (0000 expected)
+# Test number:         28
+# Error: inputs = 0111
+# Rows:  1101 (1011 expected)
+# New Value:  0000 (0101 expected)
+# Old Value:  0000 (0000 expected)
+# Test number:         29
+# Error: inputs = 0111
+# Rows:  1011 (1011 expected)
+# New Value:  0000 (0101 expected)
+# Old Value:  0000 (0000 expected)
+# Test number:         30
+# Error: inputs = 0111
+# Rows:  1011 (1011 expected)
+# New Value:  0000 (0101 expected)
+# Old Value:  0000 (0000 expected)
+# Test number:         31
+# Error: inputs = 0111
+# Rows:  1011 (1011 expected)
+# New Value:  0000 (0101 expected)
+# Old Value:  0000 (0000 expected)
+# Test number:         32
+# Error: inputs = 0111
+# Rows:  0111 (1011 expected)
+# New Value:  0000 (0101 expected)
+# Old Value:  0000 (0000 expected)
+# Test number:         33
+# Error: inputs = 0111
+# Rows:  0111 (1011 expected)
+# New Value:  0000 (0101 expected)
+# Old Value:  0000 (0000 expected)
+# Test number:         34
+# Error: inputs = 0111
+# Rows:  0111 (1011 expected)
+# New Value:  0000 (0101 expected)
+# Old Value:  0000 (0000 expected)
+# Test number:         35
+# Error: inputs = 0111
+# Rows:  1110 (1011 expected)
+# New Value:  0000 (0101 expected)
+# Old Value:  0000 (0000 expected)
+# Test number:         36
+# Error: inputs = 0111
+# Rows:  1110 (1011 expected)
+# New Value:  0000 (0101 expected)
+# Old Value:  0000 (0000 expected)
+# Test number:         37
+# Error: inputs = 0111
+# Rows:  1110 (1011 expected)
+# New Value:  0000 (0101 expected)
+# Old Value:  0000 (0000 expected)
+# Test number:         38
+# Error: inputs = 0111
+# Rows:  1101 (1011 expected)
+# New Value:  0000 (0101 expected)
+# Old Value:  0000 (0000 expected)
+# Test number:         39
+# Error: inputs = 0111
+# Rows:  1101 (1011 expected)
+# New Value:  0000 (0101 expected)
+# Old Value:  0000 (0000 expected)
+# Test number:         40
+# Error: inputs = 0111
+# Rows:  1101 (1011 expected)
+# New Value:  0000 (0101 expected)
+# Old Value:  0000 (0000 expected)
+# Test number:         41
+# Error: inputs = 0111
+# Rows:  1011 (1011 expected)
+# New Value:  0000 (0101 expected)
+# Old Value:  0000 (0000 expected)
+# Test number:         42
+# Error: inputs = 0111
+# Rows:  1011 (1011 expected)
+# New Value:  0000 (0101 expected)
+# Old Value:  0000 (0000 expected)
+# Test number:         43
+# Error: inputs = 0111
+# Rows:  1011 (1011 expected)
+# New Value:  0000 (0101 expected)
+# Old Value:  0000 (0000 expected)
+# Test number:         44
+# Error: inputs = 0111
+# Rows:  0111 (1011 expected)
+# New Value:  0000 (0101 expected)
+# Old Value:  0000 (0000 expected)
+# Test number:         45
+# Error: inputs = 0111
+# Rows:  0111 (1011 expected)
+# New Value:  0000 (1011 expected)
+# Old Value:  0000 (0101 expected)
+# Test number:         46
+# Error: inputs = 0111
+# Rows:  0111 (1011 expected)
+# New Value:  0000 (1011 expected)
+# Old Value:  0000 (0101 expected)
+# Test number:         47
+# Error: inputs = 1111
+# Rows:  1110 (1011 expected)
+# New Value:  0000 (1011 expected)
+# Old Value:  0000 (0101 expected)
+# Test number:         48
+# Error: inputs = 1111
+# Rows:  1110 (0111 expected)
+# New Value:  0000 (1011 expected)
+# Old Value:  0000 (0101 expected)
+# Test number:         49
+# Error: inputs = 0011
+# Rows:  1110 (0111 expected)
+# New Value:  0000 (1011 expected)
+# Old Value:  0000 (0101 expected)
+# Test number:         50
+# Error: inputs = 0011
+# Rows:  1110 (0111 expected)
+# New Value:  0000 (1011 expected)
+# Old Value:  0000 (0101 expected)
+# Test number:         51
+# Error: inputs = 0011
+# Rows:  1110 (1110 expected)
+# New Value:  0000 (1011 expected)
+# Old Value:  0000 (0101 expected)
+# Test number:         52
+# Error: inputs = 0010
+# Rows:  1110 (1110 expected)
+# New Value:  0000 (1011 expected)
+# Old Value:  0000 (0101 expected)
+# Test number:         53
+# Error: inputs = 0010
+# Rows:  1110 (1110 expected)
+# New Value:  0000 (1011 expected)
+# Old Value:  0000 (0101 expected)
+# Test number:         54
+# Error: inputs = 0010
+# Rows:  1110 (1101 expected)
+# New Value:  0000 (1011 expected)
+# Old Value:  0000 (0101 expected)
+# Test number:         55
+# Error: inputs = 0010
+# Rows:  1110 (1101 expected)
+# New Value:  0000 (1011 expected)
+# Old Value:  0000 (0101 expected)
+# Test number:         56
+# Error: inputs = 0010
+# Rows:  1110 (1101 expected)
+# New Value:  0000 (1011 expected)
+# Old Value:  0000 (0101 expected)
+# Test number:         57
+# Error: inputs = 0010
+# Rows:  1110 (1011 expected)
+# New Value:  0000 (1011 expected)
+# Old Value:  0000 (0101 expected)
+# Test number:         58
+# Error: inputs = 0010
+# Rows:  1110 (1011 expected)
+# New Value:  0000 (1011 expected)
+# Old Value:  0000 (0101 expected)
+# Test number:         59
+# Error: inputs = 0010
+# Rows:  1110 (1011 expected)
+# New Value:  0000 (1011 expected)
+# Old Value:  0000 (0101 expected)
+# Test number:         60
+# Error: inputs = 0010
+# Rows:  1110 (0111 expected)
+# New Value:  0000 (1011 expected)
+# Old Value:  0000 (0101 expected)
+# Test number:         61
+# Error: inputs = 0010
+# Rows:  1110 (0111 expected)
+# New Value:  0000 (1011 expected)
+# Old Value:  0000 (0101 expected)
+# Test number:         62
+# Error: inputs = 0010
+# Rows:  1110 (0111 expected)
+# New Value:  0000 (1011 expected)
+# Old Value:  0000 (0101 expected)
+# Test number:         63
+# Error: inputs = 0010
+# Rows:  1110 (1110 expected)
+# New Value:  0000 (1011 expected)
+# Old Value:  0000 (0101 expected)
+# Test number:         64
+#         65 tests completed with         56 errors
+# ** Note: $stop    : C:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_reader_tb.sv(55)
+#    Time: 665 ns  Iteration: 1  Instance: /keypad_reader_tb
+# Break in Module keypad_reader_tb at C:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_reader_tb.sv line 55
+vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/src/next_state_logic.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 18:52:56 on Sep 15,2025
+# vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/src/next_state_logic.sv 
+# -- Compiling package next_state_logic_sv_unit
+# -- Importing package state
+# -- Compiling module next_state_logic
+# 
+# Top level modules:
+# 	next_state_logic
+# End time: 18:52:56 on Sep 15,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.keypad_reader_tb(fast)
+# Loading work.keypad_reader(fast)
+# Loading work.state(fast)
+# Loading work.keypad_input_sv_unit(fast)
+# Loading work.keypad_input(fast)
+# Loading work.next_state_logic_sv_unit(fast)
+# Loading work.next_state_logic(fast)
+# Loading work.keypad_decoder(fast)
+run -all
+#         65 tests completed with          0 errors
+# ** Note: $stop    : C:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_reader_tb.sv(55)
+#    Time: 665 ns  Iteration: 1  Instance: /keypad_reader_tb
+# Break in Module keypad_reader_tb at C:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_reader_tb.sv line 55
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.keypad_reader_tb(fast)
+# Loading work.keypad_reader(fast)
+# Loading work.state(fast)
+# Loading work.keypad_input_sv_unit(fast)
+# Loading work.keypad_input(fast)
+# Loading work.next_state_logic_sv_unit(fast)
+# Loading work.next_state_logic(fast)
+# Loading work.keypad_decoder(fast)
+run -all
+# Error: inputs = 1110
+# Rows:  1110 (1110 expected)
+# New Value:  0000 (1011 expected)
+# Old Value:  1011 (0101 expected)
+# Test number:         84
+#         89 tests completed with          1 errors
+# ** Note: $stop    : C:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_reader_tb.sv(55)
+#    Time: 905 ns  Iteration: 1  Instance: /keypad_reader_tb
+# Break in Module keypad_reader_tb at C:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_reader_tb.sv line 55
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.keypad_reader_tb(fast)
+# Loading work.keypad_reader(fast)
+# Loading work.state(fast)
+# Loading work.keypad_input_sv_unit(fast)
+# Loading work.keypad_input(fast)
+# Loading work.next_state_logic_sv_unit(fast)
+# Loading work.next_state_logic(fast)
+# Loading work.keypad_decoder(fast)
+run -all
+#         88 tests completed with          0 errors
+# ** Note: $stop    : C:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_reader_tb.sv(55)
+#    Time: 895 ns  Iteration: 1  Instance: /keypad_reader_tb
+# Break in Module keypad_reader_tb at C:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_reader_tb.sv line 55

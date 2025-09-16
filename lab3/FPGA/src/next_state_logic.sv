@@ -13,9 +13,10 @@ module next_state_logic(
 	output statetype nextstate
 );
 	logic press;
-	
+	logic valid_input;
+	assign valid_input = ($countones(cols) >= 3);
 	// if any of the columns are read to be low, then that indicates a press.
-	assign press = !(cols[0] && cols[1] && cols[2] && cols[3]);
+	assign press = !(cols[0] && cols[1] && cols[2] && cols[3]) && valid_input;
 	
 	always_comb
 		case(state)
@@ -78,7 +79,7 @@ module next_state_logic(
 						nextstate = (press) ? D3 : R3;
 					end
 				end
-			// in the sending pulse state (where pulse is the message that a row with a pressed button has been identified)
+			// Send the message that a key's been pressed
 			P0: begin
 					nextstate = (press) ? W0 : R0;  
 				end
