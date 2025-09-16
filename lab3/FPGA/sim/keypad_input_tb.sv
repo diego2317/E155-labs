@@ -5,12 +5,11 @@
 module keypad_input_tb();
     logic clk, reset;
     logic press, press_exp;
-    logic change, change_exp;
     logic [3:0] cols;
     logic [3:0] rows, rows_exp;
 
     logic [31:0] vectornum, errors;
-    logic [12:0] testvectors[10000:0];
+    logic [8:0] testvectors[10000:0];
 
     // Instantiate DUT
     keypad_input dut(
@@ -18,8 +17,7 @@ module keypad_input_tb();
         .reset(reset),
         .cols(cols),
         .rows(rows),
-        .press(press),
-        .change(change)
+        .press(press)
     );
 
     // Setup clock
@@ -37,19 +35,19 @@ module keypad_input_tb();
 
     always @(posedge clk)
         begin
-            #1; {cols, rows_exp, press_exp, change_exp} = testvectors[vectornum];
+            #1; {cols, rows_exp, press_exp} = testvectors[vectornum];
         end
     
     always @(negedge clk)
         if (reset) begin // skip during reset
-            if (rows != rows_exp || press != press_exp || change != change_exp) begin // check result
+            if (rows != rows_exp || press != press_exp) begin // check result
                 $display("Error: inputs = %b", cols);
                 $display("Rows:  %b (%b expected)", rows, rows_exp);
                 $display("Press:  %b (%b expected)", press, press_exp);
-                $display("Change:  %b (%b expected)", change, change_exp);
+                $display("Test number: %d", vectornum);
             end
             vectornum = vectornum + 1;
-            if (testvectors[vectornum] === 10'bx) begin
+            if (testvectors[vectornum] === 9'bx) begin
 				$display("%d tests completed with %d errors", vectornum, errors);
 				$stop;
 			end

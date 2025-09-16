@@ -14,7 +14,7 @@ module next_state_logic(
 );
 	logic press;
 	
-	// if any of the columns are read to be high, then that indicates a press.
+	// if any of the columns are read to be low, then that indicates a press.
 	assign press = !(cols[0] && cols[1] && cols[2] && cols[3]);
 	
 	always_comb
@@ -47,35 +47,35 @@ module next_state_logic(
 				end
 			// debouncing state, we wait a certain amount of clock cycles for the signal to settle
 			D0: begin
-					if (counter == 15) begin //(counter == 25000) begin
+					if (counter == 15) begin 
 						nextstate = (press) ? P0 : R0;
 					end
 					else begin
-						nextstate = D0;
+						nextstate = (press) ? D0 : R0;
 					end
 				end
 			D1: begin
-					if (counter == 15) begin //if (counter == 25000) begin
+					if (counter == 15) begin 
 						nextstate = (press) ? P1 : R1;
 					end
 					else begin
-						nextstate = D1;
-					end
+						nextstate = (press) ? D1 : R1;
+					end 
 				end
 			D2: begin
-					if (counter == 15) begin //if (counter == 25000) begin
+					if (counter == 15) begin 
 						nextstate = (press) ? P2 : R2;
 					end
 					else begin
-						nextstate = D2;
+						nextstate = (press) ? D2 : R2;
 					end
 				end
 			D3: begin
-					if (counter == 15) begin //if (counter == 25000) begin
+					if (counter == 15) begin 
 						nextstate = (press) ? P3 : R3;
 					end
 					else begin
-						nextstate = D3;
+						nextstate = (press) ? D3 : R3;
 					end
 				end
 			// in the sending pulse state (where pulse is the message that a row with a pressed button has been identified)
@@ -93,16 +93,16 @@ module next_state_logic(
 				end
 			// in the waiting state (waiting for pressed button to be released)
 			W0: begin
-					nextstate = (press) ? W0 : R0;  
+					nextstate = (press) ? W0 : B1;  
 				end
 			W1: begin
-					nextstate = (press) ? W1 : R1;  
+					nextstate = (press) ? W1 : B2;  
 				end
 			W2: begin
-					nextstate = (press) ? W2 : R2;  
+					nextstate = (press) ? W2 : B3;  
 				end
 			W3: begin
-					nextstate = (press) ? W3 : R3;  
+					nextstate = (press) ? W3 : B0;  
 				end
 			default: nextstate = R0;
 		endcase

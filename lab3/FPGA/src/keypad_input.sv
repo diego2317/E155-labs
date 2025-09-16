@@ -12,8 +12,7 @@ module keypad_input(
 	input logic reset,
 	input logic [3:0] cols,
 	output logic [3:0] rows,
-	output logic press,
-	output logic change
+	output logic press
 );
 
 	statetype state, nextstate;
@@ -25,9 +24,14 @@ module keypad_input(
 			state <= B0;
 			counter <= 0;
 		end
-		else begin
-			// Reset the counter when scanning columns, otherwise increment
-			counter <= (state == R0 || state == R1 || state == R2 || state == R3) ? 0 : counter + 1;
+		else if (state == R0 || state == R1 || state == R2 || state == R3) begin
+			counter <= 0;
+			state <= nextstate;
+		end else if (state == W0 || state == W1 || state == W2 || state == W3) begin
+			counter <= 0;
+			state <= nextstate;
+		end else begin
+			counter <= counter + 1;
 			state <= nextstate;
 		end
 	end
@@ -36,10 +40,9 @@ module keypad_input(
 	next_state_logic scan(state, cols, counter, nextstate);
 	
 	// output logic
-	assign rows[0] = (state == B1 || state == R1 || state == B2 || state == R2 || state == B3 || state == R3);
-	assign rows[1] = (state == B2 || state == R2 || state == B3 || state == R3 || state == B0 || state == R0);
-	assign rows[2] = (state == B3 || state == R3 || state == B0 || state == R0 || state == B1 || state == R1);
-	assign rows[3] = (state == B0 || state == R0 || state == B1 || state == R1 || state == B2 || state == R2);
-	assign press = ((state == R0 || state == R1 || state == R2 || state == R3) && !(cols[0] && cols[1] && cols[2] && cols[3]));
-	assign change = (state == P0 || state == P1 || state == P2 || state == P3);	
+	assign rows[0] = !(state == B0 || state == R0 || state == D0 || state == P0 || state == W0);
+	assign rows[1] = !(state == B1 || state == R1 || state == D1 || state == P1 || state == W1);
+	assign rows[2] = !(state == B2 || state == R2 || state == D2 || state == P2 || state == W2);
+	assign rows[3] = !(state == B3 || state == R3 || state == D3 || state == P3 || state == W3);
+	assign press = ((state == P0 || state == P1 || state == P2 || state == P3) && !(cols[0] && cols[1] && cols[2] && cols[3]));
 endmodule

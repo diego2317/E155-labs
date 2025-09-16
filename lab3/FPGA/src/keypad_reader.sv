@@ -3,7 +3,7 @@
 // Date: 9.15.2025
 // This module deals with reading the keypad
 module keypad_reader(
-	input  logic        clk,
+	input  logic       clk,
 	input  logic       reset,
 	input  logic [3:0] cols,
 	output logic [3:0] rows,
@@ -11,7 +11,7 @@ module keypad_reader(
 	);
 	
 	logic [3:0] temp;
-	logic [3:0] digit_storage;	logic key_pressed, new_key;
+	logic key_pressed;
 	logic [3:0] rows_out;
 	
 	
@@ -21,8 +21,7 @@ module keypad_reader(
 		.reset(reset),
 		.cols(cols),
 		.rows(rows_out),
-		.press(key_pressed),
-		.change(new_key)
+		.press(key_pressed)
 	);
 	
 	// Convert from key to hex
@@ -37,11 +36,9 @@ module keypad_reader(
 		if (reset == 0) begin
 			new_value <= 3'b0;
 			old_value <= 3'b0;
-		end else if (new_key) begin
-			old_value <= new_value;
-			new_value <= digit_storage;
 		end else if (key_pressed) begin
-			digit_storage <= temp;
+			old_value <= new_value;
+			new_value <= temp;
 		end
 	end
 	
