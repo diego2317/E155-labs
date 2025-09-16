@@ -1138,3 +1138,5 @@ run -all
 # ** Note: $stop    : C:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_reader_tb.sv(55)
 #    Time: 895 ns  Iteration: 1  Instance: /keypad_reader_tb
 # Break in Module keypad_reader_tb at C:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_reader_tb.sv line 55
+# End time: 21:40:57 on Sep 15,2025, Elapsed time: 3:22:17
+# Errors: 0, Warnings: 1
