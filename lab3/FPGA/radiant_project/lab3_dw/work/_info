@@ -5,6 +5,26 @@ Z0 !s12c _opt1
 Z1 !s99 nomlopt
 R0
 R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
 !s12c _opt2
 R1
 R0
@@ -37,10 +57,10 @@ n@_opt
 Z9 OL;O;2024.2;79
 R2
 T_opt1
-!s110 1757975147
-V1YS]MU[@1<FL84V@Y4NA:2
+!s110 1757983527
+VPOlh?[R7eKkhG5HlbfDKa1
 04 15 4 work keypad_input_tb fast 0
-=4-a8934a98430d-68c8926b-109-15fc
+=38-a8934a98430d-68c8b326-377-15fc
 R1
 !s12f OEM25U3 
 R4
@@ -93,7 +113,7 @@ R8
 vkeypad_decoder
 2C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_decoder.sv
 R10
-!s110 1757974174
+Z14 !s110 1757977430
 !i10b 1
 !s100 =Id^d[EEON2eiY?B==Xc<2
 IZVRN20^UC>3POPZS;PW1S3
@@ -102,14 +122,14 @@ R2
 w1757989464
 8C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_decoder.sv
 FC:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_decoder.sv
-!i122 22
+!i122 34
 L0 6 30
 R11
 R12
 r1
 !s85 0
 31
-!s108 1757974174.000000
+Z15 !s108 1757977430.000000
 !s107 C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_decoder.sv|
 !s90 -reportprogress|300|-work|work|C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_decoder.sv|
 !i113 0
@@ -141,80 +161,80 @@ r1
 R13
 R8
 vkeypad_input
-Z14 2C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_input.sv
+Z16 2C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_input.sv
 R10
-Z15 DXx4 work 5 state 0 22 CLX?7iH0@N22fNJUEjMS40
-DXx4 work 20 keypad_input_sv_unit 0 22 QDdT0iDoSE@@<[XZ<<^5N0
-Z16 !s110 1757974532
+Z17 DXx4 work 5 state 0 22 CLX?7iH0@N22fNJUEjMS40
+DXx4 work 20 keypad_input_sv_unit 0 22 B7KdmneAA_R:jN9Q5Y>7=0
+Z18 !s110 1757979590
 R11
 r1
 !s85 0
 !i10b 1
-!s100 bh_kQR3KS9cnnV7ITGIZR0
-I6mTig>2I4TLmVD];>:_fW3
+!s100 kX5ZJLM4@RbZ6e4a8>PFY3
+INXn[mX:<U^KhPZFB1GWi40
 !s105 keypad_input_sv_unit
 S1
 R2
-Z17 w1757974395
-Z18 8C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_input.sv
-Z19 FC:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_input.sv
-!i122 30
-L0 10 36
+Z19 w1757979545
+Z20 8C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_input.sv
+Z21 FC:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_input.sv
+!i122 44
+L0 10 39
 R12
 31
-Z20 !s108 1757974532.000000
-Z21 !s107 C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_input.sv|
-Z22 !s90 -reportprogress|300|-work|work|C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_input.sv|
+Z22 !s108 1757979590.000000
+Z23 !s107 C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_input.sv|
+Z24 !s90 -reportprogress|300|-work|work|C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_input.sv|
 !i113 0
 R13
 R8
 Xkeypad_input_sv_unit
-R14
-R10
-R15
 R16
-VQDdT0iDoSE@@<[XZ<<^5N0
+R10
+R17
+R18
+VB7KdmneAA_R:jN9Q5Y>7=0
 r1
 !s85 0
 !i10b 1
-!s100 3@jPjSl`zd6CaDPWkFdzb1
-IQDdT0iDoSE@@<[XZ<<^5N0
+!s100 [d<UVUoWCX<fSTCI:2j[A3
+IB7KdmneAA_R:jN9Q5Y>7=0
 !i103 1
 S1
 R2
-R17
-R18
 R19
-!i122 30
+R20
+R21
+!i122 44
 L0 8 0
 R12
 31
-R20
-R21
 R22
+R23
+R24
 !i113 0
 R13
 R8
 vkeypad_input_tb
 2C:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_input_tb.sv
 R10
-!s110 1757975136
+!s110 1757983517
 !i10b 1
-!s100 A1SVJ:?[20I7ac5[:0mkN3
-I;`EY^6ImNlC2_RibLVFJT0
+!s100 `EL2MSYAFn]7LHC[zzYHO1
+IIah7G2<kj0JlMQaiD0^d]0
 S1
 R2
-w1757975024
+w1757983495
 8C:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_input_tb.sv
 FC:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_input_tb.sv
-!i122 31
-L0 5 55
+!i122 46
+L0 5 53
 R11
 R12
 r1
 !s85 0
 31
-!s108 1757975136.000000
+!s108 1757983517.000000
 !s107 C:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_input_tb.sv|
 !s90 -reportprogress|300|-work|work|C:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_input_tb.sv|
 !i113 0
@@ -223,23 +243,23 @@ R8
 vkeypad_reader
 2C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_reader.sv
 R10
-Z23 !s110 1757974175
+R14
 !i10b 1
-!s100 I;NX_:T2VhB4D7ze:P=hc2
-IhM<dFSz1754UTldRWPAAb1
+!s100 [69AQlcg[9o]X8`oIiEb83
+I^TBP:_49:cSMk@Vhk8PMO1
 S1
 R2
-w1757992871
+w1757977369
 8C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_reader.sv
 FC:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_reader.sv
-!i122 24
-L0 5 46
+!i122 36
+L0 5 43
 R11
 R12
 r1
 !s85 0
 31
-Z24 !s108 1757974175.000000
+R15
 !s107 C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_reader.sv|
 !s90 -reportprogress|300|-work|work|C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_reader.sv|
 !i113 0
@@ -273,26 +293,26 @@ R8
 vnext_state_logic
 Z25 2C:/Users/diego/College/2025/E155/lab3/FPGA/src/next_state_logic.sv
 R10
-R15
+R17
 DXx4 work 24 next_state_logic_sv_unit 0 22 ]lYiA;O5`m5cmO>[Mh`K32
-Z26 !s110 1757974450
+Z26 !s110 1757981730
 R11
 r1
 !s85 0
 !i10b 1
-!s100 HO[4Sll8nNDcU6hTclNmK2
-IND`In1:0hN=okg4WjRJoP0
+!s100 YGg<41QJeDZ26I@afWAd^1
+IA0?=EPQe=I1TTS?:[>2>N1
 !s105 next_state_logic_sv_unit
 S1
 R2
-Z27 w1757974421
+Z27 w1757981638
 Z28 8C:/Users/diego/College/2025/E155/lab3/FPGA/src/next_state_logic.sv
 Z29 FC:/Users/diego/College/2025/E155/lab3/FPGA/src/next_state_logic.sv
-!i122 29
+!i122 45
 L0 9 102
 R12
 31
-Z30 !s108 1757974450.000000
+Z30 !s108 1757981730.000000
 Z31 !s107 C:/Users/diego/College/2025/E155/lab3/FPGA/src/next_state_logic.sv|
 Z32 !s90 -reportprogress|300|-work|work|C:/Users/diego/College/2025/E155/lab3/FPGA/src/next_state_logic.sv|
 !i113 0
@@ -301,7 +321,7 @@ R8
 Xnext_state_logic_sv_unit
 R25
 R10
-R15
+R17
 R26
 V]lYiA;O5`m5cmO>[Mh`K32
 r1
@@ -315,7 +335,7 @@ R2
 R27
 R28
 R29
-!i122 29
+!i122 45
 L0 7 0
 R12
 31
@@ -378,7 +398,7 @@ R8
 Xstate
 2C:/Users/diego/College/2025/E155/lab3/FPGA/src/state.sv
 R10
-R23
+!s110 1757974175
 !i10b 1
 !s100 EE91W57=hE]?QN7=ke6D30
 ICLX?7iH0@N22fNJUEjMS40
@@ -394,7 +414,7 @@ R12
 r1
 !s85 0
 31
-R24
+!s108 1757974175.000000
 !s107 C:/Users/diego/College/2025/E155/lab3/FPGA/src/state.sv|
 !s90 -reportprogress|300|-work|work|C:/Users/diego/College/2025/E155/lab3/FPGA/src/state.sv|
 !i113 0
