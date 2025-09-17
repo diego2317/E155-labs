@@ -27,16 +27,10 @@ module lab3_dw (
 		.divided_clock(slow_clock)
 	);
 
-	// Create 240 Hz clock
-	clock_divider #('d50000) count_1 (
-		.clk(int_osc),
-		.reset(reset),
-		.divided_clock(slower_clock)
-	);
 	
 	// Synchronize columns
 	synchronizer sync(
-		.clk(slower_clock),
+		.clk(slow_clock),
 		.reset(reset),
 		.cols(cols),
 		.synchronized_cols(synchronized_cols)
@@ -44,7 +38,7 @@ module lab3_dw (
 	
 	// Initalize top level module for keypad scanning
 	keypad_reader keypad(
-		.clk(slower_clock),
+		.clk(slow_clock),
 		.reset(reset),
 		.cols(synchronized_cols),
 		.rows(rows),

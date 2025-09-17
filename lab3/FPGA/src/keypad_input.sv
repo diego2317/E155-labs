@@ -21,13 +21,13 @@ module keypad_input(
 	// state register
 	always_ff @(posedge clk) begin
 		if (reset == 0) begin
-			state <= RESET;
+			state <= nextstate;
 			counter <= 0;
 		end
-		else if (state == RESET) begin
-			counter <= counter + 1;
-			state <= nextstate;
-		end
+		//else if (state == RESET) begin
+		//	counter <= counter + 1;
+		//	state <= nextstate;
+		//end
 		else if (state == R0 || state == R1 || state == R2 || state == R3) begin
 			counter <= 0;
 			state <= nextstate;
