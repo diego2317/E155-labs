@@ -1,0 +1,1 @@
+C:/lscc/radiant/2025.1/questasim/win64/VisualizerRls/bin/viscom.exe -nolock -quiet -jmem_size 393216 work.synchronizer_tb(fast) -quiet -auto_acc_if_foreign -work work +acc -allow_unnamed -o _opt2 -id 4-a8934a98430d-68ca22cc-87-4fbc +__design_bin_path+C:/Users/diego/College/2025/E155/lab3/FPGA/radiant_project/lab3_dw +__betafsm

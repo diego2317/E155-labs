@@ -14,11 +14,11 @@ module lab3_dw (
 	logic [3:0] s_seg;
 	logic [3:0] current_value, previous_value;
 	logic [3:0] synchronized_cols;
-	logic int_osc, slow_clock;
+	logic int_osc, slow_clock, slower_clock;
 
-// Initialize high-speed oscillator to 24 MHz
-				HSOSC #(.CLKHF_DIV(2'b01)) 
-					hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(int_osc));
+	// Initialize high-speed oscillator to 24 MHz
+	HSOSC #(.CLKHF_DIV(2'b01)) 
+		hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(int_osc));
 
 	// Create 2400 Hz clock
 	clock_divider #('d5000) count(
@@ -26,10 +26,17 @@ module lab3_dw (
 		.reset(reset),
 		.divided_clock(slow_clock)
 	);
+
+	// Create 240 Hz clock
+	clock_divider #('d50000) count_1 (
+		.clk(int_osc),
+		.reset(reset),
+		.divided_clock(slower_clock)
+	);
 	
 	// Synchronize columns
 	synchronizer sync(
-		.clk(slow_clock),
+		.clk(int_osc),
 		.reset(reset),
 		.cols(cols),
 		.synchronized_cols(synchronized_cols)
@@ -37,7 +44,7 @@ module lab3_dw (
 	
 	// Initalize top level module for keypad scanning
 	keypad_reader keypad(
-		.clk(slow_clock),
+		.clk(int_osc),
 		.reset(reset),
 		.cols(synchronized_cols),
 		.rows(rows),
@@ -47,12 +54,12 @@ module lab3_dw (
 	
 	// Initialize module to control the 7 segment display
 	seven_seg_controller DISPLAY_CONTROL(
-		.clk(slow_clock),
+		.clk(int_osc),
 		.reset(reset),
 		.s1(current_value),
 		.s2(previous_value),
-		.t1(enable_left),
-		.t2(enable_right),
+		.enable_left(enable_left),
+		.enable_right(enable_right),
 		.seg(seg)
 	);	
 

@@ -14,7 +14,7 @@ module clock_divider #(
 	logic [31:0] counter;
 
     always_ff @(posedge clk) begin
-        if (reset == 1) begin
+        if (reset == 0) begin
             counter <= 0;
             divided_clock <= 0;
         end else if (counter == HALF_PERIOD) begin // switch clock

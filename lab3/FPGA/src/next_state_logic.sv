@@ -20,9 +20,12 @@ module next_state_logic(
 	
 	always_comb
 		case(state)
+			RESET: begin
+				nextstate = (counter == 1) ? B0: RESET;
+			end
 			// row turns on, we wait two clock cycles for the column signal to change after the row changes
 			B0: begin
-					nextstate = (counter == 1) ? R0 : B0;
+					nextstate = (counter >= 1) ? R0 : B0;
 				end
 			B1: begin
 					nextstate = (counter == 1) ? R1 : B1;
