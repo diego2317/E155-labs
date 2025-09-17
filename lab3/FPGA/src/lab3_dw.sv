@@ -10,11 +10,9 @@ module lab3_dw (
     output logic [6:0] seg
 );
 
-	logic multi_switch; 
-	logic [3:0] s_seg;
 	logic [3:0] current_value, previous_value;
-	logic [3:0] synchronized_cols;
-	logic int_osc, slow_clock, slower_clock;
+	logic [3:0] s_cols;
+	logic int_osc, slow_clock;
 
 	// Initialize high-speed oscillator to 24 MHz
 	HSOSC #(.CLKHF_DIV(2'b01)) 
@@ -33,14 +31,14 @@ module lab3_dw (
 		.clk(slow_clock),
 		.reset(reset),
 		.cols(cols),
-		.synchronized_cols(synchronized_cols)
+		.s_cols(s_cols)
 	);
 	
 	// Initalize top level module for keypad scanning
 	keypad_reader keypad(
 		.clk(slow_clock),
 		.reset(reset),
-		.cols(synchronized_cols),
+		.cols(s_cols),
 		.rows(rows),
 		.new_value(current_value),
 		.old_value(previous_value)

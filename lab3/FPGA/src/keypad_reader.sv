@@ -34,8 +34,8 @@ module keypad_reader(
 	// Current values FSM
 	always_ff @(posedge clk) begin
 		if (reset == 0) begin
-			new_value <= 3'b0;
-			old_value <= 3'b0;
+			new_value <= 4'b0;
+			old_value <= 4'b0;
 		end else if (key_pressed) begin
 			old_value <= new_value;
 			new_value <= temp;

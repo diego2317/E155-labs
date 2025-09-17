@@ -7,7 +7,7 @@ module synchronizer (
     input  logic clk,
 	input  logic reset,
     input  logic [3:0] cols,
-    output logic [3:0] synchronized_cols
+    output logic [3:0] s_cols
 );
 
 logic [3:0] n;
@@ -16,7 +16,7 @@ always_ff @(posedge clk) begin
 		if (reset == 0) n <= 4'b0;
 		else begin
 			n <= cols;
-			synchronized_cols <= n;
+			s_cols <= n;
         end
     end
 
