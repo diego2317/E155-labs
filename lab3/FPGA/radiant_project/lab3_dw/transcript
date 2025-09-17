@@ -4406,3 +4406,554 @@ run -all
 # ** Note: $stop    : C:/Users/diego/College/2025/E155/lab3/FPGA/sim/lab3_dw_tb.sv(61)
 #    Time: 751024 ps  Iteration: 0  Instance: /lab3_dw_tb
 # Break in Module lab3_dw_tb at C:/Users/diego/College/2025/E155/lab3/FPGA/sim/lab3_dw_tb.sv line 61
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.lab3_dw_tb(fast)
+# Loading work.lab3_dw(fast)
+# Loading iCE40UP.HSOSC(fast__1)
+# Loading work.clock_divider(fast)
+# Loading work.clock_divider(fast__1)
+# Loading work.synchronizer(fast)
+# Loading work.keypad_reader(fast)
+# Loading work.state(fast)
+# Loading work.keypad_input_sv_unit(fast)
+# Loading work.keypad_input(fast)
+# Loading work.next_state_logic_sv_unit(fast)
+# Loading work.next_state_logic(fast)
+# Loading work.keypad_decoder(fast)
+# Loading work.seven_seg_controller(fast)
+# Loading work.seven_seg_decoder(fast)
+# Loading iCE40UP.HSOSC(fast)
+run -all
+# Error: input = 1111
+# Rows: 1110 (1110 expected)
+# Enable left: 0 (0 expected)
+# Enable right: 1 (1 expected)
+# Seg: 0100100 (1000000 expected)
+# Test number:         35
+#         36 tests completed with          1 errors
+# ** Note: $stop    : C:/Users/diego/College/2025/E155/lab3/FPGA/sim/lab3_dw_tb.sv(61)
+#    Time: 771858 ps  Iteration: 0  Instance: /lab3_dw_tb
+# Break in Module lab3_dw_tb at C:/Users/diego/College/2025/E155/lab3/FPGA/sim/lab3_dw_tb.sv line 61
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.lab3_dw_tb(fast)
+# Loading work.lab3_dw(fast)
+# Loading iCE40UP.HSOSC(fast__1)
+# Loading work.clock_divider(fast)
+# Loading work.clock_divider(fast__1)
+# Loading work.synchronizer(fast)
+# Loading work.keypad_reader(fast)
+# Loading work.state(fast)
+# Loading work.keypad_input_sv_unit(fast)
+# Loading work.keypad_input(fast)
+# Loading work.next_state_logic_sv_unit(fast)
+# Loading work.next_state_logic(fast)
+# Loading work.keypad_decoder(fast)
+# Loading work.seven_seg_controller(fast)
+# Loading work.seven_seg_decoder(fast)
+# Loading iCE40UP.HSOSC(fast)
+run -all
+#         36 tests completed with          0 errors
+# ** Note: $stop    : C:/Users/diego/College/2025/E155/lab3/FPGA/sim/lab3_dw_tb.sv(61)
+#    Time: 771858 ps  Iteration: 0  Instance: /lab3_dw_tb
+# Break in Module lab3_dw_tb at C:/Users/diego/College/2025/E155/lab3/FPGA/sim/lab3_dw_tb.sv line 61
+vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/src/next_state_logic.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 21:55:36 on Sep 16,2025
+# vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/src/next_state_logic.sv 
+# -- Compiling package next_state_logic_sv_unit
+# -- Importing package state
+# -- Compiling module next_state_logic
+# 
+# Top level modules:
+# 	next_state_logic
+# End time: 21:55:36 on Sep 16,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.lab3_dw_tb(fast)
+# Loading work.lab3_dw(fast)
+# Loading iCE40UP.HSOSC(fast__1)
+# Loading work.clock_divider(fast)
+# Loading work.clock_divider(fast__1)
+# Loading work.synchronizer(fast)
+# Loading work.keypad_reader(fast)
+# Loading work.state(fast)
+# Loading work.keypad_input_sv_unit(fast)
+# Loading work.keypad_input(fast)
+# Loading work.next_state_logic_sv_unit(fast)
+# Loading work.next_state_logic(fast)
+# Loading work.keypad_decoder(fast)
+# Loading work.seven_seg_controller(fast)
+# Loading work.seven_seg_decoder(fast)
+# Loading iCE40UP.HSOSC(fast)
+run -all
+#         37 tests completed with          0 errors
+# ** Note: $stop    : C:/Users/diego/College/2025/E155/lab3/FPGA/sim/lab3_dw_tb.sv(61)
+#    Time: 792692 ps  Iteration: 0  Instance: /lab3_dw_tb
+# Break in Module lab3_dw_tb at C:/Users/diego/College/2025/E155/lab3/FPGA/sim/lab3_dw_tb.sv line 61
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.lab3_dw_tb(fast)
+# Loading work.lab3_dw(fast)
+# Loading iCE40UP.HSOSC(fast__1)
+# Loading work.clock_divider(fast)
+# Loading work.clock_divider(fast__1)
+# Loading work.synchronizer(fast)
+# Loading work.keypad_reader(fast)
+# Loading work.state(fast)
+# Loading work.keypad_input_sv_unit(fast)
+# Loading work.keypad_input(fast)
+# Loading work.next_state_logic_sv_unit(fast)
+# Loading work.next_state_logic(fast)
+# Loading work.keypad_decoder(fast)
+# Loading work.seven_seg_controller(fast)
+# Loading work.seven_seg_decoder(fast)
+# Loading iCE40UP.HSOSC(fast)
+run -all
+#         38 tests completed with          0 errors
+# ** Note: $stop    : C:/Users/diego/College/2025/E155/lab3/FPGA/sim/lab3_dw_tb.sv(61)
+#    Time: 813526 ps  Iteration: 0  Instance: /lab3_dw_tb
+# Break in Module lab3_dw_tb at C:/Users/diego/College/2025/E155/lab3/FPGA/sim/lab3_dw_tb.sv line 61
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.lab3_dw_tb(fast)
+# Loading work.lab3_dw(fast)
+# Loading iCE40UP.HSOSC(fast__1)
+# Loading work.clock_divider(fast)
+# Loading work.clock_divider(fast__1)
+# Loading work.synchronizer(fast)
+# Loading work.keypad_reader(fast)
+# Loading work.state(fast)
+# Loading work.keypad_input_sv_unit(fast)
+# Loading work.keypad_input(fast)
+# Loading work.next_state_logic_sv_unit(fast)
+# Loading work.next_state_logic(fast)
+# Loading work.keypad_decoder(fast)
+# Loading work.seven_seg_controller(fast)
+# Loading work.seven_seg_decoder(fast)
+# Loading iCE40UP.HSOSC(fast)
+run -all
+#         39 tests completed with          0 errors
+# ** Note: $stop    : C:/Users/diego/College/2025/E155/lab3/FPGA/sim/lab3_dw_tb.sv(61)
+#    Time: 834360 ps  Iteration: 0  Instance: /lab3_dw_tb
+# Break in Module lab3_dw_tb at C:/Users/diego/College/2025/E155/lab3/FPGA/sim/lab3_dw_tb.sv line 61
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.lab3_dw_tb(fast)
+# Loading work.lab3_dw(fast)
+# Loading iCE40UP.HSOSC(fast__1)
+# Loading work.clock_divider(fast)
+# Loading work.clock_divider(fast__1)
+# Loading work.synchronizer(fast)
+# Loading work.keypad_reader(fast)
+# Loading work.state(fast)
+# Loading work.keypad_input_sv_unit(fast)
+# Loading work.keypad_input(fast)
+# Loading work.next_state_logic_sv_unit(fast)
+# Loading work.next_state_logic(fast)
+# Loading work.keypad_decoder(fast)
+# Loading work.seven_seg_controller(fast)
+# Loading work.seven_seg_decoder(fast)
+# Loading iCE40UP.HSOSC(fast)
+run -all
+#         40 tests completed with          0 errors
+# ** Note: $stop    : C:/Users/diego/College/2025/E155/lab3/FPGA/sim/lab3_dw_tb.sv(61)
+#    Time: 855194 ps  Iteration: 0  Instance: /lab3_dw_tb
+# Break in Module lab3_dw_tb at C:/Users/diego/College/2025/E155/lab3/FPGA/sim/lab3_dw_tb.sv line 61
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.lab3_dw_tb(fast)
+# Loading work.lab3_dw(fast)
+# Loading iCE40UP.HSOSC(fast__1)
+# Loading work.clock_divider(fast)
+# Loading work.clock_divider(fast__1)
+# Loading work.synchronizer(fast)
+# Loading work.keypad_reader(fast)
+# Loading work.state(fast)
+# Loading work.keypad_input_sv_unit(fast)
+# Loading work.keypad_input(fast)
+# Loading work.next_state_logic_sv_unit(fast)
+# Loading work.next_state_logic(fast)
+# Loading work.keypad_decoder(fast)
+# Loading work.seven_seg_controller(fast)
+# Loading work.seven_seg_decoder(fast)
+# Loading iCE40UP.HSOSC(fast)
+run -all
+# Error: input = 0111
+# Rows: 1101 (1101 expected)
+# Enable left: 0 (0 expected)
+# Enable right: 1 (1 expected)
+# Seg: 0100100 (1000000 expected)
+# Test number:         41
+# Error: input = 0111
+# Rows: 1011 (1011 expected)
+# Enable left: 1 (1 expected)
+# Enable right: 0 (0 expected)
+# Seg: 1000000 (0100100 expected)
+# Test number:         42
+# Error: input = 0111
+# Rows: 1011 (1011 expected)
+# Enable left: 0 (0 expected)
+# Enable right: 1 (1 expected)
+# Seg: 0100100 (1000000 expected)
+# Test number:         43
+#         44 tests completed with          3 errors
+# ** Note: $stop    : C:/Users/diego/College/2025/E155/lab3/FPGA/sim/lab3_dw_tb.sv(61)
+#    Time: 938530 ps  Iteration: 0  Instance: /lab3_dw_tb
+# Break in Module lab3_dw_tb at C:/Users/diego/College/2025/E155/lab3/FPGA/sim/lab3_dw_tb.sv line 61
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.lab3_dw_tb(fast)
+# Loading work.lab3_dw(fast)
+# Loading iCE40UP.HSOSC(fast__1)
+# Loading work.clock_divider(fast)
+# Loading work.clock_divider(fast__1)
+# Loading work.synchronizer(fast)
+# Loading work.keypad_reader(fast)
+# Loading work.state(fast)
+# Loading work.keypad_input_sv_unit(fast)
+# Loading work.keypad_input(fast)
+# Loading work.next_state_logic_sv_unit(fast)
+# Loading work.next_state_logic(fast)
+# Loading work.keypad_decoder(fast)
+# Loading work.seven_seg_controller(fast)
+# Loading work.seven_seg_decoder(fast)
+# Loading iCE40UP.HSOSC(fast)
+run -all
+#         44 tests completed with          0 errors
+# ** Note: $stop    : C:/Users/diego/College/2025/E155/lab3/FPGA/sim/lab3_dw_tb.sv(61)
+#    Time: 938530 ps  Iteration: 0  Instance: /lab3_dw_tb
+# Break in Module lab3_dw_tb at C:/Users/diego/College/2025/E155/lab3/FPGA/sim/lab3_dw_tb.sv line 61
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.lab3_dw_tb(fast)
+# Loading work.lab3_dw(fast)
+# Loading iCE40UP.HSOSC(fast__1)
+# Loading work.clock_divider(fast)
+# Loading work.clock_divider(fast__1)
+# Loading work.synchronizer(fast)
+# Loading work.keypad_reader(fast)
+# Loading work.state(fast)
+# Loading work.keypad_input_sv_unit(fast)
+# Loading work.keypad_input(fast)
+# Loading work.next_state_logic_sv_unit(fast)
+# Loading work.next_state_logic(fast)
+# Loading work.keypad_decoder(fast)
+# Loading work.seven_seg_controller(fast)
+# Loading work.seven_seg_decoder(fast)
+# Loading iCE40UP.HSOSC(fast)
+run -all
+#         46 tests completed with          0 errors
+# ** Note: $stop    : C:/Users/diego/College/2025/E155/lab3/FPGA/sim/lab3_dw_tb.sv(61)
+#    Time: 980198 ps  Iteration: 0  Instance: /lab3_dw_tb
+# Break in Module lab3_dw_tb at C:/Users/diego/College/2025/E155/lab3/FPGA/sim/lab3_dw_tb.sv line 61
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.lab3_dw_tb(fast)
+# Loading work.lab3_dw(fast)
+# Loading iCE40UP.HSOSC(fast__1)
+# Loading work.clock_divider(fast)
+# Loading work.clock_divider(fast__1)
+# Loading work.synchronizer(fast)
+# Loading work.keypad_reader(fast)
+# Loading work.state(fast)
+# Loading work.keypad_input_sv_unit(fast)
+# Loading work.keypad_input(fast)
+# Loading work.next_state_logic_sv_unit(fast)
+# Loading work.next_state_logic(fast)
+# Loading work.keypad_decoder(fast)
+# Loading work.seven_seg_controller(fast)
+# Loading work.seven_seg_decoder(fast)
+# Loading iCE40UP.HSOSC(fast)
+run -all
+# Error: input = 0111
+# Rows: 1011 (1011 expected)
+# Enable left: 0 (0 expected)
+# Enable right: 1 (1 expected)
+# Seg: 0100100 (0000011 expected)
+# Test number:         61
+#         63 tests completed with          1 errors
+# ** Note: $stop    : C:/Users/diego/College/2025/E155/lab3/FPGA/sim/lab3_dw_tb.sv(61)
+#    Time: 1334376 ps  Iteration: 0  Instance: /lab3_dw_tb
+# Break in Module lab3_dw_tb at C:/Users/diego/College/2025/E155/lab3/FPGA/sim/lab3_dw_tb.sv line 61
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.lab3_dw_tb(fast)
+# Loading work.lab3_dw(fast)
+# Loading iCE40UP.HSOSC(fast__1)
+# Loading work.clock_divider(fast)
+# Loading work.clock_divider(fast__1)
+# Loading work.synchronizer(fast)
+# Loading work.keypad_reader(fast)
+# Loading work.state(fast)
+# Loading work.keypad_input_sv_unit(fast)
+# Loading work.keypad_input(fast)
+# Loading work.next_state_logic_sv_unit(fast)
+# Loading work.next_state_logic(fast)
+# Loading work.keypad_decoder(fast)
+# Loading work.seven_seg_controller(fast)
+# Loading work.seven_seg_decoder(fast)
+# Loading iCE40UP.HSOSC(fast)
+run -all
+#         64 tests completed with          0 errors
+# ** Note: $stop    : C:/Users/diego/College/2025/E155/lab3/FPGA/sim/lab3_dw_tb.sv(61)
+#    Time: 1355210 ps  Iteration: 0  Instance: /lab3_dw_tb
+# Break in Module lab3_dw_tb at C:/Users/diego/College/2025/E155/lab3/FPGA/sim/lab3_dw_tb.sv line 61
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.lab3_dw_tb(fast)
+# Loading work.lab3_dw(fast)
+# Loading iCE40UP.HSOSC(fast__1)
+# Loading work.clock_divider(fast)
+# Loading work.clock_divider(fast__1)
+# Loading work.synchronizer(fast)
+# Loading work.keypad_reader(fast)
+# Loading work.state(fast)
+# Loading work.keypad_input_sv_unit(fast)
+# Loading work.keypad_input(fast)
+# Loading work.next_state_logic_sv_unit(fast)
+# Loading work.next_state_logic(fast)
+# Loading work.keypad_decoder(fast)
+# Loading work.seven_seg_controller(fast)
+# Loading work.seven_seg_decoder(fast)
+# Loading iCE40UP.HSOSC(fast)
+run -all
+#         67 tests completed with          0 errors
+# ** Note: $stop    : C:/Users/diego/College/2025/E155/lab3/FPGA/sim/lab3_dw_tb.sv(61)
+#    Time: 1417712 ps  Iteration: 0  Instance: /lab3_dw_tb
+# Break in Module lab3_dw_tb at C:/Users/diego/College/2025/E155/lab3/FPGA/sim/lab3_dw_tb.sv line 61
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.lab3_dw_tb(fast)
+# Loading work.lab3_dw(fast)
+# Loading iCE40UP.HSOSC(fast__1)
+# Loading work.clock_divider(fast)
+# Loading work.clock_divider(fast__1)
+# Loading work.synchronizer(fast)
+# Loading work.keypad_reader(fast)
+# Loading work.state(fast)
+# Loading work.keypad_input_sv_unit(fast)
+# Loading work.keypad_input(fast)
+# Loading work.next_state_logic_sv_unit(fast)
+# Loading work.next_state_logic(fast)
+# Loading work.keypad_decoder(fast)
+# Loading work.seven_seg_controller(fast)
+# Loading work.seven_seg_decoder(fast)
+# Loading iCE40UP.HSOSC(fast)
+run -all
+# Error: input = 0110
+# Rows: 1110 (1011 expected)
+# Enable left: 0 (0 expected)
+# Enable right: 1 (1 expected)
+# Seg: 0000011 (0000011 expected)
+# Test number:         67
+# Error: input = 0110
+# Rows: 1101 (1011 expected)
+# Enable left: 1 (1 expected)
+# Enable right: 0 (0 expected)
+# Seg: 0100100 (0100100 expected)
+# Test number:         68
+#         69 tests completed with          2 errors
+# ** Note: $stop    : C:/Users/diego/College/2025/E155/lab3/FPGA/sim/lab3_dw_tb.sv(61)
+#    Time: 1459380 ps  Iteration: 0  Instance: /lab3_dw_tb
+# Break in Module lab3_dw_tb at C:/Users/diego/College/2025/E155/lab3/FPGA/sim/lab3_dw_tb.sv line 61
+vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/src/next_state_logic.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 22:09:43 on Sep 16,2025
+# vlog -reportprogress 300 -work work C:/Users/diego/College/2025/E155/lab3/FPGA/src/next_state_logic.sv 
+# -- Compiling package next_state_logic_sv_unit
+# -- Importing package state
+# -- Compiling module next_state_logic
+# 
+# Top level modules:
+# 	next_state_logic
+# End time: 22:09:43 on Sep 16,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.lab3_dw_tb(fast)
+# Loading work.lab3_dw(fast)
+# Loading iCE40UP.HSOSC(fast__1)
+# Loading work.clock_divider(fast)
+# Loading work.clock_divider(fast__1)
+# Loading work.synchronizer(fast)
+# Loading work.keypad_reader(fast)
+# Loading work.state(fast)
+# Loading work.keypad_input_sv_unit(fast)
+# Loading work.keypad_input(fast)
+# Loading work.next_state_logic_sv_unit(fast)
+# Loading work.next_state_logic(fast)
+# Loading work.keypad_decoder(fast)
+# Loading work.seven_seg_controller(fast)
+# Loading work.seven_seg_decoder(fast)
+# Loading iCE40UP.HSOSC(fast)
+run -all
+# Error: input = 0110
+# Rows: 0111 (1011 expected)
+# Enable left: 1 (1 expected)
+# Enable right: 0 (0 expected)
+# Seg: 0100100 (0100100 expected)
+# Test number:         68
+#         69 tests completed with          1 errors
+# ** Note: $stop    : C:/Users/diego/College/2025/E155/lab3/FPGA/sim/lab3_dw_tb.sv(61)
+#    Time: 1459380 ps  Iteration: 0  Instance: /lab3_dw_tb
+# Break in Module lab3_dw_tb at C:/Users/diego/College/2025/E155/lab3/FPGA/sim/lab3_dw_tb.sv line 61
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.lab3_dw_tb(fast)
+# Loading work.lab3_dw(fast)
+# Loading iCE40UP.HSOSC(fast__1)
+# Loading work.clock_divider(fast)
+# Loading work.clock_divider(fast__1)
+# Loading work.synchronizer(fast)
+# Loading work.keypad_reader(fast)
+# Loading work.state(fast)
+# Loading work.keypad_input_sv_unit(fast)
+# Loading work.keypad_input(fast)
+# Loading work.next_state_logic_sv_unit(fast)
+# Loading work.next_state_logic(fast)
+# Loading work.keypad_decoder(fast)
+# Loading work.seven_seg_controller(fast)
+# Loading work.seven_seg_decoder(fast)
+# Loading iCE40UP.HSOSC(fast)
+run -all
+#         71 tests completed with          0 errors
+# ** Note: $stop    : C:/Users/diego/College/2025/E155/lab3/FPGA/sim/lab3_dw_tb.sv(61)
+#    Time: 1501048 ps  Iteration: 0  Instance: /lab3_dw_tb
+# Break in Module lab3_dw_tb at C:/Users/diego/College/2025/E155/lab3/FPGA/sim/lab3_dw_tb.sv line 61
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.lab3_dw_tb(fast)
+# Loading work.lab3_dw(fast)
+# Loading iCE40UP.HSOSC(fast__1)
+# Loading work.clock_divider(fast)
+# Loading work.clock_divider(fast__1)
+# Loading work.synchronizer(fast)
+# Loading work.keypad_reader(fast)
+# Loading work.state(fast)
+# Loading work.keypad_input_sv_unit(fast)
+# Loading work.keypad_input(fast)
+# Loading work.next_state_logic_sv_unit(fast)
+# Loading work.next_state_logic(fast)
+# Loading work.keypad_decoder(fast)
+# Loading work.seven_seg_controller(fast)
+# Loading work.seven_seg_decoder(fast)
+# Loading iCE40UP.HSOSC(fast)
+run -all
+#         75 tests completed with          0 errors
+# ** Note: $stop    : C:/Users/diego/College/2025/E155/lab3/FPGA/sim/lab3_dw_tb.sv(61)
+#    Time: 1584384 ps  Iteration: 0  Instance: /lab3_dw_tb
+# Break in Module lab3_dw_tb at C:/Users/diego/College/2025/E155/lab3/FPGA/sim/lab3_dw_tb.sv line 61
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.lab3_dw_tb(fast)
+# Loading work.lab3_dw(fast)
+# Loading iCE40UP.HSOSC(fast__1)
+# Loading work.clock_divider(fast)
+# Loading work.clock_divider(fast__1)
+# Loading work.synchronizer(fast)
+# Loading work.keypad_reader(fast)
+# Loading work.state(fast)
+# Loading work.keypad_input_sv_unit(fast)
+# Loading work.keypad_input(fast)
+# Loading work.next_state_logic_sv_unit(fast)
+# Loading work.next_state_logic(fast)
+# Loading work.keypad_decoder(fast)
+# Loading work.seven_seg_controller(fast)
+# Loading work.seven_seg_decoder(fast)
+# Loading iCE40UP.HSOSC(fast)
+run -all
+#         93 tests completed with          0 errors
+# ** Note: $stop    : C:/Users/diego/College/2025/E155/lab3/FPGA/sim/lab3_dw_tb.sv(61)
+#    Time: 1959396 ps  Iteration: 0  Instance: /lab3_dw_tb
+# Break in Module lab3_dw_tb at C:/Users/diego/College/2025/E155/lab3/FPGA/sim/lab3_dw_tb.sv line 61
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.lab3_dw_tb(fast)
+# Loading work.lab3_dw(fast)
+# Loading iCE40UP.HSOSC(fast__1)
+# Loading work.clock_divider(fast)
+# Loading work.clock_divider(fast__1)
+# Loading work.synchronizer(fast)
+# Loading work.keypad_reader(fast)
+# Loading work.state(fast)
+# Loading work.keypad_input_sv_unit(fast)
+# Loading work.keypad_input(fast)
+# Loading work.next_state_logic_sv_unit(fast)
+# Loading work.next_state_logic(fast)
+# Loading work.keypad_decoder(fast)
+# Loading work.seven_seg_controller(fast)
+# Loading work.seven_seg_decoder(fast)
+# Loading iCE40UP.HSOSC(fast)
+run -all
+#         94 tests completed with          0 errors
+# ** Note: $stop    : C:/Users/diego/College/2025/E155/lab3/FPGA/sim/lab3_dw_tb.sv(61)
+#    Time: 1980230 ps  Iteration: 0  Instance: /lab3_dw_tb
+# Break in Module lab3_dw_tb at C:/Users/diego/College/2025/E155/lab3/FPGA/sim/lab3_dw_tb.sv line 61
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.lab3_dw_tb(fast)
+# Loading work.lab3_dw(fast)
+# Loading iCE40UP.HSOSC(fast__1)
+# Loading work.clock_divider(fast)
+# Loading work.clock_divider(fast__1)
+# Loading work.synchronizer(fast)
+# Loading work.keypad_reader(fast)
+# Loading work.state(fast)
+# Loading work.keypad_input_sv_unit(fast)
+# Loading work.keypad_input(fast)
+# Loading work.next_state_logic_sv_unit(fast)
+# Loading work.next_state_logic(fast)
+# Loading work.keypad_decoder(fast)
+# Loading work.seven_seg_controller(fast)
+# Loading work.seven_seg_decoder(fast)
+# Loading iCE40UP.HSOSC(fast)
+run -all
+#         95 tests completed with          0 errors
+# ** Note: $stop    : C:/Users/diego/College/2025/E155/lab3/FPGA/sim/lab3_dw_tb.sv(61)
+#    Time: 2001064 ps  Iteration: 0  Instance: /lab3_dw_tb
+# Break in Module lab3_dw_tb at C:/Users/diego/College/2025/E155/lab3/FPGA/sim/lab3_dw_tb.sv line 61

@@ -57,6 +57,10 @@ R0
 R1
 R0
 R1
+R0
+R1
+R0
+R1
 Z2 !s12c _opt2
 R1
 R2
@@ -146,11 +150,11 @@ R1
 cModel Technology
 Z4 dC:/Users/diego/College/2025/E155/lab3/FPGA/radiant_project/lab3_dw
 T_opt
-!s110 1758084306
-V6e^WnHQS;PdkGLHVT>K<02
+!s110 1758085791
+V_hdJcdH88G3z2T<2g=23=2
 04 10 4 work lab3_dw_tb fast 0
 07 5 4 iCE40UP HSOSC fast 0
-=52-a8934a98430d-68ca3cd2-14d-7230
+=71-a8934a98430d-68ca429f-2ab-7230
 R1
 !s12f OEM25U10 
 Z5 !s12b OEM100
@@ -500,24 +504,24 @@ Z31 2C:/Users/diego/College/2025/E155/lab3/FPGA/src/next_state_logic.sv
 R11
 R21
 DXx4 work 24 next_state_logic_sv_unit 0 22 E7gibZ@POj=fIB`OhWDRh1
-Z32 !s110 1758084299
+Z32 !s110 1758085783
 R13
 r1
 !s85 0
 !i10b 1
-!s100 54To<hOIVhKnMidQeMj?42
-IS;`[j=9eL3R^f3N4RLXBI2
+!s100 >7=o2GCj=lW@WMW3^Iez;3
+IZ<Elj[<Y]cjEbQ>?X1JHJ1
 !s105 next_state_logic_sv_unit
 S1
 R4
-Z33 w1758084291
+Z33 w1758085774
 Z34 8C:/Users/diego/College/2025/E155/lab3/FPGA/src/next_state_logic.sv
 Z35 FC:/Users/diego/College/2025/E155/lab3/FPGA/src/next_state_logic.sv
-!i122 152
+!i122 154
 L0 9 106
 R14
 31
-Z36 !s108 1758084299.000000
+Z36 !s108 1758085783.000000
 Z37 !s107 C:/Users/diego/College/2025/E155/lab3/FPGA/src/next_state_logic.sv|
 Z38 !s90 -reportprogress|300|-work|work|C:/Users/diego/College/2025/E155/lab3/FPGA/src/next_state_logic.sv|
 !i113 0
@@ -540,7 +544,7 @@ R4
 R33
 R34
 R35
-!i122 152
+!i122 154
 L0 7 0
 R14
 31
