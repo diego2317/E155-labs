@@ -4957,3 +4957,5 @@ run -all
 # ** Note: $stop    : C:/Users/diego/College/2025/E155/lab3/FPGA/sim/lab3_dw_tb.sv(61)
 #    Time: 2001064 ps  Iteration: 0  Instance: /lab3_dw_tb
 # Break in Module lab3_dw_tb at C:/Users/diego/College/2025/E155/lab3/FPGA/sim/lab3_dw_tb.sv line 61
+# End time: 22:20:32 on Sep 16,2025, Elapsed time: 2:22:36
+# Errors: 0, Warnings: 1

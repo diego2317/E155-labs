@@ -36,7 +36,7 @@ module lab3_dw (
 	
 	// Synchronize columns
 	synchronizer sync(
-		.clk(int_osc),
+		.clk(slower_clock),
 		.reset(reset),
 		.cols(cols),
 		.synchronized_cols(synchronized_cols)
@@ -44,7 +44,7 @@ module lab3_dw (
 	
 	// Initalize top level module for keypad scanning
 	keypad_reader keypad(
-		.clk(int_osc),
+		.clk(slower_clock),
 		.reset(reset),
 		.cols(synchronized_cols),
 		.rows(rows),
@@ -54,7 +54,7 @@ module lab3_dw (
 	
 	// Initialize module to control the 7 segment display
 	seven_seg_controller DISPLAY_CONTROL(
-		.clk(int_osc),
+		.clk(slow_clock),
 		.reset(reset),
 		.s1(current_value),
 		.s2(previous_value),
