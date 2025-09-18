@@ -18,13 +18,12 @@
 				<BScanVal>0</BScanVal>
 			</Bypass>
 			<File>../../impl_1/lab3_dw_impl_1.bin</File>
-			<FileTime>09/16/25 22:48:14</FileTime>
-			<JedecChecksum>0x726A</JedecChecksum>
+			<FileTime>09/17/25 16:32:45</FileTime>
+			<JedecChecksum>0x8FC5</JedecChecksum>
 			<MemoryType>External SPI Flash Memory (SPI FLASH)</MemoryType>
 			<Operation>Erase,Program,Verify</Operation>
 			<Option>
 				<SVFVendor>JTAG STANDARD</SVFVendor>
-				<SVFProcessor>SVF Processor</SVFProcessor>
 				<AccessMode>Direct Programming</AccessMode>
 			</Option>
 			<FPGALoader>
@@ -49,7 +48,6 @@
 						<SVFVendor>JTAG STANDARD</SVFVendor>
 						<IOState>HighZ</IOState>
 						<IOVectorData>P</IOVectorData>
-						<SVFProcessor>SVF Processor</SVFProcessor>
 						<AccessMode>Direct Programming</AccessMode>
 					</Option>
 				</Device>
@@ -84,7 +82,6 @@
 					</LocalChainList>
 					<Option>
 						<SVFVendor>JTAG STANDARD</SVFVendor>
-						<SVFProcessor>SVF Processor</SVFProcessor>
 					</Option>
 				</Device>
 			</FPGADevice>

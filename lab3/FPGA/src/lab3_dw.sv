@@ -48,8 +48,8 @@ module lab3_dw (
 	seven_seg_controller DISPLAY_CONTROL(
 		.clk(slow_clock),
 		.reset(reset),
-		.s1(current_value),
-		.s2(previous_value),
+		.s1(previous_value),
+		.s2(current_value),
 		.enable_left(enable_left),
 		.enable_right(enable_right),
 		.seg(seg)
