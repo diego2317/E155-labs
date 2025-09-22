@@ -13,10 +13,12 @@ module next_state_logic(
 	output statetype nextstate
 );
 	logic press;
+	logic valid_press;
 	logic valid_input;
-	assign valid_input = ($countones(cols) >= 3);
+	assign valid_input = ($countones(cols) == 3);
 	// if any of the columns are read to be low, then that indicates a press.
-	assign press = !(cols[0] && cols[1] && cols[2] && cols[3]) && valid_input;
+	assign press = !(cols[0] && cols[1] && cols[2] && cols[3]);
+	assign valid_press = press && valid_input;
 	
 	always_comb
 		case(state)
@@ -38,62 +40,62 @@ module next_state_logic(
 				end
 			// in the scanning row state
 			R0: begin
-					nextstate = (press) ? D0 : B1;  
+					nextstate = (valid_press) ? D0 : B1;  
 				end
 			R1: begin
-					nextstate = (press) ? D1 : B2;  
+					nextstate = (valid_press) ? D1 : B2;  
 				end
 			R2: begin
-					nextstate = (press) ? D2 : B3;  
+					nextstate = (valid_press) ? D2 : B3;  
 				end
 			R3: begin
-					nextstate = (press) ? D3 : B0;  
+					nextstate = (valid_press) ? D3 : B0;  
 				end
 			// debouncing state, we wait a certain amount of clock cycles for the signal to settle
 			D0: begin
 					if (counter == 15) begin 
-						nextstate = (press) ? P0 : R0;
+						nextstate = (valid_press) ? P0 : R0;
 					end
 					else begin
-						nextstate = (press) ? D0 : R0;
+						nextstate = (valid_press) ? D0 : R0;
 					end
 				end
 			D1: begin
 					if (counter == 15) begin 
-						nextstate = (press) ? P1 : R1;
+						nextstate = (valid_press) ? P1 : R1;
 					end
 					else begin
-						nextstate = (press) ? D1 : R1;
+						nextstate = (valid_press) ? D1 : R1;
 					end 
 				end
 			D2: begin
 					if (counter == 15) begin 
-						nextstate = (press) ? P2 : R2;
+						nextstate = (valid_press) ? P2 : R2;
 					end
 					else begin
-						nextstate = (press) ? D2 : R2;
+						nextstate = (valid_press) ? D2 : R2;
 					end
 				end
 			D3: begin
 					if (counter == 15) begin 
-						nextstate = (press) ? P3 : R3;
+						nextstate = (valid_press) ? P3 : R3;
 					end
 					else begin
-						nextstate = (press) ? D3 : R3;
+						nextstate = (valid_press) ? D3 : R3;
 					end
 				end
 			// Send the message that a key's been pressed
 			P0: begin
-					nextstate = (press) ? W0 : R0;  
+					nextstate = (valid_press) ? W0 : R0;  
 				end
 			P1: begin
-					nextstate = (press) ? W1 : R1;  
+					nextstate = (valid_press) ? W1 : R1;  
 				end
 			P2: begin
-					nextstate = (press) ? W2 : R2;  
+					nextstate = (valid_press) ? W2 : R2;  
 				end
 			P3: begin
-					nextstate = (press) ? W3 : R3;  
+					nextstate = (valid_press) ? W3 : R3;  
 				end
 			// in the waiting state (waiting for pressed button to be released)
 			W0: begin
