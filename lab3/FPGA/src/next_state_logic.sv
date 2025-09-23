@@ -15,7 +15,7 @@ module next_state_logic(
 	logic press;
 	logic valid_press;
 	logic valid_input;
-	assign valid_input = ($countones(cols) == 3);
+	assign valid_input = ($countones(cols) >= 3);
 	// if any of the columns are read to be low, then that indicates a press.
 	assign press = !(cols[0] && cols[1] && cols[2] && cols[3]);
 	assign valid_press = press && valid_input;
