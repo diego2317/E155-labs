@@ -40,8 +40,8 @@ module lab3_dw (
 		.reset(reset),
 		.cols(s_cols),
 		.rows(rows),
-		.new_value(current_value),
-		.old_value(previous_value)
+		.new_value(previous_value),
+		.old_value(current_value)
 	);
 	
 	// Initialize module to control the 7 segment display
