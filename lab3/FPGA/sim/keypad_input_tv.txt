@@ -1,4 +1,4 @@
-//cols_rows_press_change
+//cols_rows_press
 // No button pressed, make sure we go through full FSM
 1111_1110_0 // B0
 1111_1110_0 // B0
