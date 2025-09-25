@@ -1,0 +1,566 @@
+m255
+K4
+z2
+Z0 !s12c _opt2
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+R0
+R1
+Z2 !s12c _opt
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+Z3 !s12c _opt1
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R0
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+!s11f vlog 2024.2 2024.05, May 20 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z4 dC:/Users/diego/College/2025/E155/lab3/FPGA/radiant_project/lab3_dw
+T_opt
+!s110 1758076971
+VKX9J9h7EMkmc=_MHMlG1a2
+04 10 4 work lab3_dw_tb fast 0
+07 5 4 iCE40UP HSOSC fast 0
+=6-a8934a98430d-68ca202a-33a-3ba8
+R1
+!s12f OEM25U10 
+Z5 !s12b OEM100
+Z6 !s124 OEM100
+Z7 !s135 nogc
+Z8 o-quiet -auto_acc_if_foreign -work work +acc
+Z9 tCvgOpt 0
+n@_opt
+Z10 OL;O;2024.2;79
+R4
+T_opt1
+!s110 1758070647
+VggMOB:4_F7PB_JFl<nMmI2
+04 23 4 work seven_seg_controller_tb fast 0
+=9-a8934a98430d-68ca0776-24b-64d4
+R1
+!s12f OEM25U3 
+R5
+R6
+R7
+R8
+R9
+n@_opt1
+R10
+R4
+T_opt2
+!s110 1758077644
+VBbMiHP[1LT_Gif53KVhj73
+04 15 4 work synchronizer_tb fast 0
+=4-a8934a98430d-68ca22cc-87-4fbc
+R1
+!s12f OEM25U2 
+R5
+R6
+R7
+R8
+R9
+n@_opt2
+R10
+vclock_divider
+2C:/Users/diego/College/2025/E155/lab3/FPGA/src/clock_divider.sv
+Z11 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z12 !s110 1758067936
+!i10b 1
+!s100 G`4MTjDYniLYGUZ=UcoHF2
+I=g4B<hcJG:3?l[7b5<ALJ3
+S1
+R4
+w1757893204
+8C:/Users/diego/College/2025/E155/lab3/FPGA/src/clock_divider.sv
+FC:/Users/diego/College/2025/E155/lab3/FPGA/src/clock_divider.sv
+!i122 37
+L0 6 22
+Z13 VDg1SIo80bB@j0V0VzS_@n1
+Z14 OL;L;2024.2;79
+r1
+!s85 0
+31
+!i113 0
+Z15 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R9
+vdisplay_controller
+2C:/Users/diego/College/2025/E155/lab3/FPGA/src/display_controller.sv
+R11
+!s110 1758068868
+!i10b 1
+!s100 f49R90@LGIa2OKNgl`JC03
+I3b6K^zkho9YU=MlbzVk[J1
+S1
+R4
+w1758068862
+8C:/Users/diego/College/2025/E155/lab3/FPGA/src/display_controller.sv
+FC:/Users/diego/College/2025/E155/lab3/FPGA/src/display_controller.sv
+!i122 59
+Z16 L0 5 27
+R13
+R14
+r1
+!s85 0
+31
+!i113 0
+R15
+R9
+vdisplay_controller_tb
+2C:/Users/diego/College/2025/E155/lab3/FPGA/sim/display_controller_tb.sv
+R11
+!s110 1758068782
+!i10b 1
+!s100 ChdFXjZFDcXfZDBRm`B9i2
+IDmlgG9KZ9kfGU2M18dMDh3
+S1
+R4
+w1758068752
+8C:/Users/diego/College/2025/E155/lab3/FPGA/sim/display_controller_tb.sv
+FC:/Users/diego/College/2025/E155/lab3/FPGA/sim/display_controller_tb.sv
+!i122 57
+L0 5 81
+R13
+R14
+r1
+!s85 0
+31
+!i113 0
+R15
+R9
+vkeypad_decoder
+2C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_decoder.sv
+R11
+R12
+!i10b 1
+!s100 =Id^d[EEON2eiY?B==Xc<2
+IZVRN20^UC>3POPZS;PW1S3
+S1
+R4
+w1757989464
+8C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_decoder.sv
+FC:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_decoder.sv
+!i122 38
+L0 6 30
+R13
+R14
+r1
+!s85 0
+31
+!i113 0
+R15
+R9
+vkeypad_decoder_tb
+2C:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_decoder_tb.sv
+R11
+Z17 !s110 1758067948
+!i10b 1
+!s100 YKmT]=<eg:FT]TBR6BIEm1
+I1zjC1=YnD52YR>dWFfEAI0
+S1
+R4
+w1757996619
+8C:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_decoder_tb.sv
+FC:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_decoder_tb.sv
+!i122 47
+L0 5 44
+R13
+R14
+r1
+!s85 0
+31
+!i113 0
+R15
+R9
+vkeypad_input
+Z18 2C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_input.sv
+R11
+Z19 DXx4 work 5 state 0 22 CLX?7iH0@N22fNJUEjMS40
+DXx4 work 20 keypad_input_sv_unit 0 22 B7KdmneAA_R:jN9Q5Y>7=0
+Z20 !s110 1758067937
+R13
+r1
+!s85 0
+!i10b 1
+!s100 kX5ZJLM4@RbZ6e4a8>PFY3
+INXn[mX:<U^KhPZFB1GWi40
+!s105 keypad_input_sv_unit
+S1
+R4
+Z21 w1757984206
+Z22 8C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_input.sv
+Z23 FC:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_input.sv
+!i122 39
+L0 10 39
+R14
+31
+!i113 0
+R15
+R9
+Xkeypad_input_sv_unit
+R18
+R11
+R19
+R20
+VB7KdmneAA_R:jN9Q5Y>7=0
+r1
+!s85 0
+!i10b 1
+!s100 [d<UVUoWCX<fSTCI:2j[A3
+IB7KdmneAA_R:jN9Q5Y>7=0
+!i103 1
+S1
+R4
+R21
+R22
+R23
+!i122 39
+L0 8 0
+R14
+31
+!i113 0
+R15
+R9
+vkeypad_input_tb
+2C:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_input_tb.sv
+R11
+R17
+!i10b 1
+!s100 `EL2MSYAFn]7LHC[zzYHO1
+IIah7G2<kj0JlMQaiD0^d]0
+S1
+R4
+R21
+8C:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_input_tb.sv
+FC:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_input_tb.sv
+!i122 48
+L0 5 53
+R13
+R14
+r1
+!s85 0
+31
+!i113 0
+R15
+R9
+vkeypad_reader
+2C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_reader.sv
+R11
+R20
+!i10b 1
+!s100 [69AQlcg[9o]X8`oIiEb83
+I^TBP:_49:cSMk@Vhk8PMO1
+S1
+R4
+R21
+8C:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_reader.sv
+FC:/Users/diego/College/2025/E155/lab3/FPGA/src/keypad_reader.sv
+!i122 40
+L0 5 43
+R13
+R14
+r1
+!s85 0
+31
+!i113 0
+R15
+R9
+vkeypad_reader_tb
+2C:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_reader_tb.sv
+R11
+R17
+!i10b 1
+!s100 YOZTiMcF<?B;2G1hDnVIV2
+I@i?zGEmRD2BC[gB<>O>:L0
+S1
+R4
+w1757987129
+8C:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_reader_tb.sv
+FC:/Users/diego/College/2025/E155/lab3/FPGA/sim/keypad_reader_tb.sv
+!i122 49
+L0 5 56
+R13
+R14
+r1
+!s85 0
+31
+!i113 0
+R15
+R9
+vlab3_dw
+2C:/Users/diego/College/2025/E155/lab3/FPGA/src/lab3_dw.sv
+R11
+!s110 1758076963
+!i10b 1
+!s100 kI8OM13DDWHmgg26FEC@O1
+I?NCCz`Y4NQX=Rme9TUILh1
+S1
+R4
+w1758076962
+8C:/Users/diego/College/2025/E155/lab3/FPGA/src/lab3_dw.sv
+FC:/Users/diego/College/2025/E155/lab3/FPGA/src/lab3_dw.sv
+!i122 76
+L0 5 63
+R13
+R14
+r1
+!s85 0
+31
+!i113 0
+R15
+R9
+vlab3_dw_tb
+2C:/Users/diego/College/2025/E155/lab3/FPGA/sim/lab3_dw_tb.sv
+R11
+!s110 1758076137
+!i10b 1
+!s100 Z^9X8fhA_V[VDT3MkF1Ca2
+IZh9Cd_1mEGDJA:P15z2?f1
+S1
+R4
+w1758076094
+8C:/Users/diego/College/2025/E155/lab3/FPGA/sim/lab3_dw_tb.sv
+FC:/Users/diego/College/2025/E155/lab3/FPGA/sim/lab3_dw_tb.sv
+!i122 75
+L0 5 60
+R13
+R14
+r1
+!s85 0
+31
+!i113 0
+R15
+R9
+vnext_state_logic
+Z24 2C:/Users/diego/College/2025/E155/lab3/FPGA/src/next_state_logic.sv
+R11
+R19
+DXx4 work 24 next_state_logic_sv_unit 0 22 <Vh?[0C8`b^SI[:4Th8nL3
+R20
+R13
+r1
+!s85 0
+!i10b 1
+!s100 ?HPVIV?Rg^K00jT?F7Hn?0
+Id^2CFV^AV<B^Mj0jOf6O@3
+!s105 next_state_logic_sv_unit
+S1
+R4
+Z25 w1757987569
+Z26 8C:/Users/diego/College/2025/E155/lab3/FPGA/src/next_state_logic.sv
+Z27 FC:/Users/diego/College/2025/E155/lab3/FPGA/src/next_state_logic.sv
+!i122 42
+L0 9 103
+R14
+31
+!i113 0
+R15
+R9
+Xnext_state_logic_sv_unit
+R24
+R11
+R19
+R20
+V<Vh?[0C8`b^SI[:4Th8nL3
+r1
+!s85 0
+!i10b 1
+!s100 g<dDl:k`G@No[@MXQ?]6n0
+I<Vh?[0C8`b^SI[:4Th8nL3
+!i103 1
+S1
+R4
+R25
+R26
+R27
+!i122 42
+L0 7 0
+R14
+31
+!i113 0
+R15
+R9
+vseven_seg_controller
+2C:/Users/diego/College/2025/E155/lab3/FPGA/src/seven_seg_controller.sv
+R11
+!s110 1758070275
+!i10b 1
+!s100 RMfkYe;bM@1T:7AUmJ97F0
+IE>^<WP9]3Nad2cA>Y]c1h2
+S1
+R4
+w1758070261
+8C:/Users/diego/College/2025/E155/lab3/FPGA/src/seven_seg_controller.sv
+FC:/Users/diego/College/2025/E155/lab3/FPGA/src/seven_seg_controller.sv
+!i122 71
+R16
+R13
+R14
+r1
+!s85 0
+31
+!i113 0
+R15
+R9
+vseven_seg_controller_tb
+2C:/Users/diego/College/2025/E155/lab3/FPGA/sim/seven_seg_controller_tb.sv
+R11
+!s110 1758070225
+!i10b 1
+!s100 ]659NNFmT<CY66H371joT3
+I8iYgo^LWXfl0g0_^4?XI@3
+S1
+R4
+w1758070210
+8C:/Users/diego/College/2025/E155/lab3/FPGA/sim/seven_seg_controller_tb.sv
+FC:/Users/diego/College/2025/E155/lab3/FPGA/sim/seven_seg_controller_tb.sv
+!i122 70
+L0 5 82
+R13
+R14
+r1
+!s85 0
+31
+!i113 0
+R15
+R9
+vseven_seg_decoder
+2C:/Users/diego/College/2025/E155/lab3/FPGA/src/seven_seg_decoder.sv
+R11
+!s110 1758069639
+!i10b 1
+!s100 ;cK0APdKL9X2ihgP_5;i=1
+IbY>2^3dd;_B;ZnhQ4?NVW1
+S1
+R4
+w1757810352
+8C:/Users/diego/College/2025/E155/lab3/FPGA/src/seven_seg_decoder.sv
+FC:/Users/diego/College/2025/E155/lab3/FPGA/src/seven_seg_decoder.sv
+!i122 61
+L0 5 31
+R13
+R14
+r1
+!s85 0
+31
+!i113 0
+R15
+R9
+Xstate
+2C:/Users/diego/College/2025/E155/lab3/FPGA/src/state.sv
+R11
+R20
+!i10b 1
+!s100 EE91W57=hE]?QN7=ke6D30
+ICLX?7iH0@N22fNJUEjMS40
+S1
+R4
+w1757992716
+8C:/Users/diego/College/2025/E155/lab3/FPGA/src/state.sv
+FC:/Users/diego/College/2025/E155/lab3/FPGA/src/state.sv
+!i122 45
+L0 5 0
+VCLX?7iH0@N22fNJUEjMS40
+R14
+r1
+!s85 0
+31
+!i113 0
+R15
+R9
+vsynchronizer
+2C:/Users/diego/College/2025/E155/lab3/FPGA/src/synchronizer.sv
+R11
+!s110 1758067938
+!i10b 1
+!s100 Do3B0hfF>bQj0QT?YF>202
+If^RnY@F>GRm:ZXn1jGXof3
+S1
+R4
+w1757990470
+8C:/Users/diego/College/2025/E155/lab3/FPGA/src/synchronizer.sv
+FC:/Users/diego/College/2025/E155/lab3/FPGA/src/synchronizer.sv
+!i122 46
+L0 6 18
+R13
+R14
+r1
+!s85 0
+31
+!i113 0
+R15
+R9
+vsynchronizer_tb
+2C:/Users/diego/College/2

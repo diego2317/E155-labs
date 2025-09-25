@@ -1,0 +1,8 @@
+00000000   // during reset (ignored by checker)
+00000000   // during reset
+00010000   //  cols=0001, exp=0000  (1st after reset)
+00110000   //  cols=0011, exp=0000  (2nd after reset)
+00100001   //  cols=0010, exp=0001
+10100011   //  cols=1010, exp=0011
+11110010   //  cols=1111, exp=0010
+01011010   //  cols=0101, exp=1010
