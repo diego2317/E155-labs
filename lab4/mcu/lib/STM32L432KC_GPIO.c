@@ -1,0 +1,38 @@
+// STM32L432KC_GPIO.c
+// Source code for GPIO functions
+// Author: Diego Weiss
+// Date: 9/30/2025
+
+#include "STM32L432KC_GPIO.h"
+
+void pinMode(GPIO_PIN * GPIO, int pin, int function) {
+    switch(function) {
+        case GPIO_INPUT:
+            GPIO->MODER &= ~(0b11 << 2*pin);
+            break;
+        case GPIO_OUTPUT:
+            GPIO->MODER |= (0b1 << 2*pin);
+            GPIO->MODER &= ~(0b1 << (2*pin+1));
+            break;
+        case GPIO_ALT:
+            GPIO->MODER &= ~(0b1 << 2*pin);
+            GPIO->MODER |= (0b1 << (2*pin+1));
+            break;
+        case GPIO_ANALOG:
+            GPIO->MODER |= (0b11 << 2*pin);
+            break;
+    }
+}
+
+int digitalRead(GPIO_PIN * GPIO, int pin) {
+    return ((GPIO->IDR) >> pin) & 1;
+}
+
+void digitalWrite(GPIO_PIN * GPIO, int pin, int val) {
+    GPIO->ODR |= (1 << pin);
+}
+
+void togglePin(GPIO_PIN * GPIO, int pin) {
+    // Use XOR to toggle
+    GPIO->ODR ^= (1 << pin);
+}

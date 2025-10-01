@@ -1,10 +1,12 @@
 // STM32L432KC_FLASH.h
 // Header for FLASH functions
+// Author: Diego Weiss
+// Date: 9/30/2025
 
 #ifndef STM32_L4_GPIO_H
 #define STM32_L4_GPIO_H
 
-// Pins we will be using
+// Pins in use
 #define SONG_PIN    6
 
 // Base addresses for GPIO ports
@@ -32,19 +34,19 @@ typedef struct {
     volatile uint32_t AFRL;       // Offset: 0x20. GPIO alternate function low register
     volatile uint32_t AFRH;       // Offset: 0x24. GPIO alternate function high register
     volatile uint32_t BRR;        // Offset: 0x28. GPIO port bit reset register
-} GPIO_TypeDef;
+} GPIO_PIN;
 
-#define GPIOA ((GPIO_TypeDef *) GPIOA_BASE)
-#define GPIOB ((GPIO_TypeDef *) GPIOB_BASE)
+#define GPIOA ((GPIO_PIN *) GPIOA_BASE)
+#define GPIOB ((GPIO_PIN *) GPIOB_BASE)
 
 
 // Function prototypes
-void pinMode(GPIO_TypeDef * GPIO, int pin, int function);
+void pinMode(GPIO_PIN * GPIO, int pin, int function);
 
-int digitalRead(GPIO_TypeDef * GPIO, int pin);
+int digitalRead(GPIO_PIN * GPIO, int pin);
 
-void digitalWrite(GPIO_TypeDef * GPIO, int pin, int val);
+void digitalWrite(GPIO_PIN * GPIO, int pin, int val);
 
-void togglePin(GPIO_TypeDef * GPIO, int pin);
+void togglePin(GPIO_PIN * GPIO, int pin);
 
 #endif
