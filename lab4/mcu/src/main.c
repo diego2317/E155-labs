@@ -8,8 +8,9 @@
 #include "../lib/STM32L432KC_RCC.h"
 #include "../lib/STM32L432KC_GPIO.h"
 #include "../lib/STM32L432KC_FLASH.h"
-#include <math.h>
 
+
+#define SONG_PIN 6
 
 // Pitch in Hz, duration in ms
 const int notes[][2] = {
@@ -124,6 +125,47 @@ const int notes[][2] = {
 {  0,	0}};
 
 int main(void) {
-	
-	
+	// Configure flash
+    configureFlash();
+
+    // Configure clock
+    configureClock();
+
+    // Enable clock peripherals
+
+    RCC->APB2ENR |= (1 << 17); // TIM16
+    RCC->APB2ENR |= (1 << 16); // TIM15
+    RCC->AHB2ENR |= (1 << 0); // GPIOA
+
+    // Setup clock for timers
+    // Set APB1, APB2, AHB prescalers and clear all bits
+    RCC->CFGR &= ~(0b111 << 8); // PPRE1, APB1
+    RCC->CFGR &= ~(0b1111 << 4); // HPRE, AHB
+    RCC->CFGR &= ~(0b111 << 11); // PPRE2, APB
+
+    // Configure timers
+    initTIM(TIM16, PRESCALER_SOUND); // frequency timer
+    initTIM(TIM15, PRESCALER_DELAY); // delay timer
+
+    // Configure pin for frequency output
+    pinMode(GPIOA, SONG_PIN, GPIO_ALT);
+
+    // Connect TIM16 to PA6 by ettng AF14
+    GPIOA->AFRL &= ~(0b1111 << 4*SONG_PIN);
+    GPIOA->AFRL |= (0b1110 << 4 * SONG_PIN);
+    GPIOA->OSPEEDR |= (0b11 << 2*SONG_PIN);
+
+    // loop to play song
+    for (size_t i = 0; i < (sizeof(notes)/(2*sizeof(int))); ++i) {
+        // get freq, rest
+        float frequency = notes[i][0];
+        float delay = notes[i][1];
+
+        setFrequency(TIM16, frequency);
+        setDelay(TIM15, delay);
+    }
+
+    for (;;);
+
+    return 0;
 }

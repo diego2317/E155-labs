@@ -5,6 +5,9 @@
 
 #ifndef STM32_L4_FLASH_H
 #define STM32_L4_FLASH_H
+#include <stdint.h>
+
+#define FLASH_BASE (0x4002200UL)
 
 /**
 * Struct for Flash registers
@@ -23,8 +26,9 @@ typedef struct {
     volatile uint32_t PCROP1ER;   // Offset: 0x28. Flash PCROP End address register
     volatile uint32_t WRP1AR;     // Offset: 0x2C. Flash WRP area A address register
     volatile uint32_t WRP1BR;     // Offset: 0x30. Flash WRP area B address register
-} FLASH;
+} FLASH_TYPE;
 
+#define FLASH ((FLASH_TYPE *) FLASH_BASE)
 
 // Function prototypes
 void configureFlash(void);

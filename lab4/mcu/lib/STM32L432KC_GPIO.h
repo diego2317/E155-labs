@@ -6,6 +6,8 @@
 #ifndef STM32_L4_GPIO_H
 #define STM32_L4_GPIO_H
 
+#include <stdint.h>
+
 // Pins in use
 #define SONG_PIN    6
 

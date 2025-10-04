@@ -6,6 +6,8 @@
 #ifndef STM32_L4_RCC_H
 #define STM32_L4_RCC_H
 
+#include <stdint.h>
+
 // Base addresses
 #define RCC_BASE (0x40021000UL) // base address of RCC
 
