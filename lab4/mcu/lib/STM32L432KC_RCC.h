@@ -63,7 +63,6 @@ typedef struct {
     volatile uint32_t BDCR;         // Offset: 0x90. Backup domain control register
     volatile uint32_t CSR;          // Offset: 0x94. Control/status register
     volatile uint32_t CRRCR;        // Offset: 0x98. Clock recovery RC register
-    volatile uint32_t CCIPR2;       // Offset: 0x9C. Peripherals independent clock configuration register
 } RCC_TYPE;
 
 #define RCC ((RCC_TYPE *) RCC_BASE)
