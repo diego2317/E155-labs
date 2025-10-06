@@ -6,7 +6,7 @@
 #define STM32_L4_FLASH_H
 #include <stdint.h>
 
-#define FLASH_BASE (0x4002200UL)
+#define FLASH_BASE (0x40022000UL) // base address of RCC
 
 /**
 * Struct for Flash registers
