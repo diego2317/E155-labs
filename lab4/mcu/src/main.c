@@ -124,6 +124,20 @@ const int notes[][2] = {
 {440,	500},
 {  0,	0}};
 
+
+const int hcb[][2] = {
+{392, 500},   // G
+{349, 500},   // F
+{330, 1000},  // E (hold)
+{392, 500},   // G
+{349, 500},   // F
+{330, 1000},  // E (hold)
+{330, 250}, {330, 250}, {330, 250}, // E E E
+{349, 250}, {349, 250}, {349, 250}, // F F F
+{392, 500}, {349, 500}, {330, 1000} // G F E
+};
+
+
 int main(void) {
 	// Configure flash
     configureFlash();
@@ -156,10 +170,19 @@ int main(void) {
     GPIOA->OSPEEDR |= (0b11 << 2*SONG_PIN);
 
     // loop to play song
-    for (size_t i = 0; i < (sizeof(notes)/(2*sizeof(int))); ++i) {
+    for (size_t i = 0; i < (sizeof(notes)/(2*sizeof(size_t))); ++i) {
         // get freq, rest
         float frequency = notes[i][0];
         float delay = notes[i][1];
+
+        setFrequency(TIM16, frequency);
+        setDelay(TIM15, delay);
+    }
+
+    for (size_t i = 0; i < (sizeof(hcb)/(2*sizeof(size_t))); ++i) {
+        // get freq, rest
+        float frequency = hcb[i][0];
+        float delay = hcb[i][1];
 
         setFrequency(TIM16, frequency);
         setDelay(TIM15, delay);

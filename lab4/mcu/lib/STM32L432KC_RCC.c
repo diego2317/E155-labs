@@ -16,11 +16,9 @@ void configurePLL(void) {
   RCC->CR &= ~(1 << 24);
 
   // Wait till PLL is unlocked (e.g., off)
-  while ((RCC->CR >> 25 & 1) != 0)
-    ;
+  while ((RCC->CR >> 25 & 1) != 0);
 
-  // Load configuration
-  // Set PLL SRC to MSI
+  // Load configuration and set PLL SRC to MSI
   RCC->PLLCFGR |= (1 << 0);
   RCC->PLLCFGR &= ~(1 << 1);
 
@@ -42,8 +40,7 @@ void configurePLL(void) {
   RCC->CR |= (1 << 24);
 
   // Wait until PLL is locked
-  while ((RCC->CR >> 25 & 1) != 1)
-    ;
+  while ((RCC->CR >> 25 & 1) != 1);
 }
 
 void configureClock(void) {
@@ -52,6 +49,5 @@ void configureClock(void) {
 
   // Select PLL as clock source
   RCC->CFGR |= (0b11 << 0);
-  while (!((RCC->CFGR >> 2) & 0b11))
-    ;
+  while (!((RCC->CFGR >> 2) & 0b11));
 }

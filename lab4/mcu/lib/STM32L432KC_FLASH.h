@@ -1,6 +1,7 @@
 // STM32L432KC_FLASH.h
 // Header for FLASH functions
-
+// Author: Diego Weiss
+// Date: 9/30/2025
 
 #ifndef STM32_L4_FLASH_H
 #define STM32_L4_FLASH_H

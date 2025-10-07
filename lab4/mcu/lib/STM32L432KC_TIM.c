@@ -1,5 +1,7 @@
 // STM32L432KC_TIM.c
 // Source code for TIM functions
+// Author: Diego Weiss
+// Date: 9/30/2025
 
 #include "STM32L432KC_TIM.h"
 
