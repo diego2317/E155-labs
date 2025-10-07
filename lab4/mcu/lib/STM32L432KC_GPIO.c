@@ -1,7 +1,6 @@
 // STM32L432KC_GPIO.c
 // Source code for GPIO functions
-// Author: Diego Weiss
-// Date: 9/30/2025
+
 
 #include "STM32L432KC_GPIO.h"
 

@@ -1,7 +1,6 @@
 // STM32L432KC_RCC.h
 // Header for RCC functions
-// Author: Diego Weiss
-// Date: 9/30/2025
+
 
 #ifndef STM32_L4_RCC_H
 #define STM32_L4_RCC_H

@@ -164,7 +164,7 @@ int main(void) {
     // Configure pin for frequency output
     pinMode(GPIOA, SONG_PIN, GPIO_ALT);
 
-    // Connect TIM16 to PA6 by ettng AF14
+    // Connect TIM16 to PA6 by setting AF14
     GPIOA->AFRL &= ~(0b1111 << 4*SONG_PIN);
     GPIOA->AFRL |= (0b1110 << 4 * SONG_PIN);
     GPIOA->OSPEEDR |= (0b11 << 2*SONG_PIN);
