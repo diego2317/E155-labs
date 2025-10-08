@@ -125,23 +125,17 @@ const int notes[][2] = {
 {440,	500},
 {  0,	0}};
 
-// Hz, ms  (approx at 136 BPM)
-const int notes2[][2] = {
-  {494,3528},  // B4 sustained
-  // measure 1–2 bass pattern
-  {98,441},{123,441},{147,441},{98,441},
-  {123,441},{147,441},{98,441},{123,441},
-  // measure 3–4 Am / Bm chords
-  {110,441},{131,441},{165,441},{110,441},
-  {123,441},{147,441},{185,441},{123,441},
-  // measure 5–6 Cm / Dm chords
-  {131,441},{165,441},{196,441},{131,441},
-  {147,441},{185,441},{220,441},{147,441},
-  // measure 7–8 melody motion
-  {523,220},{587,220},{659,220},{740,220},{784,441},
-  {784,220},{740,220},{659,220},{587,220},{523,441},
-  {0,0}
-};
+const int hcb[][2] = {
+{392, 500},   // G
+{349, 500},   // F
+{330, 1000},  // E (hold)
+{392, 500},   // G
+{349, 500},   // F
+{330, 1000}, {0, 250},  // E (hold)
+{330, 250}, {0, 250}, {330, 250}, {0, 250}, {330, 250}, {0, 250}, {330, 250}, {0, 250}, // E E E
+{349, 250}, {0, 250}, {349, 250}, {0, 250}, {349, 250}, {0, 250}, {349, 250}, {0, 250}, // F F F
+{392, 500}, {0, 250}, {349, 500}, {0, 250}, {330, 1000}, {0, 250}, // G F E
+{  0,	0}};
 
 
 int main(void) {
@@ -176,22 +170,33 @@ int main(void) {
     GPIOA->AFRL |= (0b1110 << 4 * SONG_PIN);
     GPIOA->OSPEEDR |= (0b11 << 2*SONG_PIN);
 
-    // loop to play song
-    for (size_t i = 0; i < (sizeof(notes)/(2*sizeof(int))); ++i) {
+
+    for (size_t i = 0; i < (sizeof(notes)/(2*sizeof(size_t))); ++i) {
         // get freq, rest
         float frequency = notes[i][0];
         float delay = notes[i][1];
+        
+        if (delay == 0) {
+            break;
+        }
 
         setFrequency(TIM16, frequency);
         setDelay(TIM15, delay);
     }
 
-    for (size_t i = 0; i < (sizeof(notes2)/(2*sizeof(int))); ++i) {
-      float frequency = notes2[i][0];
-      float delay = notes[i][1];
+    setFrequency(TIM16, 0);
+    setDelay(TIM15, 1000);
 
-      setFrequency(TIM16, frequency);
-      setDelay(TIM15, delay);
+    for (size_t i = 0; i < (sizeof(notes)/(2*sizeof(size_t))); ++i) {
+        // get freq, rest
+        float frequency = hcb[i][0];
+        float delay = hcb[i][1];
+
+        setFrequency(TIM16, frequency);
+        setDelay(TIM15, delay);
+        if (hcb[i][1] == 0) {
+            break;
+        }
     }
 
     for (;;);

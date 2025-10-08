@@ -55,9 +55,10 @@
   <Watches active="0" update="Never"/>
  </Watch4>
  <Files>
-  <SessionOpenFile windowGroup="DockEditLeft" x="2" y="143" useTextEdit="1" path="main.c" left="0" selected="1" top="145" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="14" useTextEdit="1" path="main.c" left="0" selected="1" top="0" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="10" useTextEdit="1" path="../lib/STM32L432KC_FLASH.c" left="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="272" useTextEdit="1" path="STM32L4xx/Source/STM32L4xx_Startup.s" left="0" top="238" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="272" useTextEdit="1" path="STM32L4xx/Source/STM32L4xx_Startup.s" left="0" top="236" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="74" useTextEdit="1" path="../lib/STM32L432KC_TIM.c" left="0" top="45" codecName="Default"/>
  </Files>
  <EMStudioWindow activeProject="lab4_dw" fileDialogDefaultFilter="*.c;*.h" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="C:/Users/diego/College/2025/E155/lab4/mcu/lib" debugSearchPath="" autoConnectCapabilities="3711"/>
 </session>
