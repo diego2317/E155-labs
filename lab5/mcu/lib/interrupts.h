@@ -5,8 +5,14 @@
 #include "../src/main.h"
 #include <stm32l432xx.h>  // CMSIS device library include
 
-void configureInterrupts(int gpioPin);
+void configureInterrupts(void);
 
 void EXTI9_5_IRQHandler(void);
+
+int getDelta(void);
+
+int getOff(void);
+
+float calculateRPMs(void);
 
 #endif
