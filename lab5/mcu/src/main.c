@@ -21,7 +21,7 @@ int main(void) {
 
     // Configure EXTICR for encoder interrupts
     SYSCFG->EXTICR[1] |= _VAL2FLD(SYSCFG_EXTICR2_EXTI6, 0b000); // select PA6
-    SYSCFG->EXTICR[2] |= _VAL2FLD(SYSCFG_EXTICR2_EXTI7, 0b000); // select PA7
+    SYSCFG->EXTICR[2] |= _VAL2FLD(SYSCFG_EXTICR3_EXTI8, 0b000); // select PA8
 
     // Enable interrupts globally
     __enable_irq();

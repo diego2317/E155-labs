@@ -10,7 +10,7 @@
 
 // Define pins
 #define ENCODER_A_PIN PA6
-#define ENCODER_B_PIN PA7
+#define ENCODER_B_PIN PA8
 
 // define timers
 #define DELAY_TIM TIM2
