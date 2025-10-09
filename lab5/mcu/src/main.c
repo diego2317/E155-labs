@@ -1,6 +1,10 @@
-#include "../lib/STM32L432KC.h"
-#include <stm32l432xx.h>
-#include <stdio.h>
+// main.c
+// quadrature decoding using interrupts
+// Author: Diego Weiss
+// Email: dweiss@hmc.edu
+// 10/8/2025
+
+#include "main.h"
 
 int main(void) {
     // Configure encoders as inputs
@@ -12,7 +16,7 @@ int main(void) {
     // Enable timers
     RCC->APB1ENR1 |= RCC_APB1ENR1_TIM2EN; // timer 2
     RCC->APB1ENR1 |= RCC_APB1ENR1_TIM6EN;  // timer 6
-    
+
     // Initialize timers
     initTIM(DELAY_TIM);
     initFastTIM(COUNT_TIM);

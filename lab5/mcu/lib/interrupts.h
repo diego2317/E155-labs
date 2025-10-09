@@ -1,3 +1,9 @@
+// interrupts.h
+// Header for interrupt functions
+// Author: Diego Weiss
+// Email: dweiss@hmc.edu
+// 10/8/2025
+
 #ifndef INTERRUPTS_H
 #define INTERRUPTS_H
 

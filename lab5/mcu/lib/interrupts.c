@@ -1,3 +1,9 @@
+// interrupts.c
+// interrupt functions + quadrature decoding
+// Author: Diego Weiss
+// Email: dweiss@hmc.edu
+// 10/8/2025
+
 #include "interrupts.h"
 #include "stm32l4xx.h"
 #include "../lib/STM32L432KC.h"
