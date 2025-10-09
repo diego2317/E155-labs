@@ -1,7 +1,6 @@
 #include "../lib/STM32L432KC.h"
 #include <stm32l432xx.h>
 #include <stdio.h>
-#include "main.h"
 
 int main(void) {
     // Configure encoders as inputs
@@ -10,9 +9,11 @@ int main(void) {
     pinMode(ENCODER_A_PIN, GPIO_INPUT);
     pinMode(ENCODER_B_PIN, GPIO_INPUT);
 
-    // Initialize timers
+    // Enable timers
     RCC->APB1ENR1 |= RCC_APB1ENR1_TIM2EN; // timer 2
     RCC->APB1ENR1 |= RCC_APB1ENR1_TIM6EN;  // timer 6
+    
+    // Initialize timers
     initTIM(DELAY_TIM);
     initFastTIM(COUNT_TIM);
 
@@ -28,17 +29,8 @@ int main(void) {
 
     // Configure interrupts for both edges
     configureInterrupts();
-    float rpm = 0.0; 
 
     // Update every 0.25s
-    while(1) {
-        
-        rpm = calculateRPMs();
-
-        // print rps in debug mode using printf
-        printf("Revolutions per Second: %.2f\n", rpm);
-
-        delay_millis(DELAY_TIM, 250);
-    }
+    while(1) {}
     return 0;
 }

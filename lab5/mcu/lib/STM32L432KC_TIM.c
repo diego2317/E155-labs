@@ -18,7 +18,7 @@ void initTIM(TIM_TypeDef * TIMx){
 
 void initFastTIM(TIM_TypeDef * TIMx){
   // Set prescaler to give 0.01 ms time base
-  uint32_t psc_div = (uint32_t) ((SystemCoreClock/1e5));
+  uint32_t psc_div = (uint32_t) ((SystemCoreClock/1e6));
 
   // Set prescaler division factor
   TIMx->PSC = (psc_div - 1);

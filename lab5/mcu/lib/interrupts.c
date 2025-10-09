@@ -2,9 +2,13 @@
 #include "stm32l4xx.h"
 #include "../lib/STM32L432KC.h"
 
-static volatile int delta = 0;
+static volatile int dt = 0;
 static volatile int off   = 1;
 static volatile int motorDirection = 0;
+static volatile int32_t pulse_count = 0;
+static volatile uint32_t elapsed_time_ms = 0;
+static volatile float rps = 0.0;
+
 void configureInterrupts(void) {
     EXTI->IMR1 |= (1 << gpioPinOffset(ENCODER_A_PIN));  // configure mask bit
     EXTI->RTSR1 |= (1 << gpioPinOffset(ENCODER_A_PIN)); // enable rising edge trigger
@@ -16,53 +20,56 @@ void configureInterrupts(void) {
 
     // Enable EXTI interrupts in NVIC
     NVIC_EnableIRQ(EXTI9_5_IRQn);
+
+    // Enable SysTick for 1ms interrupts
+    SysTick_Config(SystemCoreClock / 1000);
 }
 
 void EXTI9_5_IRQHandler(void) {
+    // clear interrupt
+    EXTI->PR1 = EXTI->PR1;
     // read PA6, PA8
-    int a = digitalRead(ENCODER_A_PIN);
-    int b = digitalRead(ENCODER_B_PIN);
-    
-    // if PA6 triggered the interrupt
-    if (EXTI->PR1 & (1 << 6)) {
-        // clear the interrupt
-        EXTI->PR1 |= (1 << 6);
-        off = 0;
+    uint32_t a = digitalRead(ENCODER_A_PIN);
+    uint32_t b = digitalRead(ENCODER_B_PIN);
 
-        // if both signals are the same calculate delta
-        if(a == b) delta = COUNT_TIM->CNT;
-        if (a > b) motorDirection = 1;
+    uint8_t curr_AB = (a << 1) | b;
 
-        // reset the clock
-        COUNT_TIM->CNT = 0;
-    }
+    // Static variable to hold previous AB state
+    static uint8_t last_AB = 0;
 
-    // if PA8 triggered the interrupt
-    if (EXTI->PR1 & (1 << 8)) {
-        // clear the interrupt
-        // clear the interrupt
-        EXTI->PR1 |= (1 << 8);
-        off = 0;
+    // Lookup table for quadrature decoding
+    const int8_t lookup_table[16] = {0,  -1, 1, 0, 1, 0, 0,  -1,
+                                   -1, 0,  0, 1, 0, 1, -1, 0};
 
-        // if both signals are the same calculate delta
-        if(a == b) delta = COUNT_TIM->CNT;
-        if (b > a) motorDirection = -1;
+    uint8_t index = (last_AB << 2) | curr_AB;
+    int8_t change = lookup_table[index & 0x0F];
 
-        // reset the clock
-        COUNT_TIM->CNT = 0;
-    }
+    pulse_count += change;
+    last_AB = curr_AB;
 }
 
-int getDelta(void) {
+void SysTick_Handler(void) {
+    elapsed_time_ms++;
+
+    if (elapsed_time_ms >= 250) {
+        rps = calculateRPS() * 4;
+        printf("Revolutions per Second: %.2f\n", rps);
+        elapsed_time_ms = 0;
+        pulse_count = 0;
+  }
+}
+
+
+int getdt(void) {
     __disable_irq();
-    int d = delta;
+    int d = dt;
     __enable_irq();
     return d;
 }
 
-void clearDelta(void) {
+void cleardt(void) {
     __disable_irq();
-    delta = 0;
+    dt = 0;
     __enable_irq();
 }
 
@@ -70,21 +77,8 @@ int getOff(void) {
     return off;
 }
 
-float calculateRPMs(void) {
-    static float rpms[4] = {0,0,0,0};
-    float rpm;
-
-    if (COUNT_TIM->CNT > 45000) {
-            off = 1;
-    }
-
-    if (off) {
-            rpm = 0.0;
-    } else {
-        float rps = 1 / (float)(408*delta*4/100000.0);
-        rpms[0] = rpms[1]; rpms[1] = rpms[2]; rpms[2] = rpms[3]; rpms[3] = rps;
-        rpm = motorDirection * (rpms[0] + rpms[1] + rpms[2] + rpms[3]) * 0.25f;
-    }
-    return rpm;
-
+float calculateRPS(void) {
+    int curPulses = pulse_count;
+    float r = (float)curPulses / (408*4);
+    return r;
 }

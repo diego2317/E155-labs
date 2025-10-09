@@ -14,10 +14,12 @@ void configureInterrupts(void);
 
 void EXTI9_5_IRQHandler(void);
 
+void SysTick_Handler(void);
+
 int getDelta(void);
 
 int getOff(void);
 
-float calculateRPMs(void);
+float calculateRPS(void);
 
 #endif
