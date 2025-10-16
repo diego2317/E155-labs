@@ -31,6 +31,9 @@ void configureInterrupts(void) {
     SysTick_Config(SystemCoreClock / 1000);
 }
 
+
+// triggered by any edge on PA6 or PA8
+// increments pulse count
 void EXTI9_5_IRQHandler(void) {
     // clear interrupt
     EXTI->PR1 = EXTI->PR1;
@@ -54,6 +57,8 @@ void EXTI9_5_IRQHandler(void) {
     last_AB = curr_AB;
 }
 
+// triggered every 1 ms
+// prints rps every 0.25s
 void SysTick_Handler(void) {
     elapsed_time_ms++;
 

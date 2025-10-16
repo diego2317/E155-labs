@@ -10,8 +10,10 @@ int main(void) {
     // Configure encoders as inputs
     gpioEnable(GPIO_PORT_A);
     gpioEnable(GPIO_PORT_B);
+    gpioEnable(GPIO_PORT_C);
     pinMode(ENCODER_A_PIN, GPIO_INPUT);
     pinMode(ENCODER_B_PIN, GPIO_INPUT);
+    pinMode(PA9, GPIO_OUTPUT);
 
     // Enable timers
     RCC->APB1ENR1 |= RCC_APB1ENR1_TIM2EN; // timer 2
@@ -35,6 +37,10 @@ int main(void) {
     configureInterrupts();
 
     // Update every 0.25s
-    while(1) {}
+    uint8_t butt = 0;
+    while(1) {
+      if (butt) digitalWrite(PA9, 1), butt=0;
+      else digitalWrite(PA9, 0), butt =1;
+    }
     return 0;
 }
