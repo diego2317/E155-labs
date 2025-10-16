@@ -7,6 +7,7 @@
 #ifndef DS1722_H
 #define DS1722_H
 
+#include <stdint.h>
 // Initializes the DS1722
 void initDS1722(void);
 

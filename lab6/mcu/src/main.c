@@ -22,6 +22,15 @@ char* webpageStart = "<!DOCTYPE html><html><head><title>E155 Web Server Demo Web
 	<body><h1>E155 Web Server Demo Webpage</h1>";
 char* ledStr = "<p>LED Control:</p><form action=\"ledon\"><input type=\"submit\" value=\"Turn the LED on!\"></form>\
 	<form action=\"ledoff\"><input type=\"submit\" value=\"Turn the LED off!\"></form>";
+
+char* tempStr = 
+  "<p> Choose the precision of the DS1722!: <p> <form action=\"8bit\"<input "
+  "type=\"submit\" value=\"8bit\"></form><form action=\"9bit\"><input "
+  "type=\"submit\" value=\"9bit\"></form><form action=\"10bit\"><input "
+  "type=\"submit\" value=\"10bit\"></form><form action=\"11bit\"><input "
+  "type=\"submit\" value=\"11bit\"></form><form action=\"12bit\"><input "
+  "type=\"submit\" value=\"12bit\"></form>";
+
 char* webpageEnd   = "</body></html>";
 
 //determines whether a given character sequence is in a char array request, returning 1 if present, -1 if not present
@@ -46,6 +55,22 @@ int updateLEDStatus(char request[])
 	return led_status;
 }
 
+void updateResolution(char request[]) {
+  if (inString(request, "8bit") == 1) {
+    changeResolution(8);
+  } else if (inString(request, "9bit") == 1) {
+    changeResolution(9);
+  } else if (inString(request, "10bit") == 1) {
+    changeResolution(10);
+  } else if (inString(request, "11bit") == 1) {
+    changeResolution(11);
+  } else if (inString(request, "12bit") == 1) {
+    changeResolution(12);
+  }
+
+  return;
+}
+
 /////////////////////////////////////////////////////////////////
 // Solution Functions
 /////////////////////////////////////////////////////////////////
@@ -65,7 +90,8 @@ int main(void) {
   
   USART_TypeDef * USART = initUSART(USART1_ID, 125000);
 
-  // TODO: Add SPI initialization code
+  initSPI(0b111, 1, 0);
+  initDS1722();
 
   while(1) {
     /* Wait for ESP8266 to send a request.
@@ -84,8 +110,8 @@ int main(void) {
       request[charIndex++] = readChar(USART);
     }
 
-    // TODO: Add SPI code here for reading temperature
-  
+    updateResolution(request);
+    float temp = readTemperature();
     // Update string with current LED state
   
     int led_status = updateLEDStatus(request);
@@ -96,15 +122,26 @@ int main(void) {
     else if (led_status == 0)
       sprintf(ledStatusStr,"LED is off!");
 
+    char tempStatusStr[32];
+    sprintf(tempStatusStr, "Temperature: %.4f", temp);
+
     // finally, transmit the webpage over UART
     sendString(USART, webpageStart); // webpage header code
     sendString(USART, ledStr); // button for controlling LED
+    sendString(USART, tempStr);
 
     sendString(USART, "<h2>LED Status</h2>");
 
 
     sendString(USART, "<p>");
     sendString(USART, ledStatusStr);
+    sendString(USART, "</p>");
+
+
+    sendString(USART, "<h2>Temperature</h2>");
+
+    sendString(USART, "<p>");
+    sendString(USART, tempStatusStr);
     sendString(USART, "</p>");
 
   

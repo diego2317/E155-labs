@@ -14,7 +14,7 @@ void initDS1722(void) {
 
     // Setup configuration register
     spiSendReceive(0x80); // Send write address
-    spiSendReceieve(0b11101110); // Send data to write, autoconfigure to 12-bit resolution
+    spiSendReceive(0b11101110); // Send data to write, autoconfigure to 12-bit resolution
 
     // Set CS pin LOW
     digitalWrite(SPI_CS, PIO_LOW);
