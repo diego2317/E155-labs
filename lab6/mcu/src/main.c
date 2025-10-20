@@ -110,8 +110,8 @@ int main(void) {
       request[charIndex++] = readChar(USART);
     }
 
-    updateResolution(request);
-    float temp = readTemperature();
+    //updateResolution(request);
+    float temp = 4.0;
     // Update string with current LED state
   
     int led_status = updateLEDStatus(request);
