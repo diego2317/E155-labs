@@ -7,6 +7,9 @@
 
 #include "DS1722.h"
 #include "STM32L432KC.h"
+#include "STM32L432KC_GPIO.h"
+#include "STM32L432KC_SPI.h"
+#include "STM32L432KC_TIM.h"
 
 void initDS1722(void) {
     // set CS pin high
@@ -22,6 +25,8 @@ void initDS1722(void) {
 
 void changeResolution(uint8_t bits) {
     digitalWrite(SPI_CS, PIO_HIGH); // CS pin high
+
+    spiSendReceive(0x80);
     switch (bits) {
         case 8:
             spiSendReceive(0xE0); //0b11100000

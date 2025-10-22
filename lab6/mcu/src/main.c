@@ -83,14 +83,14 @@ int main(void) {
   gpioEnable(GPIO_PORT_B);
   gpioEnable(GPIO_PORT_C);
 
-  pinMode(PB3, GPIO_OUTPUT);
+  pinMode(LED_PIN, GPIO_OUTPUT);
   
   RCC->APB2ENR |= (RCC_APB2ENR_TIM15EN);
   initTIM(TIM15);
   
   USART_TypeDef * USART = initUSART(USART1_ID, 125000);
 
-  initSPI(0b111, 1, 0);
+  initSPI(0b111, 0, 1);
   initDS1722();
 
   while(1) {

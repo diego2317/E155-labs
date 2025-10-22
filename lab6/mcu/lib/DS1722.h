@@ -11,7 +11,7 @@
 // Initializes the DS1722
 void initDS1722(void);
 
-// 
+// Changes the resolution of the DS1722
 void changeResolution(uint8_t bits);
 
 // Returns the temperature from the DS1722 in Celsius

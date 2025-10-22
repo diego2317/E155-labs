@@ -8,7 +8,7 @@
 
 void initSPI(int br, int cpol, int cpha) {
     // Configure GPIO for SDO, SDI, SCK
-    RCC->APB2ENR |= RCC_APB2ENR_SPI1EN;
+    RCC->APB2ENR |= RCC_APB2ENR_SPI1EN; // send the clock into SPI
     pinMode(SPI_SDI, GPIO_ALT);
     pinMode(SPI_SDO, GPIO_ALT);
     pinMode(SPI_CS, GPIO_OUTPUT);
