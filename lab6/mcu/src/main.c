@@ -122,8 +122,8 @@ int main(void) {
     else if (led_status == 0)
       sprintf(ledStatusStr,"LED is off!");
 
-    char tempStatusStr[32];
-    sprintf(tempStatusStr, "Temperature: %.4f", temp);
+    char tempStatusStr[50];
+    sprintf(tempStatusStr, "Temperature: %.4f Degrees Celsius", temp);
 
     // finally, transmit the webpage over UART
     sendString(USART, webpageStart); // webpage header code
