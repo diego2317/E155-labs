@@ -10,23 +10,42 @@
 #include "STM32L432KC_GPIO.h"
 #include "STM32L432KC_SPI.h"
 #include "STM32L432KC_TIM.h"
+#include <stdio.h>
 
 void initDS1722(void) {
     // set CS pin high
     digitalWrite(SPI_CS, PIO_HIGH);
-
+    
     // Setup configuration register
     spiSendReceive(0x80); // Send write address
     spiSendReceive(0xEE); // Send data to write, autoconfigure to 12-bit resolution
-
     // Set CS pin LOW
     digitalWrite(SPI_CS, PIO_LOW);
 }
 
-void changeResolution(uint8_t bits) {
+void changeResolution(int bits) {
     digitalWrite(SPI_CS, PIO_HIGH); // CS pin high
 
     spiSendReceive(0x80);
+    
+    
+    if (bits == 8) {
+      spiSendReceive(0xE0); //0b11100000
+      delay_millis(TIM15, 75);
+    } else if (bits == 9) {
+      spiSendReceive(0xE2); //0b11100010
+      delay_millis(TIM15, 150);
+    } else if (bits == 10) {
+      spiSendReceive(0xE4); //0b11100100
+      delay_millis(TIM15, 300);
+    } else if (bits == 11) {
+      spiSendReceive(0xE6); //0b11100110
+      delay_millis(TIM15, 600);
+    } else if (bits == 12) {
+      spiSendReceive(0xE8); //0b11101110
+      delay_millis(TIM15, 1200);
+    }
+    /*
     switch (bits) {
         case 8:
             spiSendReceive(0xE0); //0b11100000
@@ -48,27 +67,27 @@ void changeResolution(uint8_t bits) {
             spiSendReceive(0xE8); //0b11101110
             delay_millis(TIM15, 1200);
         break;
-        default:
-            // do nothing
     }
+    */
     digitalWrite(SPI_CS, PIO_LOW); // CS pin low
 }
 
 float readTemperature(void) {
     digitalWrite(SPI_CS, PIO_HIGH); // CS pin high
 
-    int8_t msb = 0;
-    int8_t lsb = 0;
+    int8_t msb;
+    uint8_t lsb;
     spiSendReceive(0x02); // tell sensor we want to read MSB register
-    msb = spiSendReceive(0x44); // read msb, 0b01000100
+    msb = spiSendReceive(0x00); // read msb, 0b01000100
     digitalWrite(SPI_CS, PIO_LOW);
     digitalWrite(SPI_CS, PIO_HIGH);
     spiSendReceive(0x01); // tell sensor we want to read LSB register
-    lsb = spiSendReceive(0x45); // read lsb, 0b01000101
+    lsb = spiSendReceive(0x00); // read lsb, 0b01000101
 
     digitalWrite(SPI_CS, PIO_LOW); // CS pin low
 
     float temp = msb + (lsb / 256.0);
-
+    
+    printf("Temp = %.4f\n", temp);
     return temp;
 }

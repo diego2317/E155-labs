@@ -6,9 +6,7 @@ Date: 9/14/19
 */
 
 
-#include <string.h>
-#include <stdlib.h>
-#include <stdio.h>
+
 #include "main.h"
 
 /////////////////////////////////////////////////////////////////
@@ -25,11 +23,12 @@ char* ledStr = "<p>LED Control:</p><form action=\"ledon\"><input type=\"submit\"
 
 char* tempStr = 
   "<p> Choose the precision of the DS1722!: <p> <form action=\"8bit\"<input "
+  "type=\"submit\" value=\"8bit\"></form><form action=\"8bit\"><input "
   "type=\"submit\" value=\"8bit\"></form><form action=\"9bit\"><input "
   "type=\"submit\" value=\"9bit\"></form><form action=\"10bit\"><input "
-  "type=\"submit\" value=\"10bit\"></form><form action=\"11bit\"><input "
-  "type=\"submit\" value=\"11bit\"></form><form action=\"12bit\"><input "
-  "type=\"submit\" value=\"12bit\"></form>";
+  "type=\"submit\" value=\"10bit\"></form><form action=\"1bit\"><input "
+  "type=\"submit\" value=\"11bit\"></form><form action=\"2bit\"><input "
+  "type=\"submit\" value=\"12bit\">";
 
 char* webpageEnd   = "</body></html>";
 
@@ -39,9 +38,9 @@ int inString(char request[], char des[]) {
 	return -1;
 }
 
-int updateLEDStatus(char request[])
+int updateLEDStatus(char request[], int init)
 {
-	int led_status = 0;
+	int led_status = init;
 	// The request has been received. now process to determine whether to turn the LED on or off
 	if (inString(request, "ledoff")==1) {
 		digitalWrite(LED_PIN, PIO_LOW);
@@ -62,9 +61,9 @@ void updateResolution(char request[]) {
     changeResolution(9);
   } else if (inString(request, "10bit") == 1) {
     changeResolution(10);
-  } else if (inString(request, "11bit") == 1) {
+  } else if (inString(request, "1bit") == 1) {
     changeResolution(11);
-  } else if (inString(request, "12bit") == 1) {
+  } else if (inString(request, "2bit") == 1) {
     changeResolution(12);
   }
 
@@ -92,7 +91,7 @@ int main(void) {
 
   initSPI(0b111, 0, 1);
   initDS1722();
-
+  int led_status = 0;
   while(1) {
     /* Wait for ESP8266 to send a request.
     Requests take the form of '/REQ:<tag>\n', with TAG begin <= 10 characters.
@@ -104,17 +103,18 @@ int main(void) {
     int charIndex = 0;
   
     // Keep going until you get end of line character
+    
     while(inString(request, "\n") == -1) {
       // Wait for a complete request to be transmitted before processing
       while(!(USART->ISR & USART_ISR_RXNE));
       request[charIndex++] = readChar(USART);
     }
-
-    //updateResolution(request);
-    float temp = 4.0;
+    
+    updateResolution(request);
+    float temp = readTemperature();
     // Update string with current LED state
-  
-    int led_status = updateLEDStatus(request);
+    
+    led_status = updateLEDStatus(request, led_status);
 
     char ledStatusStr[20];
     if (led_status == 1)

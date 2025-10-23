@@ -8,11 +8,12 @@
 #define DS1722_H
 
 #include <stdint.h>
+#include <stm32l432xx.h>
 // Initializes the DS1722
 void initDS1722(void);
 
 // Changes the resolution of the DS1722
-void changeResolution(uint8_t bits);
+void changeResolution(int bits);
 
 // Returns the temperature from the DS1722 in Celsius
 float readTemperature(void);
