@@ -27,7 +27,7 @@ char* tempStr =
   "type=\"submit\" value=\"8bit\"></form><form action=\"9bit\"><input "
   "type=\"submit\" value=\"9bit\"></form><form action=\"10bit\"><input "
   "type=\"submit\" value=\"10bit\"></form><form action=\"1bit\"><input "
-  "type=\"submit\" value=\"11bit\"></form><form action=\"2bit\"><input "
+  "type=\"submit\" value=\"11bit\"></form><form action=\"12bit\"><input "
   "type=\"submit\" value=\"12bit\">";
 
 char* webpageEnd   = "</body></html>";
@@ -63,7 +63,7 @@ void updateResolution(char request[]) {
     changeResolution(10);
   } else if (inString(request, "1bit") == 1) {
     changeResolution(11);
-  } else if (inString(request, "2bit") == 1) {
+  } else if (inString(request, "12bit") == 1) {
     changeResolution(12);
   }
 

@@ -31,19 +31,19 @@ void changeResolution(int bits) {
     
     if (bits == 8) {
       spiSendReceive(0xE0); //0b11100000
-      delay_millis(TIM15, 75);
+      //delay_millis(TIM15, 75);
     } else if (bits == 9) {
       spiSendReceive(0xE2); //0b11100010
-      delay_millis(TIM15, 150);
+      //delay_millis(TIM15, 150);
     } else if (bits == 10) {
       spiSendReceive(0xE4); //0b11100100
-      delay_millis(TIM15, 300);
+      //delay_millis(TIM15, 300);
     } else if (bits == 11) {
       spiSendReceive(0xE6); //0b11100110
-      delay_millis(TIM15, 600);
+      //delay_millis(TIM15, 600);
     } else if (bits == 12) {
       spiSendReceive(0xE8); //0b11101110
-      delay_millis(TIM15, 1200);
+      //delay_millis(TIM15, 1200);
     }
     /*
     switch (bits) {
