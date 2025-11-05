@@ -17,7 +17,7 @@ module keypad_input(
 
 	statetype state, nextstate;
 	logic [5:0] counter;
-
+	logic [3:0] cols_ff;
 	// state register
 	always_ff @(posedge clk) begin
 		if (reset == 0) begin
@@ -34,6 +34,9 @@ module keypad_input(
 		end else if (state == W0 || state == W1 || state == W2 || state == W3) begin
 			counter <= 0;
 			state <= nextstate;
+		end else if (state == P0 || state == P1 || state == P2 || state == P3) begin
+			cols_ff <= cols;
+			state <= nextstate;
 		end else begin
 			counter <= counter + 1;
 			state <= nextstate;
@@ -41,7 +44,7 @@ module keypad_input(
 	end
 	
 	// Call module to determine next state logic combinationally
-	next_state_logic scan(state, cols, counter, nextstate);
+	next_state_logic scan(state, cols, cols_ff, counter, nextstate);
 	
 	// output logic
 	assign rows[0] = (state == B0 || state == R0 || state == D0 || state == P0 || state == W0) ? 1'b1 : 1'bz;

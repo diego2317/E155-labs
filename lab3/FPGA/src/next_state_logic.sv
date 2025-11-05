@@ -9,14 +9,13 @@ import state::*;
 module next_state_logic(
 	input statetype state,
 	input logic [3:0] cols,
+	input logic [3:0] cols_ff,
 	input logic [5:0] counter,
 	output statetype nextstate
 );
 	logic press;
 	logic valid_press;
 	logic valid_input;
-	logic orig;
-	assign orig = cols;
 	assign valid_input = ($countones(cols)==1);
 	// if any of the columns are read to be low, then that indicates a press.
 	assign press = (cols[0] || cols[1] || cols[2] || cols[3]);
@@ -101,16 +100,40 @@ module next_state_logic(
 				end
 			// in the waiting state (waiting for pressed button to be released)
 			W0: begin
-					nextstate = (press) ? W0 : R0;  
+					if (cols == 4'b000) begin
+						nextstate = R0;
+					end else if (cols != cols_ff && valid_input) begin // if the original key's been released
+						nextstate = R0;
+					end else begin
+						nextstate = W0;
+					end
 				end
 			W1: begin
-					nextstate = (press) ? W1 : R1;  
+					if (cols == 4'b000) begin
+						nextstate = R1;
+					end else if (cols != cols_ff && valid_input) begin // if the original key's been released
+						nextstate = R1;
+					end else begin
+						nextstate = W1;
+					end 
 				end
 			W2: begin
-					nextstate = (press) ? W2 : R2;  
+					if (cols == 4'b000) begin
+						nextstate = R2;
+					end else if (cols != cols_ff && valid_input) begin // if the original key's been released
+						nextstate = R2;
+					end else begin
+						nextstate = W2;
+					end  
 				end
 			W3: begin
-					nextstate = (press) ? W3 : R3;  
+					if (cols == 4'b000) begin
+						nextstate = R3;
+					end else if (cols != cols_ff && valid_input) begin // if the original key's been released
+						nextstate = R3;
+					end else begin
+						nextstate = W3;
+					end  
 				end
 			default: nextstate = R0;
 		endcase
