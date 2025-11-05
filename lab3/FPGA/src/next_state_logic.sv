@@ -101,16 +101,16 @@ module next_state_logic(
 				end
 			// in the waiting state (waiting for pressed button to be released)
 			W0: begin
-					nextstate = (valid_press) ? W0 : R0;  
+					nextstate = (press) ? W0 : R0;  
 				end
 			W1: begin
-					nextstate = (valid_press) ? W1 : R1;  
+					nextstate = (press) ? W1 : R1;  
 				end
 			W2: begin
-					nextstate = (valid_press) ? W2 : R2;  
+					nextstate = (press) ? W2 : R2;  
 				end
 			W3: begin
-					nextstate = (valid_press) ? W3 : R3;  
+					nextstate = (press) ? W3 : R3;  
 				end
 			default: nextstate = R0;
 		endcase
