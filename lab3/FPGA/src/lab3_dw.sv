@@ -19,7 +19,7 @@ module lab3_dw (
 		hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(int_osc));
 
 	// Create 2400 Hz clock
-	clock_divider #('d10000) count(
+	clock_divider #('d1000) count(
 		.clk(int_osc),
 		.reset(reset),
 		.divided_clock(slow_clock)
@@ -33,6 +33,7 @@ module lab3_dw (
 		.cols(cols),
 		.s_cols(s_cols)
 	);
+	
 	
 	// Initalize top level module for keypad scanning
 	keypad_reader keypad(

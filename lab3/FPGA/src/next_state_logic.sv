@@ -15,10 +15,12 @@ module next_state_logic(
 	logic press;
 	logic valid_press;
 	logic valid_input;
-	assign valid_input = ($countones(cols) >= 3);
+	logic orig;
+	assign orig = cols;
+	assign valid_input = ($countones(cols)==1);
 	// if any of the columns are read to be low, then that indicates a press.
-	assign press = !(cols[0] && cols[1] && cols[2] && cols[3]);
-	assign valid_press = press && valid_input;
+	assign press = (cols[0] || cols[1] || cols[2] || cols[3]);
+	assign valid_press = valid_input && press;
 	
 	always_comb
 		case(state)
@@ -99,16 +101,16 @@ module next_state_logic(
 				end
 			// in the waiting state (waiting for pressed button to be released)
 			W0: begin
-					nextstate = (press) ? W0 : R0;  
+					nextstate = (valid_press) ? W0 : R0;  
 				end
 			W1: begin
-					nextstate = (press) ? W1 : R1;  
+					nextstate = (valid_press) ? W1 : R1;  
 				end
 			W2: begin
-					nextstate = (press) ? W2 : R2;  
+					nextstate = (valid_press) ? W2 : R2;  
 				end
 			W3: begin
-					nextstate = (press) ? W3 : R3;  
+					nextstate = (valid_press) ? W3 : R3;  
 				end
 			default: nextstate = R0;
 		endcase

@@ -44,9 +44,9 @@ module keypad_input(
 	next_state_logic scan(state, cols, counter, nextstate);
 	
 	// output logic
-	assign rows[0] = !(state == B0 || state == R0 || state == D0 || state == P0 || state == W0 || state == W1 || state == W2 || state == W3);
-	assign rows[1] = !(state == B1 || state == R1 || state == D1 || state == P1 || state == W0 || state == W1 || state == W2 || state == W3);
-	assign rows[2] = !(state == B2 || state == R2 || state == D2 || state == P2 || state == W0 || state == W1 || state == W2 || state == W3);
-	assign rows[3] = !(state == B3 || state == R3 || state == D3 || state == P3 || state == W0 || state == W1 || state == W2 || state == W3);
-	assign press = ((state == P0 || state == P1 || state == P2 || state == P3) && !(cols[0] && cols[1] && cols[2] && cols[3]));
+	assign rows[0] = (state == B0 || state == R0 || state == D0 || state == P0 || state == W0) ? 1'b1 : 1'bz;
+	assign rows[1] = (state == B1 || state == R1 || state == D1 || state == P1 || state == W1) ? 1'b1 : 1'bz;
+	assign rows[2] = (state == B2 || state == R2 || state == D2 || state == P2 || state == W2) ? 1'b1 : 1'bz;
+	assign rows[3] = (state == B3 || state == R3 || state == D3 || state == P3 || state == W3) ? 1'b1 : 1'bz;
+	assign press = ((state == P0 || state == P1 || state == P2 || state == P3) && (cols[0] || cols[1] || cols[2] || cols[3]));
 endmodule
